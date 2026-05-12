@@ -108,7 +108,7 @@ export function ReturnOrderRecycleBin() {
 
       {/* Table Section */}
       <div className="overflow-auto overflow-y-auto max-h-[calc(100vh-220px)] custom-scrollbar">
-        <table className="w-full border-collapse text-[12px] text-left">
+        <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
           <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
             <tr className="border-b border-gray-200">
               <th className="px-3 py-2 border-r border-gray-200 w-12"><input type="checkbox" /> 序号</th>

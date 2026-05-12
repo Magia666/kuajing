@@ -188,7 +188,7 @@ export function FinancialReports({ mode }: FinancialReportProps) {
       </div>
 
       <div className="bg-white border border-gray-200 flex-1 mx-2 overflow-auto relative">
-        <table className="w-full border-collapse text-[12px] text-center min-w-max">
+        <table className="w-full border-collapse text-[12px] text-center min-w-max border-b border-gray-200">
           <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
             <tr className="border-b border-gray-200">
               {mode === 'report-delivery' && (
@@ -270,7 +270,7 @@ export function FinancialReports({ mode }: FinancialReportProps) {
               )}
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200">
+          <tbody className="divide-y divide-gray-200 border-b border-gray-200">
             {mode === 'report-sale-detail' && MOCK_SALE_DETAIL.map((item, index) => (
               <tr key={item.id} className="hover:bg-[#f5f7fa] transition-colors">
                 <td className="px-3 py-3 border-r border-gray-200"><input type="checkbox" className="mr-1" /> {index + 1}</td>

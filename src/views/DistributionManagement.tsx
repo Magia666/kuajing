@@ -27,48 +27,14 @@ interface DistributionData {
 }
 
 const MOCK_DATA: DistributionData[] = [
-  {
-    id: '1',
-    customerName: 'jinyi',
-    customerCode: '12013',
-    fnsku: 'D12013604FH',
-    sellerSku: 'SN1234',
-    productName: '测试商品',
-    weight: 1,
-    size: '1*2*3',
-    costPrice: 0.00,
-    distPrice: 20.00,
-    declaredValue: 0.00,
-    status: '启用',
-    productType: '单个产品',
-    isDistribution: '待审核分销',
-    commissionRate: 0.0,
-    totalDistAmount: 20,
-    pushStatus: '',
-    pushExcellentWms: '未推送',
-    addedTime: '2025-12-01 23:16:12'
-  },
-  {
-    id: '2',
-    customerName: 'YY',
-    customerCode: '12012',
-    fnsku: 'D12012NBQWF',
-    sellerSku: '44444',
-    productName: '44444',
-    weight: 1,
-    size: '1*1*1',
-    costPrice: 0.00,
-    distPrice: 100.00,
-    declaredValue: 0.00,
-    status: '启用',
-    productType: '单个产品',
-    isDistribution: '待审核分销',
-    commissionRate: 0.09,
-    totalDistAmount: 109,
-    pushStatus: '',
-    pushExcellentWms: '已推送',
-    addedTime: '2025-04-19 16:34:59'
-  }
+  { id: '1', customerName: 'jinyi', customerCode: '12013', fnsku: 'D120136O4FH', sellerSku: 'SN1234', productName: '测试商品', weight: 1, size: '1*2*3', costPrice: 0.00, distPrice: 20.00, declaredValue: 0.00, status: '启用', productType: '单个产品', isDistribution: '待审核分销', commissionRate: 0.0, totalDistAmount: 20, pushStatus: '', pushExcellentWms: '未推送', addedTime: '2025-12-01 23:16:12' },
+  { id: '2', customerName: 'YY', customerCode: '12012', fnsku: 'D12012NBQWF', sellerSku: '44444', productName: '无线充', weight: 1, size: '1*1*1', costPrice: 0.00, distPrice: 100.00, declaredValue: 0.00, status: '启用', productType: '单个产品', isDistribution: '待审核分销', commissionRate: 0.09, totalDistAmount: 109, pushStatus: '', pushExcellentWms: '已推送', addedTime: '2025-04-19 16:34:59' },
+  { id: '3', customerName: 'beijing_trade', customerCode: '13002', fnsku: 'D13002K9PLL', sellerSku: 'BJT-001', productName: '便携式吸尘器', weight: 1.5, size: '10*10*30', costPrice: 45.00, distPrice: 150.00, declaredValue: 45.00, status: '启用', productType: '单个产品', isDistribution: '已通过分销', commissionRate: 0.10, totalDistAmount: 165, pushStatus: '', pushExcellentWms: '未推送', addedTime: '2026-05-02 10:20:00' },
+  { id: '4', customerName: 'shanghai_tech', customerCode: '13001', fnsku: 'D13001A8BBC', sellerSku: 'SHT-005', productName: '无线蓝牙耳机', weight: 0.2, size: '5*5*3', costPrice: 45.00, distPrice: 89.00, declaredValue: 30.00, status: '启用', productType: '单个产品', isDistribution: '待审核分销', commissionRate: 0.05, totalDistAmount: 93.45, pushStatus: '', pushExcellentWms: '未推送', addedTime: '2026-05-10 10:00:00' },
+  { id: '5', customerName: 'guangzhou_garment', customerCode: '13004', fnsku: 'D13004W2LLJ', sellerSku: 'GZG-010', productName: '无缝瑜伽裤', weight: 0.8, size: '20*30*2', costPrice: 15.00, distPrice: 45.00, declaredValue: 20.00, status: '启用', productType: '支持多规格变体产品', isDistribution: '已通过分销', commissionRate: 0.08, totalDistAmount: 48.60, pushStatus: '部分推送', pushExcellentWms: '未推送', addedTime: '2026-05-08 14:20:00' },
+  { id: '6', customerName: 'hangzhou_home', customerCode: '13005', fnsku: 'D13005V1NNH', sellerSku: 'HZH-002', productName: '香薰机', weight: 0.5, size: '10*10*15', costPrice: 35.00, distPrice: 85.00, declaredValue: 40.00, status: '启用', productType: '单个产品', isDistribution: '待审核分销', commissionRate: 0.12, totalDistAmount: 95.20, pushStatus: '', pushExcellentWms: '已推送', addedTime: '2026-05-07 10:11:30' },
+  { id: '7', customerName: 'wuhan_sports', customerCode: '13007', fnsku: 'D13007M9PPL', sellerSku: 'WHS-012', productName: '筋膜枪', weight: 0.9, size: '18*15*8', costPrice: 80.00, distPrice: 199.00, declaredValue: 90.00, status: '启用', productType: '单个产品', isDistribution: '已通过分销', commissionRate: 0.05, totalDistAmount: 208.95, pushStatus: '', pushExcellentWms: '未推送', addedTime: '2026-04-30 11:45:00' },
+  { id: '8', customerName: 'nanjing_beauty', customerCode: '13008', fnsku: 'D13008B4PPX', sellerSku: 'NJB-008', productName: '电动修眉刀', weight: 0.1, size: '12*2*2', costPrice: 12.00, distPrice: 39.00, declaredValue: 15.00, status: '待审核', productType: '单个产品', isDistribution: '待审核分销', commissionRate: 0.05, totalDistAmount: 40.95, pushStatus: '', pushExcellentWms: '已推送', addedTime: '2026-04-20 16:30:15' },
 ];
 
 interface DistApplyData {
@@ -160,7 +126,7 @@ export function DistributionManagement({ mode }: DistributionManagementProps) {
 
         {/* Table for Apply */}
         <div className="overflow-auto border border-gray-200">
-          <table className="w-full text-[12px] text-left border-collapse min-w-[1500px]">
+          <table className="w-full text-[12px] text-left border-collapse min-w-[1500px] border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr>
                 <th className="px-3 py-2 border-r border-gray-200 w-20">
@@ -186,7 +152,7 @@ export function DistributionManagement({ mode }: DistributionManagementProps) {
                 <th className="px-3 py-2 border-r border-gray-200">操作</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200 border-b border-gray-200">
               {APPLY_MOCK_DATA.map((item, index) => (
                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-3 py-2 border-r border-gray-200">
@@ -301,7 +267,7 @@ export function DistributionManagement({ mode }: DistributionManagementProps) {
 
       {/* Distribution Table */}
       <div className="overflow-auto border border-gray-200">
-        <table className="w-full text-[12px] text-left border-collapse min-w-[1600px]">
+        <table className="w-full text-[12px] text-left border-collapse min-w-[1600px] border-b border-gray-200">
           <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
             <tr>
               <th className="px-3 py-2 border-r border-gray-200 w-20">
@@ -331,7 +297,7 @@ export function DistributionManagement({ mode }: DistributionManagementProps) {
               <th className="px-3 py-2 border-r border-gray-200">操作</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200">
+          <tbody className="divide-y divide-gray-200 border-b border-gray-200">
             {displayData.map((item, index) => (
               <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                 <td className="px-3 py-2 border-r border-gray-200">

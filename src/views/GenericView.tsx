@@ -120,7 +120,7 @@ export function GenericView({ mode }: GenericViewProps) {
 
         {/* Table area */}
         <div className="overflow-auto flex-1 pb-16">
-          <table className="w-full border-collapse text-[12px] text-center min-w-max">
+          <table className="w-full border-collapse text-[12px] text-center min-w-max border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="border-b border-gray-200">
                 <th className="px-3 py-3 border-r border-gray-200 w-16">
@@ -135,55 +135,62 @@ export function GenericView({ mode }: GenericViewProps) {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200 text-gray-700">
-              {[1, 2, 3, 4, 5].map((item, index) => {
-                let field1 = `业务数据 ${item + 101}`;
-                let typeText = `分类 ${item % 3 + 1}`;
-                let infoText = '正常状态';
+              {Array.from({ length: 20 }).map((_, index) => {
+                let field1 = `业务数据 ${index + 101}`;
+                let typeText = `分类 ${index % 3 + 1}`;
+                let infoText: string | React.ReactNode = '正常状态';
                 let person = 'admin';
 
+                const mod = index % 5;
+
                 if (mode.includes('cust') || mode.startsWith('h-') || mode === 'vip-mgmt') {
-                  field1 = `客户-${['深圳飞亚贸易', '义乌中宏跨境', '广州大志电商', '上海星辰实业', '北京通达科技'][index]}`;
-                  typeText = ['一级代理 (VIP)', '企业客户', '大客户卖家', '核心客户', '普通客户'][index];
+                  field1 = `客户-${['深圳飞亚贸易', '义乌中宏跨境', '广州大志电商', '上海星辰实业', '北京通达科技'][mod]}`;
+                  field1 += index > 4 ? `(${Math.floor(index / 5) + 1})` : '';
+                  typeText = ['一级代理 (VIP)', '企业客户', '大客户卖家', '核心客户', '普通客户'][mod];
                   infoText = `余额: ¥${(Math.random()*10000 + 500).toFixed(2)}`;
-                  person = ['张经理', '李红', '王主管', '赵敏', '刘总'][index];
+                  person = ['张经理', '李红', '王主管', '赵敏', '刘总'][mod];
                 } else if (mode.includes('analysis') || mode.includes('mgr-') || mode.includes('perf') || mode.includes('rank')) {
-                  field1 = ['当月营收汇总', '大客户订单量TOP10', '物流线路延误率', '仓库日均出库件数', '客服日均结单量'][index];
-                  typeText = ['¥ 1,284,500.00', '18,290 单', '1.24%', '42,500 件', '124 单/人'][index];
-                  infoText = ['同比增长 12.5% ↗', '环比下降 2.1% ↘', '表现平稳', '峰值上升 8.4% ↗', '人效达标'][index];
+                  field1 = ['当月营收汇总', '大客户订单量TOP10', '物流线路延误率', '仓库日均出库件数', '客服日均结单量'][mod];
+                  field1 += index > 4 ? ` - ${Math.floor(index/5) + 1}期` : '';
+                  typeText = ['¥ 1,284,500.00', '18,290 单', '1.24%', '42,500 件', '124 单/人'][mod];
+                  infoText = ['同比增长 12.5% ↗', '环比下降 2.1% ↘', '表现平稳', '峰值上升 8.4% ↗', '人效达标'][mod];
                   const colors = ['text-green-500', 'text-red-500', 'text-gray-500', 'text-green-500', 'text-green-500'];
-                  infoText = <span className={colors[index]}>{infoText}</span> as any;
+                  infoText = <span className={colors[mod]}>{infoText}</span>;
                   person = '系统自动生成';
                 } else if (mode.includes('web-') || mode.includes('wechat-')) {
-                  field1 = ['系统放假通知', '国际物流线路最新报价', '首页轮播Banner-1', '微信关注自动回复词', '新手发货指南'][index];
-                  typeText = ['已发布/置顶', '已发布/常规', '已发布/首页', '已启用/微信', '已发布/帮助中心'][index];
-                  infoText = ['阅读量: 12,450', '阅读量: 8,211', '点击率: 8.5%', '触达: 45,190次', '阅读量: 5,420'][index];
-                  person = ['运营部-小李', '市场部-王明', '设计-张杰', '运营部-小李', '客服-陈芳'][index];
+                  field1 = ['系统放假通知', '国际物流线路最新报价', '首页轮播Banner', '微信关注自动回复词', '新手发货指南'][mod];
+                  field1 += index > 4 ? ` - 副本${Math.floor(index / 5)}` : '';
+                  typeText = ['已发布/置顶', '已发布/常规', '已发布/首页', '已启用/微信', '已发布/帮助中心'][mod];
+                  infoText = ['阅读量: 12,450', '阅读量: 8,211', '点击率: 8.5%', '触达: 45,190次', '阅读量: 5,420'][mod];
+                  person = ['运营部-小李', '市场部-王明', '设计-张杰', '运营部-小李', '客服-陈芳'][mod];
                 } else if (mode.includes('tk-')) {
                   field1 = `TK-202605${10 + index}-${Math.floor(Math.random()*1000)}`;
-                  typeText = ['财务充值/待处理', '运单异常/处理中', '仓储报备/已完成', '退件处理/处理中', '理赔申请/待处理'][index];
-                  infoText = `处理进度 ${[0, 50, 100, 30, 0][index]}%`;
-                  person = ['客服-小王', '物流-老张', '仓管-赵四', '客服-小李', '财务-王姐'][index];
+                  typeText = ['财务充值/待处理', '运单异常/处理中', '仓储报备/已完成', '退件处理/处理中', '理赔申请/待处理'][mod];
+                  infoText = `处理进度 ${[0, 50, 100, 30, 0][mod]}%`;
+                  person = ['客服-小王', '物流-老张', '仓管-赵四', '客服-小李', '财务-王姐'][mod];
                 } else if (mode.includes('shop-')) {
-                  field1 = ['官方旗舰店 (Shopee)', '北美主账号 (Amazon)', '东南亚店群 (Lazada)', '独立站一号 (Shopify)', '俄罗斯区 (AliExpress)'][index];
+                  field1 = ['官方旗舰店 (Shopee)', '北美主账号 (Amazon)', '东南亚店群 (Lazada)', '独立站一号 (Shopify)', '俄罗斯区 (AliExpress)'][mod];
+                  field1 += index > 4 ? ` - D${Math.floor(index / 5)}` : '';
                   typeText = index % 2 === 0 ? '🟢 API已授权' : '🟠 授权即将过期';
                   infoText = `日均约: ${(Math.random()*1000 + 100).toFixed(0)}单`;
                   person = '店长-李明';
                 } else if (mode.includes('sys-') || mode.includes('api-') || mode.includes('-set') || mode.includes('-account') || mode.includes('list') || mode.includes('role') || mode.includes('admin-')) {
                   if (mode.includes('log')) {
-                    field1 = ['sys_admin 登录系统', 'fin_manager 导出报表', 'wh_staff 修改库存', 'cron_job 清理缓存', 'cs_lead 审核退款'][index];
-                    typeText = ['INFO', 'INFO', 'WARN', 'INFO', 'INFO'][index];
-                    infoText = `IP: 192.168.1.${100 + index} / ${['Firefox', 'Chrome', 'Safari', 'System', 'Edge'][index]}`;
+                    field1 = ['sys_admin 登录系统', 'fin_manager 导出报表', 'wh_staff 修改库存', 'cron_job 清理缓存', 'cs_lead 审核退款'][mod];
+                    typeText = ['INFO', 'INFO', 'WARN', 'INFO', 'INFO'][mod];
+                    infoText = `IP: 192.168.1.${100 + index} / ${['Firefox', 'Chrome', 'Safari', 'System', 'Edge'][mod]}`;
                     person = field1.split(' ')[0];
                   } else {
-                    field1 = ['系统并发限制阈值', 'FedEx API Key配置', 'SF-Express 面单格式', '新用户注册默认等级', '汇率自动更新接口'][index];
-                    typeText = ['已开启', '已连接', '正常', 'V1 普通客户', '正常 (每小时)'][index];
-                    infoText = ['Max=5000', '到期: 2027年', '类型: 100x100mm', '权限: 基础', 'Source: 中行'][index];
+                    field1 = ['系统并发限制阈值', 'FedEx API Key配置', 'SF-Express 面单格式', '新用户注册默认等级', '汇率自动更新接口'][mod];
+                    field1 += index > 4 ? ` (配置${Math.floor(index/5)})` : '';
+                    typeText = ['已开启', '已连接', '正常', 'V1 普通客户', '正常 (每小时)'][mod];
+                    infoText = ['Max=5000', '到期: 2027年', '类型: 100x100mm', '权限: 基础', 'Source: 中行'][mod];
                     person = 'admin';
                   }
                 }
 
                 return (
-                <tr key={item} className="hover:bg-[#f5f7fa] transition-colors">
+                <tr key={index} className="hover:bg-[#f5f7fa] transition-colors">
                   <td className="px-3 py-3 border-r border-gray-200">
                     <div className="flex items-center justify-center gap-1">
                       <input type="checkbox" /> {index + 1}
@@ -205,11 +212,12 @@ export function GenericView({ mode }: GenericViewProps) {
         </div>
 
         {/* Footer */}
-        <div className="w-full flex items-center justify-end px-4 py-2 bg-white border-t border-gray-100 absolute bottom-0 left-0 right-0 h-14">
+        <div className="w-full flex items-center justify-end px-4 py-2 bg-white border-t border-gray-100 absolute bottom-0 left-0 right-0 h-14 shrink-0">
           <div className="flex items-center gap-2 text-[12px] text-gray-600">
-            <span>总计 5 个记录分为 1 页当前第 1 页，每页</span>
+            <span>总计 20 个记录分为 1 页当前第 1 页，每页</span>
             <select className="border border-gray-300 rounded px-1 h-6 outline-none bg-white">
               <option>10</option>
+              <option>20</option>
               <option>50</option>
               <option>100</option>
             </select>

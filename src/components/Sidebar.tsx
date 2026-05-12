@@ -627,20 +627,18 @@ export function Sidebar({ activeModuleId, activeItemId, setActiveItemId }: Sideb
   return (
     <div 
       className={cn(
-        "bg-[#001529] text-white flex flex-col h-full transition-all duration-300 border-r border-[#001529] z-50 shadow-xl",
-        isCollapsed ? "w-16" : "w-64"
+        "bg-[#001529] text-gray-300 flex flex-col h-full transition-all duration-300 z-50",
+        isCollapsed ? "w-[50px]" : "w-[200px]"
       )}
     >
-      <div className="h-10 flex items-center justify-center border-b border-gray-700/30">
-        <button 
-          onClick={() => setIsCollapsed(!isCollapsed)}
-          className="hover:bg-blue-600/20 p-1.5 rounded transition-colors text-gray-400 hover:text-white"
-        >
-          {isCollapsed ? <Menu size={18} /> : <ChevronLeft size={18} />}
-        </button>
+      <div 
+         className="h-14 flex items-center justify-center bg-[#000c17] cursor-pointer hover:bg-black/20"
+         onClick={() => setIsCollapsed(!isCollapsed)}
+      >
+        <Menu size={16} className="text-white" />
       </div>
 
-      <nav className="flex-1 mt-2 overflow-y-auto overflow-x-hidden custom-scrollbar">
+      <nav className="flex-1 overflow-y-auto overflow-x-hidden custom-scrollbar py-2">
         {sidebarItems.map((item) => {
           const isExpanded = expandedItems.includes(item.id);
           const hasActiveChild = item.subItems?.some(sub => sub.id === activeItemId);
@@ -657,20 +655,19 @@ export function Sidebar({ activeModuleId, activeItemId, setActiveItemId }: Sideb
                   }
                 }}
                 className={cn(
-                  "w-full flex items-center px-4 py-3 text-sm transition-all relative group",
-                  (hasActiveChild || isActive) ? "bg-blue-600/10 text-white" : "text-gray-400 hover:text-white hover:bg-white/5",
-                  isActive && "bg-blue-600"
+                  "w-full flex items-center px-4 py-3 text-[13px] transition-all relative group",
+                  hasActiveChild ? "text-white" : isActive ? "bg-[#1890ff] text-white" : "hover:text-white"
                 )}
               >
-                <item.icon size={18} className={cn("min-w-[18px] transition-colors", (hasActiveChild || isActive) ? "text-white" : "")} />
+                <item.icon size={16} className={cn("min-w-[16px] transition-colors", (hasActiveChild || isActive) ? "text-white" : "text-[#a6adb4] group-hover:text-white")} />
                 {!isCollapsed && (
                   <>
-                    <span className="ml-3 truncate flex-1 text-left">{item.label}</span>
+                    <span className="ml-3 truncate flex-1 text-left tracking-wide">{item.label}</span>
                     {item.subItems && (
                       <ChevronDown 
                         size={14} 
                         className={cn(
-                          "ml-auto opacity-50 transition-transform duration-200",
+                          "ml-auto text-gray-400 transition-transform duration-200",
                           isExpanded ? "rotate-180" : ""
                         )} 
                       />
@@ -693,12 +690,15 @@ export function Sidebar({ activeModuleId, activeItemId, setActiveItemId }: Sideb
                         key={sub.id}
                         onClick={() => setActiveItemId(sub.id, sub.label)}
                         className={cn(
-                          "w-full flex items-center pl-11 pr-4 py-2 text-xs transition-colors relative",
+                          "w-full flex items-center pl-11 pr-4 py-2.5 text-[13px] transition-colors relative",
                           activeItemId === sub.id 
-                            ? "bg-blue-600 text-white" 
-                            : "text-gray-400 hover:text-white hover:bg-white/5"
+                            ? "bg-[#1890ff] text-white" 
+                            : "text-[#a6adb4] hover:text-white"
                         )}
                       >
+                        {activeItemId === sub.id && (
+                          <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#1890ff]"></div>
+                        )}
                         <span className="truncate">{sub.label}</span>
                       </button>
                     ))}

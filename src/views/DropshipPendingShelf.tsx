@@ -69,7 +69,7 @@ export function DropshipPendingShelf() {
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden shadow-sm">
         <div className="overflow-auto">
-          <table className="w-full border-collapse text-[12px] text-left">
+          <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr>
                 <th className="px-3 border-r border-gray-200 w-12 py-2"><input type="checkbox" className="mr-1" />序号</th>
@@ -84,7 +84,7 @@ export function DropshipPendingShelf() {
                 <th className="px-3 py-2 border-r border-gray-200">状态</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200 border-b border-gray-200">
               {MOCK_DATA.map((item, index) => (
                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-3 border-r border-gray-200 py-2"><input type="checkbox" className="mr-1" />{index + 1}</td>

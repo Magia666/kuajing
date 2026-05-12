@@ -22,7 +22,7 @@ export function ShelfVacancyRate() {
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden shadow-sm">
         <div className="overflow-auto">
-          <table className="w-full border-collapse text-[12px] text-left">
+          <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr>
                 <th className="px-3 border-r border-gray-200 w-16 py-2">序号</th>
@@ -39,7 +39,7 @@ export function ShelfVacancyRate() {
                 <th className="px-3 min-w-[100px] py-2 border-r border-gray-200">操作</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200 border-b border-gray-200">
               {MOCK_DATA.map((item, idx) => (
                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-3 border-r border-gray-200 py-2">{idx + 1}</td>

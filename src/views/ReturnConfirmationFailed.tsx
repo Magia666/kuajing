@@ -89,7 +89,7 @@ export function ReturnConfirmationFailed() {
 
       {/* Main Table */}
       <div className="overflow-auto">
-        <table className="w-full text-[12px] text-left border-collapse min-w-[1400px]">
+        <table className="w-full text-[12px] text-left border-collapse min-w-[1400px] border-b border-gray-200">
           <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
             <tr>
               <th className="px-3 py-2 border-r border-gray-200 w-20">

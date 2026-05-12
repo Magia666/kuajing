@@ -69,7 +69,7 @@ export function HSCodeManagement() {
       {/* Main Table */}
       <div className="p-4">
         <div className="bg-white border border-gray-200">
-          <table className="w-full text-[12px] text-left border-collapse">
+          <table className="w-full text-[12px] text-left border-collapse border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr>
                 <th className="px-4 py-3 border-r border-gray-200 w-1/4 px-3 py-2">产品名称</th>
@@ -79,7 +79,7 @@ export function HSCodeManagement() {
                 <th className="px-4 py-3 px-3 py-2 border-r border-gray-200">操作</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200 border-b border-gray-200">
               {MOCK_DATA.map((item) => (
                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-4 py-3 border-r border-gray-200 px-3 py-2">{item.productName}</td>

@@ -25,146 +25,18 @@ interface ProductData {
 }
 
 const MOCK_DATA: ProductData[] = [
-  {
-    id: '1',
-    customerName: 'yueyang01',
-    customerCode: '12015',
-    spu: '',
-    fnsku: 'D120154AGF2',
-    sellerSku: '123321',
-    platformSku: '',
-    productName: '猫咪水杯',
-    weight: 0.5,
-    size: '10*5*5',
-    costPrice: 0.00,
-    distPrice: 78.00,
-    declaredValue: 50.00,
-    status: '启用',
-    productType: '单个产品',
-    pushStatus: '',
-    pushExcellentWms: '未推送',
-    addedTime: '2025-12-04 13:23:19'
-  },
-  {
-    id: '2',
-    customerName: 'yueyang07',
-    customerCode: '12021',
-    spu: '',
-    fnsku: 'D12021T8BFJ',
-    sellerSku: '123456445',
-    platformSku: '',
-    productName: '短袖',
-    weight: 2,
-    size: '20*24*1',
-    costPrice: 0.00,
-    distPrice: 29.00,
-    declaredValue: 0.00,
-    status: '启用',
-    productType: '单个产品',
-    pushStatus: '',
-    pushExcellentWms: '未推送',
-    addedTime: '2025-12-04 13:22:37'
-  },
-  {
-    id: '3',
-    customerName: 'yueyang02',
-    customerCode: '12016',
-    spu: '',
-    fnsku: 'D12016706KE',
-    sellerSku: '1112',
-    platformSku: '',
-    productName: '水杯',
-    weight: 0.5,
-    size: '10*5*10',
-    costPrice: 0.00,
-    distPrice: 0.00,
-    declaredValue: 20.00,
-    status: '启用',
-    productType: '单个产品',
-    pushStatus: '',
-    pushExcellentWms: '未推送',
-    addedTime: '2025-12-04 13:21:51'
-  },
-  {
-    id: '4',
-    customerName: 'shanghai_tech',
-    customerCode: '13001',
-    spu: 'S001',
-    fnsku: 'FNSKU001',
-    sellerSku: 'SKU-001',
-    platformSku: 'P-001',
-    productName: '无线蓝牙耳机',
-    weight: 0.2,
-    size: '5*5*3',
-    costPrice: 45.00,
-    distPrice: 89.00,
-    declaredValue: 30.00,
-    status: '待审核',
-    productType: '单个产品',
-    pushStatus: '',
-    pushExcellentWms: '未推送',
-    addedTime: '2026-05-10 10:00:00'
-  },
-  {
-    id: '5',
-    customerName: 'beijing_trade',
-    customerCode: '13002',
-    spu: 'S002',
-    fnsku: 'FNSKU002',
-    sellerSku: 'SKU-002',
-    platformSku: 'P-002',
-    productName: '便携式咖啡机',
-    weight: 1.5,
-    size: '15*15*25',
-    costPrice: 120.00,
-    distPrice: 249.00,
-    declaredValue: 100.00,
-    status: '停用',
-    productType: '单个产品',
-    pushStatus: '',
-    pushExcellentWms: '已推送',
-    addedTime: '2026-05-09 14:30:00'
-  },
-  {
-    id: '6',
-    customerName: 'shenzhen_elec',
-    customerCode: '13003',
-    spu: 'S003',
-    fnsku: 'FNSKU003',
-    sellerSku: 'SKU-003',
-    platformSku: 'P-003',
-    productName: '智能手表',
-    weight: 0.3,
-    size: '10*10*5',
-    costPrice: 200.00,
-    distPrice: 399.00,
-    declaredValue: 150.00,
-    status: '审核不通过',
-    productType: '单个产品',
-    pushStatus: '',
-    pushExcellentWms: '未推送',
-    addedTime: '2026-05-11 09:15:00'
-  },
-  {
-    id: '10',
-    customerName: 'jinyi',
-    customerCode: '12013',
-    spu: '1',
-    fnsku: 'D12013R38P7',
-    sellerSku: 'yy',
-    platformSku: '',
-    productName: '小帕纸巾',
-    weight: 2,
-    size: '1*1*1',
-    costPrice: 1000.00,
-    distPrice: 0.00,
-    declaredValue: 10000.00,
-    status: '启用',
-    productType: '单个产品',
-    pushStatus: '',
-    pushExcellentWms: '已推送',
-    addedTime: '2025-06-17 14:47:53'
-  }
+  { id: '1', customerName: 'yueyang01', customerCode: '12015', spu: '', fnsku: 'D120154AGF2', sellerSku: '123321', platformSku: '', productName: '猫咪水杯', weight: 0.5, size: '10*5*5', costPrice: 0.00, distPrice: 78.00, declaredValue: 50.00, status: '启用', productType: '单个产品', pushStatus: '', pushExcellentWms: '未推送', addedTime: '2025-12-04 13:23:19' },
+  { id: '2', customerName: 'yueyang07', customerCode: '12021', spu: '', fnsku: 'D12021T8BFJ', sellerSku: '123456445', platformSku: '', productName: '短袖', weight: 2, size: '20*24*1', costPrice: 0.00, distPrice: 29.00, declaredValue: 0.00, status: '启用', productType: '单个产品', pushStatus: '', pushExcellentWms: '未推送', addedTime: '2025-12-04 13:22:37' },
+  { id: '3', customerName: 'yueyang02', customerCode: '12016', spu: '', fnsku: 'D12016706KE', sellerSku: '1112', platformSku: '', productName: '水杯', weight: 0.5, size: '10*5*10', costPrice: 0.00, distPrice: 0.00, declaredValue: 20.00, status: '启用', productType: '单个产品', pushStatus: '', pushExcellentWms: '未推送', addedTime: '2025-12-04 13:21:51' },
+  { id: '4', customerName: 'shanghai_tech', customerCode: '13001', spu: 'S001', fnsku: 'FNSKU001', sellerSku: 'SKU-001', platformSku: 'P-001', productName: '无线蓝牙耳机', weight: 0.2, size: '5*5*3', costPrice: 45.00, distPrice: 89.00, declaredValue: 30.00, status: '待审核', productType: '单个产品', pushStatus: '', pushExcellentWms: '未推送', addedTime: '2026-05-10 10:00:00' },
+  { id: '5', customerName: 'beijing_trade', customerCode: '13002', spu: 'S002', fnsku: 'FNSKU002', sellerSku: 'SKU-002', platformSku: 'P-002', productName: '便携式咖啡机', weight: 1.5, size: '15*15*25', costPrice: 120.00, distPrice: 249.00, declaredValue: 100.00, status: '停用', productType: '单个产品', pushStatus: '', pushExcellentWms: '已推送', addedTime: '2026-05-09 14:30:00' },
+  { id: '6', customerName: 'shenzhen_elec', customerCode: '13003', spu: 'S003', fnsku: 'FNSKU003', sellerSku: 'SKU-003', platformSku: 'P-003', productName: '智能手表', weight: 0.3, size: '10*10*5', costPrice: 200.00, distPrice: 399.00, declaredValue: 150.00, status: '审核不通过', productType: '单个产品', pushStatus: '', pushExcellentWms: '未推送', addedTime: '2026-05-11 09:15:00' },
+  { id: '10', customerName: 'jinyi', customerCode: '12013', spu: '1', fnsku: 'D12013R38P7', sellerSku: 'yy', platformSku: '', productName: '小帕纸巾', weight: 2, size: '1*1*1', costPrice: 1000.00, distPrice: 0.00, declaredValue: 10000.00, status: '启用', productType: '单个产品', pushStatus: '', pushExcellentWms: '已推送', addedTime: '2025-06-17 14:47:53' },
+  { id: '11', customerName: 'guangzhou_garment', customerCode: '13004', spu: 'S004', fnsku: 'FNSKU004', sellerSku: 'SKU-004', platformSku: 'P-004', productName: '无缝瑜伽裤', weight: 0.8, size: '20*30*2', costPrice: 15.00, distPrice: 45.00, declaredValue: 20.00, status: '启用', productType: '支持多规格变体产品', pushStatus: '部分推送', pushExcellentWms: '未推送', addedTime: '2026-05-08 14:20:00' },
+  { id: '12', customerName: 'hangzhou_home', customerCode: '13005', spu: 'S005', fnsku: 'FNSKU005', sellerSku: 'SKU-005', platformSku: 'P-005', productName: '香薰机', weight: 0.5, size: '10*10*15', costPrice: 35.00, distPrice: 85.00, declaredValue: 40.00, status: '待审核', productType: '单个产品', pushStatus: '', pushExcellentWms: '已推送', addedTime: '2026-05-07 10:11:30' },
+  { id: '13', customerName: 'chengdu_toys', customerCode: '13006', spu: 'S006', fnsku: 'FNSKU006', sellerSku: 'SKU-006', platformSku: 'P-006', productName: '益智积木', weight: 1.2, size: '25*15*10', costPrice: 20.00, distPrice: 60.00, declaredValue: 25.00, status: '停用', productType: '单个产品', pushStatus: '', pushExcellentWms: '未推送', addedTime: '2026-05-12 08:00:22' },
+  { id: '14', customerName: 'wuhan_sports', customerCode: '13007', spu: 'S007', fnsku: 'FNSKU007', sellerSku: 'SKU-007', platformSku: 'P-007', productName: '筋膜枪', weight: 0.9, size: '18*15*8', costPrice: 80.00, distPrice: 199.00, declaredValue: 90.00, status: '审核不通过', productType: '单个产品', pushStatus: '', pushExcellentWms: '未推送', addedTime: '2026-04-30 11:45:00' },
+  { id: '15', customerName: 'nanjing_beauty', customerCode: '13008', spu: 'S008', fnsku: 'FNSKU008', sellerSku: 'SKU-008', platformSku: 'P-008', productName: '电动修眉刀', weight: 0.1, size: '12*2*2', costPrice: 12.00, distPrice: 39.00, declaredValue: 15.00, status: '启用', productType: '单个产品', pushStatus: '', pushExcellentWms: '已推送', addedTime: '2026-04-20 16:30:15' },
 ];
 
 interface ProductManagementProps {
@@ -253,7 +125,7 @@ export function ProductManagement({ mode }: ProductManagementProps) {
 
       {/* Main Table */}
       <div className="overflow-auto border border-gray-200">
-        <table className="w-full text-[12px] text-left border-collapse min-w-[1500px]">
+        <table className="w-full text-[12px] text-left border-collapse min-w-[1500px] border-b border-gray-200">
           <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
             <tr>
               <th className="px-3 py-2 border-r border-gray-200 w-20">
@@ -280,7 +152,7 @@ export function ProductManagement({ mode }: ProductManagementProps) {
               <th className="px-3 py-2">操作</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200">
+          <tbody className="divide-y divide-gray-200 border-b border-gray-200">
             {displayData.map((item, index) => (
               <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                 <td className="px-3 py-2 border-r border-gray-200">

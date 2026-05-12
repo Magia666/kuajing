@@ -28,146 +28,18 @@ interface InventoryData {
 }
 
 const MOCK_DATA: InventoryData[] = [
-  {
-    id: '1',
-    customerName: 'yueyang07',
-    customerCode: '12021',
-    fnsku: 'D12021T8BFJ',
-    sellerSku: '',
-    productName: '短袖',
-    warehouse: '星卓越泰国国仓',
-    shelf: '',
-    transitCount: 0,
-    availableCount: 18,
-    pendingCount: 0,
-    distCount: 3,
-    day10Sales: 0,
-    day30Sales: 0,
-    invAge: 158.1,
-    volume: 0.009,
-    warningLimit: 5,
-    entryTime: '2025-12-04 13:31:42'
-  },
-  {
-    id: '2',
-    customerName: 'yueyang01',
-    customerCode: '12015',
-    fnsku: 'D120154AGF2',
-    sellerSku: '',
-    productName: '猫咪水杯',
-    warehouse: '星卓越泰国国仓',
-    shelf: '',
-    transitCount: 0,
-    availableCount: 50,
-    pendingCount: 0,
-    distCount: 50,
-    day10Sales: 0,
-    day30Sales: 0,
-    invAge: 158.1,
-    volume: 0.013,
-    warningLimit: 0,
-    entryTime: '2025-12-04 13:30:58'
-  },
-  {
-    id: '3',
-    customerName: 'qin',
-    customerCode: '12014',
-    fnsku: 'D12014GK1AA',
-    sellerSku: '',
-    productName: '猫粮10好',
-    warehouse: '星卓越泰国国仓',
-    shelf: '',
-    transitCount: 0,
-    availableCount: 100,
-    pendingCount: 0,
-    distCount: 0,
-    day10Sales: 0,
-    day30Sales: 0,
-    invAge: 158.1,
-    volume: 0.001,
-    warningLimit: 0,
-    entryTime: '2025-12-04 13:29:21'
-  },
-  {
-    id: '4',
-    customerName: 'qin',
-    customerCode: '12014',
-    fnsku: 'D12014U4YX1',
-    sellerSku: '',
-    productName: '猫砂',
-    warehouse: '星卓越泰国国仓',
-    shelf: '',
-    transitCount: 0,
-    availableCount: 225,
-    pendingCount: 2,
-    distCount: 80,
-    day10Sales: 0,
-    day30Sales: 0,
-    invAge: 158.9,
-    volume: 0.001,
-    warningLimit: 0,
-    entryTime: '2025-12-03 19:49:18'
-  },
-  {
-    id: '5',
-    customerName: 'qin',
-    customerCode: '12014',
-    fnsku: 'D12014TCL0Z',
-    sellerSku: '',
-    productName: '猫砂二号',
-    warehouse: '星卓越泰国国仓',
-    shelf: '',
-    transitCount: 0,
-    availableCount: 300,
-    pendingCount: 1,
-    distCount: 0,
-    day10Sales: 0,
-    day30Sales: 0,
-    invAge: 158.9,
-    volume: 0.007,
-    warningLimit: 0,
-    entryTime: '2025-12-03 19:49:18'
-  },
-  {
-    id: '6',
-    customerName: 'jinyi',
-    customerCode: '12013',
-    fnsku: 'D120136O4FH',
-    sellerSku: '',
-    productName: '测试商品',
-    warehouse: '星卓越泰国国仓',
-    shelf: '',
-    transitCount: 0,
-    availableCount: 70,
-    pendingCount: 0,
-    distCount: 30,
-    day10Sales: 0,
-    day30Sales: 0,
-    invAge: 160.7,
-    volume: 0,
-    warningLimit: 0,
-    entryTime: '2025-12-01 23:59:01'
-  },
-  {
-    id: '7',
-    customerName: 'chenwei',
-    customerCode: '12000',
-    fnsku: 'D12000QJXUV',
-    sellerSku: '',
-    productName: '乔丹速干短袖T恤',
-    warehouse: '星卓越泰国国仓',
-    shelf: '',
-    transitCount: 0,
-    availableCount: 0,
-    pendingCount: 2,
-    distCount: 297,
-    day10Sales: 0,
-    day30Sales: 0,
-    invAge: 376.2,
-    volume: 0,
-    warningLimit: 0,
-    entryTime: '2024-04-30 10:51:27'
-  }
+  { id: '1', customerName: 'yueyang07', customerCode: '12021', fnsku: 'D12021T8BFJ', sellerSku: 'SKU01', productName: '短袖', warehouse: '星卓越泰国国仓', shelf: 'A1-02-03', transitCount: 0, availableCount: 18, pendingCount: 0, distCount: 3, day10Sales: 5, day30Sales: 15, invAge: 158.1, volume: 0.009, warningLimit: 5, entryTime: '2025-12-04 13:31:42' },
+  { id: '2', customerName: 'yueyang01', customerCode: '12015', fnsku: 'D120154AGF2', sellerSku: 'SKU02', productName: '猫咪水杯', warehouse: '星卓越泰国国仓', shelf: 'B2-01-01', transitCount: 0, availableCount: 50, pendingCount: 0, distCount: 50, day10Sales: 10, day30Sales: 45, invAge: 158.1, volume: 0.013, warningLimit: 10, entryTime: '2025-12-04 13:30:58' },
+  { id: '3', customerName: 'qin', customerCode: '12014', fnsku: 'D12014GK1AA', sellerSku: 'SKU03', productName: '猫粮10好', warehouse: '星卓越泰国国仓', shelf: 'C5-04-02', transitCount: 30, availableCount: 100, pendingCount: 0, distCount: 0, day10Sales: 20, day30Sales: 80, invAge: 158.1, volume: 0.001, warningLimit: 20, entryTime: '2025-12-04 13:29:21' },
+  { id: '4', customerName: 'qin', customerCode: '12014', fnsku: 'D12014U4YX1', sellerSku: 'SKU04', productName: '猫砂', warehouse: '星卓越泰国国仓', shelf: 'C5-04-03', transitCount: 50, availableCount: 225, pendingCount: 2, distCount: 80, day10Sales: 15, day30Sales: 60, invAge: 158.9, volume: 0.001, warningLimit: 50, entryTime: '2025-12-03 19:49:18' },
+  { id: '5', customerName: 'qin', customerCode: '12014', fnsku: 'D12014TCL0Z', sellerSku: 'SKU05', productName: '猫砂二号', warehouse: '深圳转运仓', shelf: 'D1-01-01', transitCount: 0, availableCount: 300, pendingCount: 1, distCount: 0, day10Sales: 50, day30Sales: 120, invAge: 158.9, volume: 0.007, warningLimit: 50, entryTime: '2025-12-03 19:49:18' },
+  { id: '6', customerName: 'jinyi', customerCode: '12013', fnsku: 'D120136O4FH', sellerSku: 'SKU06', productName: '测试商品', warehouse: '星卓越泰国国仓', shelf: 'E3-02-05', transitCount: 10, availableCount: 70, pendingCount: 0, distCount: 30, day10Sales: 5, day30Sales: 10, invAge: 160.7, volume: 0, warningLimit: 10, entryTime: '2025-12-01 23:59:01' },
+  { id: '7', customerName: 'chenwei', customerCode: '12000', fnsku: 'D12000QJXUV', sellerSku: 'SKU07', productName: '乔丹速干短袖T恤', warehouse: '美国洛杉矶仓', shelf: 'F1-05-08', transitCount: 200, availableCount: 0, pendingCount: 2, distCount: 297, day10Sales: 0, day30Sales: 0, invAge: 376.2, volume: 0, warningLimit: 50, entryTime: '2024-04-30 10:51:27' },
+  { id: '8', customerName: 'shanghai_tech', customerCode: '13001', fnsku: 'D13001A8BBC', sellerSku: 'SKU08', productName: '无线蓝牙耳机', warehouse: '美国纽约仓', shelf: 'A2-03-01', transitCount: 100, availableCount: 450, pendingCount: 5, distCount: 120, day10Sales: 35, day30Sales: 150, invAge: 45.2, volume: 0.005, warningLimit: 100, entryTime: '2026-03-15 09:20:11' },
+  { id: '9', customerName: 'beijing_trade', customerCode: '13002', fnsku: 'D13002X9ZZP', sellerSku: 'SKU09', productName: '便携式咖啡机', warehouse: '英国伦敦仓', shelf: 'B1-02-02', transitCount: 0, availableCount: 85, pendingCount: 1, distCount: 0, day10Sales: 12, day30Sales: 40, invAge: 88.5, volume: 0.025, warningLimit: 50, entryTime: '2026-01-20 14:15:30' },
+  { id: '10', customerName: 'shenzhen_elec', customerCode: '13003', fnsku: 'D13003Y5MMK', sellerSku: 'SKU10', productName: '智能手表', warehouse: '星卓越泰国国仓', shelf: 'C2-01-05', transitCount: 50, availableCount: 320, pendingCount: 8, distCount: 0, day10Sales: 45, day30Sales: 180, invAge: 32.1, volume: 0.003, warningLimit: 100, entryTime: '2026-04-10 11:45:00' },
+  { id: '11', customerName: 'guangzhou_garment', customerCode: '13004', fnsku: 'D13004W2LLJ', sellerSku: 'SKU11', productName: '无缝瑜伽裤', warehouse: '美国洛杉矶仓', shelf: 'D4-05-02', transitCount: 200, availableCount: 800, pendingCount: 15, distCount: 300, day10Sales: 80, day30Sales: 350, invAge: 15.5, volume: 0.008, warningLimit: 200, entryTime: '2026-04-25 10:30:20' },
+  { id: '12', customerName: 'hangzhou_home', customerCode: '13005', fnsku: 'D13005V1NNH', sellerSku: 'SKU12', productName: '香薰机', warehouse: '德国法兰克福仓', shelf: 'E1-01-01', transitCount: 0, availableCount: 150, pendingCount: 3, distCount: 0, day10Sales: 8, day30Sales: 25, invAge: 120.4, volume: 0.015, warningLimit: 30, entryTime: '2025-12-15 08:20:10' },
 ];
 
 interface InventoryManagementProps {
@@ -275,7 +147,7 @@ export function InventoryManagement({ mode }: InventoryManagementProps) {
       {/* Main Table Content */}
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden min-h-[calc(100vh-160px)]">
         <div className="overflow-auto overflow-y-auto max-h-[calc(100vh-200px)]">
-          <table className="w-full border-collapse text-[12px] text-left">
+          <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
                 <th className="px-3 border-r border-gray-200 min-w-[50px] py-2"><input type="checkbox" className="mr-1" />序号</th>
@@ -297,7 +169,7 @@ export function InventoryManagement({ mode }: InventoryManagementProps) {
                 <th className="px-3 py-2 border-r border-gray-200">操作</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200 border-b border-gray-200">
               {MOCK_DATA.map((item, i) => (
                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-3 border-r border-gray-200 py-2"><input type="checkbox" className="mr-1" />{i + 1}</td>
@@ -413,7 +285,7 @@ function OwnerDistInv() {
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
         <div className="overflow-auto">
-          <table className="w-full border-collapse text-[12px] text-left">
+          <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
                 <th className="px-3 border-r border-gray-200 w-12 py-2"><input type="checkbox" className="mr-1" />序号</th>
@@ -431,7 +303,7 @@ function OwnerDistInv() {
                 <th className="px-3 py-2 border-r border-gray-200">操作</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200 border-b border-gray-200">
               {DIST_DATA.map((item, i) => (
                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-3 border-r border-gray-200 py-2"><input type="checkbox" className="mr-1" />{i + 1}</td>
@@ -529,7 +401,7 @@ function CustDistInv() {
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
         <div className="overflow-auto">
-          <table className="w-full border-collapse text-[12px] text-left">
+          <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
                 <th className="px-3 border-r border-gray-200 w-12 py-2"><input type="checkbox" className="mr-1" />序号</th>
@@ -551,7 +423,7 @@ function CustDistInv() {
                 <th className="px-3 py-2 border-r border-gray-200">操作</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200 border-b border-gray-200">
               {CUST_DIST_DATA.map((item, i) => (
                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-3 border-r border-gray-200 py-2"><input type="checkbox" className="mr-1" />{i + 1}</td>
@@ -659,7 +531,7 @@ function InvWarning() {
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden min-h-[calc(100vh-160px)]">
         <div className="overflow-auto overflow-y-auto max-h-[calc(100vh-200px)]">
-          <table className="w-full border-collapse text-[12px] text-left">
+          <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
                 <th className="px-3 border-r border-gray-200 min-w-[50px] py-2"><input type="checkbox" className="mr-1" />序号</th>
@@ -681,7 +553,7 @@ function InvWarning() {
                 <th className="px-3 py-2 border-r border-gray-200">操作</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200 border-b border-gray-200">
               {WARNING_DATA.map((item, i) => (
                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-3 border-r border-gray-200 py-2"><input type="checkbox" className="mr-1" />{i + 1}</td>
@@ -835,7 +707,7 @@ function InvDetail() {
       {/* Main Table Content */}
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
         <div className="overflow-auto">
-          <table className="w-full border-collapse text-[12px] text-left">
+          <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
                 <th className="px-3 border-r border-gray-200 w-12 py-2"><input type="checkbox" className="mr-1" />序号</th>
@@ -851,7 +723,7 @@ function InvDetail() {
                 <th className="px-3 min-w-[140px] py-2 border-r border-gray-200">添加时间</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200 border-b border-gray-200">
               {DETAIL_DATA.map((item, i) => (
                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-3 border-r border-gray-200 py-2"><input type="checkbox" className="mr-1" />{i + 1}</td>
@@ -1069,7 +941,7 @@ function InvQueryCombo() {
       {/* Main Table Content */}
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
         <div className="overflow-auto">
-          <table className="w-full border-collapse text-[12px] text-left">
+          <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
                 <th className="px-3 border-r border-gray-200 w-12 py-2"><input type="checkbox" className="mr-1" />序号</th>
@@ -1083,7 +955,7 @@ function InvQueryCombo() {
                 <th className="px-3 py-2 border-r border-gray-200">操作</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200 border-b border-gray-200">
               {COMBO_DATA.map((item, i) => (
                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-3 border-r border-gray-200 py-2"><input type="checkbox" className="mr-1" />{i + 1}</td>
@@ -1200,7 +1072,7 @@ function TransitDetail() {
       {/* Main Table Content */}
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
         <div className="overflow-auto">
-          <table className="w-full border-collapse text-[12px] text-left">
+          <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
                 <th className="px-3 border-r border-gray-200 w-12 py-2"><input type="checkbox" className="mr-1" />序号</th>
@@ -1215,7 +1087,7 @@ function TransitDetail() {
                 <th className="px-3 py-2 border-r border-gray-200">头程类型</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200 border-b border-gray-200">
               {TRANSIT_DATA.map((item, i) => (
                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-3 border-r border-gray-200 py-2"><input type="checkbox" className="mr-1" />{i + 1}</td>
@@ -1351,7 +1223,7 @@ function InvHistory() {
       {/* Main Table Content */}
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
         <div className="overflow-auto">
-          <table className="w-full border-collapse text-[12px] text-left">
+          <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
                 <th className="px-3 border-r border-gray-200 w-12 py-2"><input type="checkbox" className="mr-1" />序号</th>
@@ -1372,7 +1244,7 @@ function InvHistory() {
                 <th className="px-3 py-2 border-r border-gray-200">头程类型</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200 border-b border-gray-200">
               {HISTORY_DATA.map((item, i) => (
                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-3 border-r border-gray-200 py-2"><input type="checkbox" className="mr-1" />{i + 1}</td>
@@ -1573,7 +1445,7 @@ function MaterialList() {
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
         <div className="overflow-auto">
-          <table className="w-full border-collapse text-[12px] text-left">
+          <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr>
                 <th className="px-3 border-r border-gray-200 w-12 py-2"><input type="checkbox" className="mr-1" />序号</th>
@@ -1589,7 +1461,7 @@ function MaterialList() {
                 <th className="px-3 py-2 border-r border-gray-200">操作</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200 border-b border-gray-200">
               {MATERIAL_DATA.map((item, i) => (
                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-3 border-r border-gray-200 py-2"><input type="checkbox" className="mr-1" />{i + 1}</td>
@@ -1676,7 +1548,7 @@ function PendingOffShelf() {
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
         <div className="overflow-auto">
-          <table className="w-full border-collapse text-[12px] text-left">
+          <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
                 <th className="px-3 border-r border-gray-200 w-12 py-2"><input type="checkbox" className="mr-1" />序号</th>
@@ -1692,7 +1564,7 @@ function PendingOffShelf() {
                 <th className="px-3 py-2 border-r border-gray-200">操作</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200 border-b border-gray-200">
               {OFF_SHELF_DATA.map((item, i) => (
                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-3 border-r border-gray-200 py-2"><input type="checkbox" className="mr-1" />{i + 1}</td>
@@ -1781,7 +1653,7 @@ function DoneOffShelf() {
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
         <div className="overflow-auto">
-          <table className="w-full border-collapse text-[12px] text-left">
+          <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
                 <th className="px-3 border-r border-gray-200 w-12 py-2"><input type="checkbox" className="mr-1" />序号</th>
@@ -1797,7 +1669,7 @@ function DoneOffShelf() {
                 <th className="px-3 py-2 border-r border-gray-200">操作</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200 border-b border-gray-200">
               {DONE_DATA.map((item, i) => (
                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-3 border-r border-gray-200 font-normal py-2"><input type="checkbox" className="mr-1" />{i + 1}</td>
@@ -1887,7 +1759,7 @@ function MaterialRecord() {
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
         <div className="overflow-auto">
-          <table className="w-full border-collapse text-[12px] text-left">
+          <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr>
                 <th className="px-3 border-r border-gray-200 w-12 py-2"><input type="checkbox" className="mr-1" />序号</th>
@@ -1901,7 +1773,7 @@ function MaterialRecord() {
                 <th className="px-3 py-2 border-r border-gray-200">添加时间</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200 border-b border-gray-200">
               {RECORD_DATA.map((item, i) => (
                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-3 border-r border-gray-200 py-2"><input type="checkbox" className="mr-1" />{i + 1}</td>

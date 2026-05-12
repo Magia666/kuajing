@@ -99,7 +99,7 @@ export function PriceManagement({ mode }: PriceManagementProps) {
 
         {/* Table area */}
         <div className="overflow-auto flex-1 pb-16">
-          <table className="w-full border-collapse text-[12px] text-center min-w-max">
+          <table className="w-full border-collapse text-[12px] text-center min-w-max border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="border-b border-gray-200">
                 <th className="px-3 py-3 border-r border-gray-200 w-16">

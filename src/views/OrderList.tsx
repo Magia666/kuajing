@@ -23,68 +23,26 @@ interface OrderData {
   pushStatus: string;
 }
 
-const MOCK_DATA: OrderData[] = [
-  {
-    id: '1',
-    customerName: 'yueyang07',
-    customerCode: '12021',
-    refNo: 'FX12021001',
-    totalBoxes: 1,
-    inBoxes: 1,
-    weight: 4,
-    volume: 0,
-    channel: '',
-    warehouse: '星卓越泰国国仓',
-    deliveryMethod: '自寄海外仓',
-    targetType: '寄往海外仓',
-    firstLegType: '一件代发',
-    status: '海外仓已入库',
-    pushWms: '未推送',
-    addedTime: '2025-12-04 13:29:33',
-    remark: '无',
-    pushStatus: ''
-  },
-  {
-    id: '2',
-    customerName: 'yueyang01',
-    customerCode: '12015',
-    refNo: 'FX12015001',
-    totalBoxes: 1,
-    inBoxes: 1,
-    weight: 50,
-    volume: 1,
-    channel: '',
-    warehouse: '星卓越泰国国仓',
-    deliveryMethod: '自寄海外仓',
-    targetType: '寄往海外仓',
-    firstLegType: '一件代发',
-    status: '海外仓已入库',
-    pushWms: '未推送',
-    addedTime: '2025-12-04 13:28:29',
-    remark: '123',
-    pushStatus: ''
-  },
-  {
-    id: '3',
-    customerName: 'qin',
-    customerCode: '12014',
-    refNo: 'FX12014004',
-    totalBoxes: 1,
-    inBoxes: 1,
-    weight: 10,
-    volume: 0.01,
-    channel: '',
-    warehouse: '星卓越泰国国仓',
-    deliveryMethod: '自寄海外仓',
-    targetType: '寄往海外仓',
-    firstLegType: '一件代发',
-    status: '海外仓已入库',
-    pushWms: '未推送',
-    addedTime: '2025-12-04 13:27:44',
-    remark: '',
-    pushStatus: ''
-  }
-];
+const MOCK_DATA: OrderData[] = Array.from({ length: 25 }).map((_, i) => ({
+  id: `${i + 1}`,
+  customerName: ['yueyang07', 'shenzhen_trade', 'global_buy', 'lucky_star', 'tech_store'][i % 5],
+  customerCode: `120${21 + i}`,
+  refNo: `FX12021${i.toString().padStart(3, '0')}`,
+  totalBoxes: Math.floor(Math.random() * 10) + 1,
+  inBoxes: Math.floor(Math.random() * 5),
+  weight: parseFloat((Math.random() * 20 + 2).toFixed(2)),
+  volume: parseFloat((Math.random() * 2).toFixed(2)),
+  channel: ['海运快线', '空运直飞', '铁路专线', '卡航极速'][i % 4],
+  warehouse: ['美国东部仓', '星卓越泰国国仓', '英国本土仓', '澳洲悉尼仓'][i % 4],
+  deliveryMethod: '自寄海外仓',
+  targetType: '寄往海外仓',
+  firstLegType: '一件代发',
+  status: ['待确认', '已发货', '运输中', '海外仓已入库'][i % 4],
+  pushWms: i % 2 === 0 ? '已推送' : '未推送',
+  addedTime: `2026-05-${(10 + (i % 20)).toString().padStart(2, '0')} 13:29:33`,
+  remark: i % 5 === 0 ? '加急处理' : '无',
+  pushStatus: ''
+}));
 
 export function OrderList() {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
@@ -150,7 +108,7 @@ export function OrderList() {
 
       {/* Main Table */}
       <div className="overflow-auto">
-        <table className="w-full text-[12px] text-left border-collapse min-w-[2000px]">
+        <table className="w-full text-[12px] text-left border-collapse min-w-[2000px] border-b border-gray-200">
           <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
             <tr>
               <th className="px-3 py-2 border-r border-gray-200 w-20">
@@ -177,7 +135,7 @@ export function OrderList() {
               <th className="px-3 py-2 border-r border-gray-200">操作</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200">
+          <tbody className="divide-y divide-gray-200 border-b border-gray-200">
             {MOCK_DATA.map((item, index) => (
               <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                 <td className="px-3 py-2 border-r border-gray-200">
@@ -243,7 +201,7 @@ export function OrderList() {
         </button>
 
         <div className="flex items-center gap-4 text-[12px] text-gray-500">
-          <span>总计 14 个记录分为 1 页当前第 1 页，每页</span>
+          <span>总计 {MOCK_DATA.length} 个记录分为 1 页当前第 1 页，每页</span>
           <select className="border border-gray-300 rounded-sm px-1 h-6 outline-none focus:border-blue-400">
             <option>100</option>
             <option>200</option>

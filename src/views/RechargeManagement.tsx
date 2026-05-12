@@ -170,7 +170,7 @@ export function RechargeManagement({ mode }: RechargeManagementProps) {
 
           {/* Table area */}
           <div className="overflow-auto flex-1">
-            <table className="w-full border-collapse text-[12px] text-center">
+            <table className="w-full border-collapse text-[12px] text-center border-b border-gray-200">
               <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
                 <tr className="border-b border-gray-200">
                   {(mode === 'recharge-list' || mode === 'recharge-done' || mode === 'recharge-detail') && (

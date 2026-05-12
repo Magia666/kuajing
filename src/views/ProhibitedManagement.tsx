@@ -76,12 +76,12 @@ export function ProhibitedManagement() {
 
       {/* Main Table */}
       <div className="overflow-auto border border-gray-200">
-        <table className="w-full text-[12px] text-left border-collapse min-w-[1200px]">
+        <table className="w-full text-[12px] text-left border-collapse min-w-[1200px] border-b border-gray-200">
           <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
             <tr>
               <th className="px-3 py-2 border-r border-gray-200 w-20">
                 <div className="flex items-center gap-2 justify-center">
-                  <input type="checkbox" /> 查询
+                  <input type="checkbox" /> 序号
                 </div>
               </th>
               <th className="px-3 py-2 border-r border-gray-200 w-64">禁运品名称</th>
@@ -91,7 +91,7 @@ export function ProhibitedManagement() {
               <th className="px-3 py-2 w-24 border-r border-gray-200">操作</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200">
+          <tbody className="divide-y divide-gray-200 border-b border-gray-200">
             {MOCK_DATA.map((item, index) => (
               <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                 <td className="px-3 py-4 border-r border-gray-200 py-2">

@@ -23,46 +23,37 @@ export function TopNav({ activeModuleId, setActiveModuleId }: TopNavProps) {
   return (
     <header className="h-14 bg-white border-b border-gray-100 flex items-center px-4 shrink-0 shadow-sm z-40 bg-opacity-95 backdrop-blur-sm sticky top-0">
       <div className="flex items-center">
-        <div className="flex items-center gap-2 mr-8">
-          <Globe className="text-blue-600" size={24} />
-          <span className="font-bold text-gray-800 text-lg tracking-tight">跨境电商供应链实训系统</span>
+        <div className="flex items-center gap-2 mr-10 origin-bottom-left -skew-x-[15deg]">
+          <div className="font-black text-gray-800 text-lg tracking-wider">跨境电商供应链实训系统</div>
         </div>
 
-        <nav className="flex items-center h-full gap-1">
+        <nav className="flex items-center h-full gap-2">
           {NAV_TABS.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveModuleId(tab.id)}
               className={cn(
-                "px-4 h-14 text-sm font-medium transition-all relative flex items-center justify-center",
+                "px-3 py-1.5 text-[14px] transition-colors rounded-sm",
                 activeModuleId === tab.id 
-                  ? "text-blue-600 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-blue-600" 
-                  : "text-gray-600 hover:text-blue-500 hover:bg-gray-50"
+                  ? "bg-[#1890ff] text-white font-medium" 
+                  : "text-gray-600 hover:text-blue-500"
               )}
             >
-              <div className={cn(
-                "px-3 py-1 rounded-sm",
-                activeModuleId === tab.id && "bg-blue-600 text-white"
-              )}>
-                {tab.label}
-              </div>
+              {tab.label}
             </button>
           ))}
         </nav>
       </div>
 
-      <div className="ml-auto flex items-center gap-6 text-sm">
-        <div className="flex items-center gap-2 text-orange-500 font-medium">
-          <span className="text-gray-500 text-xs">您所在海外仓:</span>
-          <span className="bg-orange-50 px-2 py-0.5 rounded border border-orange-100">全部仓库</span>
+      <div className="ml-auto flex items-center gap-6 text-[13px]">
+        <div className="flex items-center text-[#fa8c16]">
+          <span>您所在海外仓:全部仓库</span>
         </div>
         
-        <div className="flex items-center gap-2 text-gray-700 cursor-pointer hover:bg-gray-50 px-2 py-1 rounded transition-colors group">
-          <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-            <User size={14} className="text-blue-600" />
-          </div>
-          <span className="font-medium">FX管理员</span>
-          <ChevronDown size={14} className="text-gray-400 group-hover:text-gray-600 transition-colors" />
+        <div className="flex items-center gap-1 text-gray-700 cursor-pointer hover:bg-gray-50 px-2 py-1 rounded transition-colors group">
+          <Globe size={14} className="text-[#1890ff]" />
+          <span>fxadmin</span>
+          <ChevronDown size={12} className="text-gray-400 group-hover:text-gray-600 ml-1" />
         </div>
       </div>
     </header>

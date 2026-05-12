@@ -179,7 +179,7 @@ export function AddDropshipOrder() {
             </button>
           </div>
           <div className="bg-white overflow-auto">
-            <table className="w-full text-[12px] border-collapse text-left">
+            <table className="w-full text-[12px] border-collapse text-left border-b border-gray-200">
               <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
                 <tr className="bg-gray-100 text-gray-600">
                   <th className="px-3 py-2 border-r border-gray-200 font-medium">Fnsku</th>
@@ -222,7 +222,7 @@ export function AddDropshipOrder() {
             <span className="text-[13px] font-medium text-gray-700">运费估算</span>
           </div>
           <div className="bg-white">
-            <table className="w-full text-left text-[12px] border-collapse">
+            <table className="w-full text-left text-[12px] border-collapse border-b border-gray-200">
               <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
                 <tr className="bg-gray-100 text-gray-600 border-b border-gray-200">
                   <th className="px-3 py-2 border-r border-gray-200 font-medium">序号</th>

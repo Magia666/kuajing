@@ -110,7 +110,7 @@ export function TrackManagement({ mode }: TrackManagementProps) {
                    </div>
                 </div>
                 <div className="p-3">
-                   <table className="w-full border-collapse text-[12px] text-left">
+                   <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
                       <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
                          <tr className="bg-[#f4f7f9] border-b border-gray-200">
                             <th className="px-3 py-2 border-r border-gray-200 font-bold text-gray-700">序号</th>
@@ -231,7 +231,7 @@ export function TrackManagement({ mode }: TrackManagementProps) {
         </div>
 
         <div className="flex-1 overflow-auto min-h-0">
-           <table className="w-full border-collapse text-[12px] text-left">
+           <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
               <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
                  <tr className="hover:bg-gray-50 transition-colors">
                     <th className="px-3 border-r border-gray-200 w-12 py-2"><input type="checkbox" /> 序号</th>
@@ -242,7 +242,7 @@ export function TrackManagement({ mode }: TrackManagementProps) {
                     <th className="px-3 text-gray-600 py-2 border-r border-gray-200">操作</th>
                  </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200">
+              <tbody className="divide-y divide-gray-200 border-b border-gray-200">
                  {RULES_MOCK.map((rule, i) => (
                     <tr key={rule.id} className="hover:bg-gray-50 transition-colors">
                        <td className="px-3 border-r border-gray-200 py-2"><input type="checkbox" /> {i + 1}</td>
@@ -343,7 +343,7 @@ export function TrackManagement({ mode }: TrackManagementProps) {
 
       {/* Table Section */}
       <div className="flex-1 overflow-auto min-h-0">
-        <table className="w-full border-collapse text-[12px] text-left">
+        <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
           <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
             <tr className="hover:bg-gray-50 transition-colors">
               <th className="px-3 border-r border-gray-200 w-12 py-2"><input type="checkbox" /> 序号</th>
@@ -361,7 +361,7 @@ export function TrackManagement({ mode }: TrackManagementProps) {
               <th className="px-3 whitespace-nowrap py-2 border-r border-gray-200">操作</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200">
+          <tbody className="divide-y divide-gray-200 border-b border-gray-200">
             {filteredOrders.map((order, i) => (
               <tr key={order.id} className="hover:bg-gray-50 transition-colors">
                 <td className="px-3 border-r border-gray-200 py-2"><input type="checkbox" /> {i + 1}</td>

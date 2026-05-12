@@ -4,8 +4,7 @@
  */
 
 import React from 'react';
-import { Sidebar } from './components/Sidebar';
-import { TopNav } from './components/TopNav';
+import { BrowserRouter, Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { StatCards } from './components/StatCards';
 import { ActionSection } from './components/ActionSection';
 import { DashboardContent } from './components/DashboardContent';
@@ -60,209 +59,100 @@ import { RechargeManagement } from './views/RechargeManagement';
 import { FinancialReports } from './views/FinancialReports';
 import { AgentSettlement } from './views/AgentSettlement';
 import { PriceManagement } from './views/PriceManagement';
+import { CustomerList } from './views/CustomerList';
 import { GenericView } from './views/GenericView';
-import { ChevronRight, Home } from 'lucide-react';
+import { ManagerMonthlyReport } from './views/ManagerMonthlyReport';
 
-export default function App() {
-  const [activeModuleId, setActiveModuleId] = React.useState('nebula');
-  const [activeItemId, setActiveItemId] = React.useState('dashboard');
-  const [openTabs, setOpenTabs] = React.useState<{id: string, label: string}[]>([{ id: 'dashboard', label: '首页' }]);
+function Dashboard() {
+  return (
+    <div className="flex flex-col gap-4 overflow-auto p-4 w-full h-full">
+      <StatCards />
+      <ActionSection />
+      <DashboardContent />
+    </div>
+  );
+}
 
-  const handleSetTab = (id: string, label?: string) => {
-    setActiveItemId(id);
-    if (!openTabs.find(t => t.id === id)) {
-      setOpenTabs([...openTabs, { id, label: label || id }]);
-    }
-  };
+function ViewSwitcher() {
+  const { viewId } = useParams();
+  const activeItemId = viewId || 'dashboard';
 
-  const closeTab = (e: React.MouseEvent, id: string) => {
-    e.stopPropagation();
-    const newTabs = openTabs.filter(t => t.id !== id);
-    if (newTabs.length === 0) {
-      newTabs.push({ id: 'dashboard', label: '首页' });
-    }
-    setOpenTabs(newTabs);
-    if (activeItemId === id) {
-      setActiveItemId(newTabs[newTabs.length - 1].id);
-    }
-  };
+  let content = null;
+
+  if (activeItemId === 'single-add') content = <AddProductSingle />;
+  else if (activeItemId === 'material-add') content = <MaterialAdd />;
+  else if (activeItemId === 'bulk-import') content = <BulkImportProduct />;
+  else if (['pending-review', 'product-list', 'disabled-products', 'rejected-products'].includes(activeItemId)) content = <ProductManagement mode={activeItemId as any} />;
+  else if (['pending-dist', 'dist-list', 'dist-apply'].includes(activeItemId)) content = <DistributionManagement mode={activeItemId as any} />;
+  else if (activeItemId === 'category-management') content = <CategoryManagement />;
+  else if (activeItemId === 'prohibited-items') content = <ProhibitedManagement />;
+  else if (activeItemId === 'hs-codes') content = <HSCodeManagement />;
+  else if (activeItemId === 'order-add') content = <AddOrder />;
+  else if (activeItemId === 'all-orders') content = <OrderList />;
+  else if (activeItemId === 'pending-confirm') content = <PendingConfirmationOrders />;
+  else if (activeItemId === 'pending-warehouse') content = <OverseasPendingInWarehouse />;
+  else if (activeItemId === 'in-warehouse') content = <OverseasInWarehouse />;
+  else if (activeItemId === 'failed-confirm') content = <ConfirmationFailedOrders />;
+  else if (activeItemId === 'order-recycle') content = <OrderRecycleBin />;
+  else if (activeItemId === 'return-order-add') content = <AddReturnOrder />;
+  else if (activeItemId === 'add-dropship-order') content = <AddDropshipOrder />;
+  else if (activeItemId === 'return-order-list') content = <ReturnOrderList />;
+  else if (activeItemId === 'ret-pending') content = <ReturnPendingConfirmation />;
+  else if (activeItemId === 'ret-wh-pending') content = <ReturnOverseasPendingInWarehouse />;
+  else if (activeItemId === 'ret-wh-done') content = <ReturnOverseasInWarehouse />;
+  else if (activeItemId === 'ret-failed') content = <ReturnConfirmationFailed />;
+  else if (activeItemId === 'ret-recycle') content = <ReturnOrderRecycleBin />;
+  else if (['ds-all', 'ds-pending', 'ds-pack', 'ds-oos', 'ds-ship', 'ds-waiting', 'ds-signed', 'ds-deleted'].includes(activeItemId)) content = <DropshipOrderList mode={activeItemId as any} />;
+  else if (['track-rules', 'track-orders', 'track-sign', 'track-delivery-err', 'track-timeout-err', 'track-analysis'].includes(activeItemId)) content = <TrackManagement mode={activeItemId as any} />;
+  else if (['inv-query', 'owner-dist-inv', 'cust-dist-inv', 'inv-query-combo', 'inv-age-analysis', 'inv-detail', 'inv-warning', 'inv-transit', 'inv-history-shelf', 'pending-off-shelf', 'done-off-shelf'].includes(activeItemId)) content = <InventoryManagement mode={activeItemId as any} />;
+  else if (activeItemId === 'ds-pending-shelf') content = <DropshipPendingShelf />;
+  else if (activeItemId === 'transit-pending-shelf') content = <TransitPendingShelf />;
+  else if (activeItemId === 'wh-in-report') content = <InboundReport />;
+  else if (activeItemId === 'wh-out-report') content = <OutboundReport />;
+  else if (activeItemId === 'sku-io-report') content = <SkuInOutReport />;
+  else if (activeItemId === 'sorting-ports') content = <SortingPortManagement />;
+  else if (activeItemId === 'sorting-flow') content = <SortingFlow />;
+  else if (activeItemId === 'sorting-status') content = <SortingStatus />;
+  else if (activeItemId === 'wh-list-config') content = <WarehouseListConfig />;
+  else if (activeItemId === 'fba-wh') content = <FBAWarehouse />;
+  else if (activeItemId === 'shelf-add') content = <ShelfAdd />;
+  else if (activeItemId === 'shelf-mgmt') content = <ShelfMgmt />;
+  else if (activeItemId === 'wh-usage-rate') content = <WhUsageRate />;
+  else if (activeItemId === 'shelf-vacancy-rate') content = <ShelfVacancyRate />;
+  else if (['material-list', 'material-record'].includes(activeItemId)) content = <MaterialManagement mode={activeItemId as any} />;
+  else if (activeItemId === 'orders-anon-list') content = <AnonList />;
+  else if (['inbound-price-review', 'inbound-pending-bill', 'inbound-balance-bill', 'inbound-write-off-bill', 'inbound-done-bill', 'del-write-off-bill', 'del-balance-bill', 'del-done-bill'].includes(activeItemId)) content = <BillingManagement mode={activeItemId as any} />;
+  else if (['del-price-review', 'del-pending-bill', 'del-dist-bill'].includes(activeItemId)) content = <DeliveryBilling mode={activeItemId as any} />;
+  else if (['del-misc-payable', 'del-srv-order', 'del-storage-bill', 'del-cost-settlement'].includes(activeItemId)) content = <OtherBilling mode={activeItemId as any} />;
+  else if (['cust-uncollected', 'cust-collected', 'cust-bill-mgmt', 'cust-recharge-sum'].includes(activeItemId)) content = <ClientSettlement mode={activeItemId as any} />;
+  else if (['corp-daily-flow', 'corp-monthly-flow', 'corp-wh-flow', 'corp-agent-flow', 'corp-cust-balance'].includes(activeItemId)) content = <CompanySettlement mode={activeItemId as any} />;
+  else if (['recharge-new', 'recharge-list', 'recharge-done', 'recharge-detail', 'recharge-method'].includes(activeItemId)) content = <RechargeManagement mode={activeItemId as any} />;
+  else if (['report-sale-detail', 'report-sale-sum', 'report-inbound', 'report-delivery'].includes(activeItemId)) content = <FinancialReports mode={activeItemId as any} />;
+  else if (['agent-fee-entry', 'agent-fee-list', 'agent-pending-bill', 'agent-write-off-bill', 'agent-done-bill', 'agent-shipping-check'].includes(activeItemId)) content = <AgentSettlement mode={activeItemId as any} />;
+  else if (['price-currency', 'price-zones', 'price-list', 'price-void', 'price-delivery-zone', 'price-remote-zone'].includes(activeItemId)) content = <PriceManagement mode={activeItemId as any} />;
+  else if (activeItemId === 'cust-list') content = <CustomerList />;
+  else if (activeItemId === 'mgr-monthly') content = <ManagerMonthlyReport />;
+  else if ([ 'cust-logout', 'cust-account', 'cust-add', 'cust-import', 'h-arrears', 'h-sleeping', 'h-quality', 'h-recharge-rank', 'h-rules', 'tk-add', 'tk-all', 'tk-pending', 'tk-processing', 'tk-completed', 'tk-abnormal', 'shop-list', 'shop-order-check', 'vip-mgmt', 'login-logs', 'login-overview', 'mgr-daily', 'fin-analysis', 'wh-analysis', 'wh-fin-overview', 'io-analysis', 'order-analysis', 'cust-order-rank', 'sales-perf', 'cs-perf', 'cust-analysis', 'web-news', 'web-ads', 'wechat-follow', 'wechat-menu', 'wechat-auto', 'web-site-settings', 'web-mobile-site', 'web-friend-links', 'web-navbar-settings', 'admin-log', 'admin-list', 'admin-role', 'sys-delivery', 'type-set', 'express-set', 'country-list', 'region-list', 'cust-ann-remind', 'reg-protocol', 'corp-ann-remind', 'api-list', 'api-recv-log', 'api-req-log', 'ups-account', 'fedex-account', 'usps-account', 'ca-post-account', 'sf-local-account', 'ship-code-set', 'handheld-print-process', 'handheld-print-history', 'price-vas', 'price-customs' ].includes(activeItemId)) content = <GenericView mode={activeItemId} />;
+  else content = <Dashboard />;
 
   return (
-    <div className="flex h-screen overflow-hidden bg-[#f0f2f5]">
-      {/* Sidebar - depends on active module */}
-      <Sidebar 
-        activeModuleId={activeModuleId} 
-        activeItemId={activeItemId} 
-        setActiveItemId={handleSetTab} 
-      />
+    <div className={`w-full flex-1 flex flex-col min-h-0 ${['single-add', 'material-add', 'bulk-import'].includes(activeItemId) || activeItemId === 'dashboard' ? 'overflow-auto p-3' : ''}`}>
+      {content}
+    </div>
+  );
+}
 
-      {/* Main Container */}
-      <div className="flex-1 flex flex-col min-w-0">
-        {/* Top Header Navigation */}
-        <TopNav activeModuleId={activeModuleId} setActiveModuleId={setActiveModuleId} />
-
-        {/* Main Content Area */}
+export default function App() {
+  return (
+    <BrowserRouter>
+      <div className="flex h-screen overflow-hidden bg-[#f0f2f5]">
         <main className="flex-1 flex flex-col overflow-hidden bg-[#f0f2f5] min-h-0">
-          {/* Tabs row */}
-          <div className="h-10 shrink-0 bg-white border-b border-gray-100 flex items-center px-2 gap-1 text-xs">
-            {openTabs.map((tab) => (
-              <div
-                key={tab.id}
-                onClick={() => setActiveItemId(tab.id)}
-                className={`group flex items-center gap-2 px-3 py-1.5 h-8 border rounded-sm cursor-pointer select-none transition-colors max-w-[150px]
-                  ${activeItemId === tab.id 
-                    ? 'bg-blue-50 border-blue-200 text-blue-600' 
-                    : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50'
-                  }`}
-                title={tab.label}
-              >
-                <div className={`w-1.5 h-1.5 rounded-full ${activeItemId === tab.id ? 'bg-blue-500' : 'bg-gray-300'}`}></div>
-                <span className="truncate">{tab.label}</span>
-                {tab.id !== 'dashboard' && (
-                  <button 
-                    onClick={(e) => closeTab(e, tab.id)}
-                    className={`ml-1 flex-shrink-0 p-0.5 rounded text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-gray-200 hover:text-gray-700
-                      ${activeItemId === tab.id ? 'opacity-100 hover:bg-blue-200' : ''}`}
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                  </button>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Actual Dashboard Body */}
-          <div className={`w-full flex-1 flex flex-col min-h-0 ${['single-add', 'material-add', 'bulk-import'].includes(activeItemId) || activeItemId === 'dashboard' ? 'overflow-auto p-4' : ''}`}>
-            {activeItemId === 'single-add' ? (
-              <AddProductSingle />
-            ) : activeItemId === 'material-add' ? (
-              <MaterialAdd />
-            ) : activeItemId === 'bulk-import' ? (
-              <BulkImportProduct />
-            ) : ['pending-review', 'product-list', 'disabled-products', 'rejected-products'].includes(activeItemId) ? (
-              <ProductManagement mode={activeItemId as any} />
-            ) : ['pending-dist', 'dist-list', 'dist-apply'].includes(activeItemId) ? (
-              <DistributionManagement mode={activeItemId as any} />
-            ) : activeItemId === 'category-management' ? (
-              <CategoryManagement />
-            ) : activeItemId === 'prohibited-items' ? (
-              <ProhibitedManagement />
-            ) : activeItemId === 'hs-codes' ? (
-              <HSCodeManagement />
-            ) : activeItemId === 'order-add' ? (
-              <AddOrder />
-            ) : activeItemId === 'all-orders' ? (
-              <OrderList />
-            ) : activeItemId === 'pending-confirm' ? (
-              <PendingConfirmationOrders />
-            ) : activeItemId === 'pending-warehouse' ? (
-              <OverseasPendingInWarehouse />
-            ) : activeItemId === 'in-warehouse' ? (
-              <OverseasInWarehouse />
-            ) : activeItemId === 'failed-confirm' ? (
-              <ConfirmationFailedOrders />
-            ) : activeItemId === 'order-recycle' ? (
-              <OrderRecycleBin />
-            ) : activeItemId === 'return-order-add' ? (
-              <AddReturnOrder />
-            ) : activeItemId === 'add-dropship-order' ? (
-              <AddDropshipOrder />
-            ) : activeItemId === 'return-order-list' ? (
-              <ReturnOrderList />
-            ) : activeItemId === 'ret-pending' ? (
-              <ReturnPendingConfirmation />
-            ) : activeItemId === 'ret-wh-pending' ? (
-              <ReturnOverseasPendingInWarehouse />
-            ) : activeItemId === 'ret-wh-done' ? (
-              <ReturnOverseasInWarehouse />
-            ) : activeItemId === 'ret-failed' ? (
-              <ReturnConfirmationFailed />
-            ) : activeItemId === 'ret-recycle' ? (
-              <ReturnOrderRecycleBin />
-            ) : ['ds-all', 'ds-pending', 'ds-pack', 'ds-oos', 'ds-ship', 'ds-waiting', 'ds-signed', 'ds-deleted'].includes(activeItemId) ? (
-              <DropshipOrderList mode={activeItemId as any} />
-            ) : ['track-rules', 'track-orders', 'track-sign', 'track-delivery-err', 'track-timeout-err', 'track-analysis'].includes(activeItemId) ? (
-              <TrackManagement mode={activeItemId as any} />
-            ) : ['inv-query', 'owner-dist-inv', 'cust-dist-inv', 'inv-query-combo', 'inv-age-analysis', 'inv-detail', 'inv-warning', 'inv-transit', 'inv-history-shelf', 'pending-off-shelf', 'done-off-shelf'].includes(activeItemId) ? (
-              <InventoryManagement mode={activeItemId as any} />
-            ) : activeItemId === 'ds-pending-shelf' ? (
-              <DropshipPendingShelf />
-            ) : activeItemId === 'transit-pending-shelf' ? (
-              <TransitPendingShelf />
-            ) : activeItemId === 'wh-in-report' ? (
-              <InboundReport />
-            ) : activeItemId === 'wh-out-report' ? (
-              <OutboundReport />
-            ) : activeItemId === 'sku-io-report' ? (
-              <SkuInOutReport />
-            ) : activeItemId === 'sorting-ports' ? (
-              <SortingPortManagement />
-            ) : activeItemId === 'sorting-flow' ? (
-              <SortingFlow />
-            ) : activeItemId === 'sorting-status' ? (
-              <SortingStatus />
-            ) : activeItemId === 'wh-list-config' ? (
-              <WarehouseListConfig />
-            ) : activeItemId === 'fba-wh' ? (
-              <FBAWarehouse />
-            ) : activeItemId === 'shelf-add' ? (
-              <ShelfAdd />
-            ) : activeItemId === 'shelf-mgmt' ? (
-              <ShelfMgmt />
-            ) : activeItemId === 'wh-usage-rate' ? (
-              <WhUsageRate />
-            ) : activeItemId === 'shelf-vacancy-rate' ? (
-              <ShelfVacancyRate />
-            ) : ['material-list', 'material-record'].includes(activeItemId) ? (
-              <MaterialManagement mode={activeItemId as any} />
-            ) : activeItemId === 'orders-anon-list' ? (
-              <AnonList />
-            ) : ['inbound-price-review', 'inbound-pending-bill', 'inbound-balance-bill', 'inbound-write-off-bill', 'inbound-done-bill', 'del-write-off-bill', 'del-balance-bill', 'del-done-bill'].includes(activeItemId) ? (
-              <BillingManagement mode={activeItemId as any} />
-            ) : ['del-price-review', 'del-pending-bill', 'del-dist-bill'].includes(activeItemId) ? (
-              <DeliveryBilling mode={activeItemId as any} />
-            ) : ['del-misc-payable', 'del-srv-order', 'del-storage-bill', 'del-cost-settlement'].includes(activeItemId) ? (
-              <OtherBilling mode={activeItemId as any} />
-            ) : ['cust-uncollected', 'cust-collected', 'cust-bill-mgmt', 'cust-recharge-sum'].includes(activeItemId) ? (
-              <ClientSettlement mode={activeItemId as any} />
-            ) : ['corp-daily-flow', 'corp-monthly-flow', 'corp-wh-flow', 'corp-agent-flow', 'corp-cust-balance'].includes(activeItemId) ? (
-              <CompanySettlement mode={activeItemId as any} />
-            ) : ['recharge-new', 'recharge-list', 'recharge-done', 'recharge-detail', 'recharge-method'].includes(activeItemId) ? (
-              <RechargeManagement mode={activeItemId as any} />
-            ) : ['report-sale-detail', 'report-sale-sum', 'report-inbound', 'report-delivery'].includes(activeItemId) ? (
-              <FinancialReports mode={activeItemId as any} />
-            ) : ['agent-fee-entry', 'agent-fee-list', 'agent-pending-bill', 'agent-write-off-bill', 'agent-done-bill', 'agent-shipping-check'].includes(activeItemId) ? (
-              <AgentSettlement mode={activeItemId as any} />
-            ) : ['price-currency', 'price-zones', 'price-list', 'price-void', 'price-delivery-zone', 'price-remote-zone'].includes(activeItemId) ? (
-              <PriceManagement mode={activeItemId as any} />
-            ) : [
-              'cust-list', 'cust-logout', 'cust-account', 'cust-add', 'cust-import',
-              'h-arrears', 'h-sleeping', 'h-quality', 'h-recharge-rank', 'h-rules',
-              'tk-add', 'tk-all', 'tk-pending', 'tk-processing', 'tk-completed', 'tk-abnormal',
-              'shop-list', 'shop-order-check', 'vip-mgmt',
-              'login-logs', 'login-overview',
-              'mgr-monthly', 'mgr-daily', 'fin-analysis', 'wh-analysis', 'wh-fin-overview', 'io-analysis', 'order-analysis', 'cust-order-rank', 'sales-perf', 'cs-perf', 'cust-analysis',
-              'web-news', 'web-ads', 'wechat-follow', 'wechat-menu', 'wechat-auto', 'web-site-settings', 'web-mobile-site', 'web-friend-links', 'web-navbar-settings',
-              'admin-log', 'admin-list', 'admin-role', 'sys-delivery', 'type-set', 'express-set', 'country-list', 'region-list', 'cust-ann-remind', 'reg-protocol', 'corp-ann-remind',
-              'api-list', 'api-recv-log', 'api-req-log', 'ups-account', 'fedex-account', 'usps-account', 'ca-post-account', 'sf-local-account', 'ship-code-set', 'handheld-print-process', 'handheld-print-history',
-              'price-vas', 'price-customs'
-            ].includes(activeItemId) ? (
-              <GenericView mode={activeItemId} />
-            ) : (
-              <div className="flex flex-col gap-4 overflow-auto p-4 w-full h-full">
-                {/* Row 1: KPI Stat Cards */}
-                <StatCards />
-
-                {/* Row 2: Search & Quick Actions */}
-                <ActionSection />
-
-                {/* Row 3 & 4: Charts, Status & Work Order List */}
-                <DashboardContent />
-              </div>
-            )}
-          </div>
+          <Routes>
+            <Route path="/" element={<Navigate to="/dashboard" replace />} />
+            <Route path="/:viewId" element={<ViewSwitcher />} />
+          </Routes>
         </main>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }

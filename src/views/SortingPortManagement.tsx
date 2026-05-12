@@ -77,7 +77,7 @@ export function SortingPortManagement() {
       {/* Table Section */}
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden shadow-sm">
         <div className="overflow-auto">
-          <table className="w-full border-collapse text-[12px] text-left">
+          <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr>
                 <th className="px-3 border-r border-gray-200 w-24 py-2">

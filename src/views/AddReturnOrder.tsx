@@ -114,7 +114,7 @@ export function AddReturnOrder() {
       {/* Main Table Wrapper */}
       <div className="px-4">
         <div className="border border-gray-200 min-h-0 flex flex-col relative overflow-hidden bg-white">
-          <table className="w-full text-left text-[12px] border-collapse min-w-[1400px]">
+          <table className="w-full text-left text-[12px] border-collapse min-w-[1400px] border-b border-gray-200">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr>
                 <th className="px-3 py-2 w-10 border-r border-gray-200"><input type="checkbox" /></th>

@@ -147,7 +147,7 @@ export function MaterialManagement({ mode }: MaterialManagementProps) {
 
       {/* Table Section */}
       <div className="overflow-auto flex-1">
-        <table className="w-full border-collapse text-[12px] text-left">
+        <table className="w-full border-collapse text-[12px] text-left border-b border-gray-200">
           <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
             <tr className="border-b border-gray-200">
               <th className="px-3 py-2 border-r border-gray-200 w-16">
@@ -179,7 +179,7 @@ export function MaterialManagement({ mode }: MaterialManagementProps) {
               )}
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200">
+          <tbody className="divide-y divide-gray-200 border-b border-gray-200">
             {isList && MOCK_LIST.map((item, index) => (
               <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                 <td className="px-3 py-2 border-r border-gray-200">

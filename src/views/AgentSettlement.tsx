@@ -7,27 +7,68 @@ interface AgentSettlementProps {
   mode: AgentSettlementMode;
 }
 
-const MOCK_FEE_LIST = [
-  { id: 1, agentName: 'FedEx代理', whName: '美西仓', admin: 'fxadmin', type: '操作费', remark: '5月操作费用', fee: 1250.00, status: '未结算', settleTime: '2026-05-30 00:00:00', addTime: '2026-05-11 10:00:00' },
-  { id: 2, agentName: 'UPS代理', whName: '美东仓', admin: 'fxadmin', type: '仓租费', remark: '仓租补录', fee: 850.00, status: '已结算', settleTime: '2026-05-10 00:00:00', addTime: '2026-05-10 14:20:00' },
-];
+const MOCK_FEE_LIST = Array.from({ length: 15 }).map((_, i) => ({
+  id: i + 1,
+  agentName: ['FedEx代理', 'UPS代理', 'DHL代理', 'USPS代理'][i % 4],
+  whName: ['美西仓', '美东仓', '欧洲仓', '澳洲仓'][i % 4],
+  admin: 'fxadmin',
+  type: ['操作费', '仓租费', '贴标费', '打包费'][i % 4],
+  remark: `5月${['操作费用', '仓租补录', '杂费'][i % 3]}`,
+  fee: parseFloat((Math.random() * 2000 + 100).toFixed(2)),
+  status: i % 3 === 0 ? '已结算' : '未结算',
+  settleTime: i % 3 === 0 ? `2026-05-${10 + i} 00:00:00` : '',
+  addTime: `2026-05-${10 + (i % 5)} 10:00:00`
+}));
 
-const MOCK_PENDING_BILLS = [
-  { id: 1, agentName: 'FedEx代理', clientName: 'VIP001', outNo: 'OUT20260511001', refNo: 'REF-001', channel: 'FedEx Ground', whName: '美西仓', orderType: '一件代发', weight: 2.5, freight: 25.50, addTime: '2026-05-11 10:00:00' },
-  { id: 2, agentName: 'UPS代理', clientName: 'VIP002', outNo: 'OUT20260511002', refNo: 'REF-002', channel: 'UPS Next Day', whName: '美东仓', orderType: 'FBA转运', weight: 15.0, freight: 125.00, addTime: '2026-05-10 14:20:00' },
-];
+const MOCK_PENDING_BILLS = Array.from({ length: 20 }).map((_, i) => ({
+  id: i + 1,
+  agentName: ['FedEx代理', 'UPS代理', 'DHL代理', 'USPS代理'][i % 4],
+  clientName: `VIP00${(i % 9) + 1}`,
+  outNo: `OUT2026051100${i + 1}`,
+  refNo: `REF-00${i + 1}`,
+  channel: ['FedEx Ground', 'UPS Next Day', 'DHL Express', 'USPS Priority'][i % 4],
+  whName: ['美西仓', '美东仓', '欧洲仓', '澳洲仓'][i % 4],
+  orderType: ['一件代发', 'FBA转运', '电商小包', 'B2B托盘'][i % 4],
+  weight: parseFloat((Math.random() * 20 + 0.5).toFixed(2)),
+  freight: parseFloat((Math.random() * 150 + 10).toFixed(2)),
+  addTime: `2026-05-${10 + (i % 5)} 10:00:00`
+}));
 
-const MOCK_WRITE_OFF_BILLS = [
-  { id: 1, agentName: 'DHL代理', billNo: 'B20260510100', admin: 'fxadmin', whName: '欧洲仓', fee: 520.00, addTime: '2026-05-10 15:30:00', writeOffTime: '' },
-];
+const MOCK_WRITE_OFF_BILLS = Array.from({ length: 12 }).map((_, i) => ({
+  id: i + 1,
+  agentName: ['FedEx代理', 'UPS代理', 'DHL代理', 'USPS代理'][i % 4],
+  billNo: `B2026051010${i}`,
+  admin: 'fxadmin',
+  whName: ['美西仓', '美东仓', '欧洲仓', '澳洲仓'][i % 4],
+  fee: parseFloat((Math.random() * 5000 + 500).toFixed(2)),
+  addTime: `2026-05-${10 + (i % 5)} 15:30:00`,
+  writeOffTime: ''
+}));
 
-const MOCK_DONE_BILLS = [
-  { id: 1, agentName: 'USPS代理', billNo: 'B20260505100', admin: 'sysadmin', whName: '美东仓', fee: 1200.00, addTime: '2026-05-05 10:00:00', writeOffTime: '2026-05-08 14:00:00' },
-];
+const MOCK_DONE_BILLS = Array.from({ length: 15 }).map((_, i) => ({
+  id: i + 1,
+  agentName: ['FedEx代理', 'UPS代理', 'DHL代理', 'USPS代理'][i % 4],
+  billNo: `B2026050510${i}`,
+  admin: 'sysadmin',
+  whName: ['美西仓', '美东仓', '欧洲仓', '澳洲仓'][i % 4],
+  fee: parseFloat((Math.random() * 3000 + 200).toFixed(2)),
+  addTime: `2026-05-0${1 + (i % 5)} 10:00:00`,
+  writeOffTime: `2026-05-0${5 + (i % 5)} 14:00:00`
+}));
 
-const MOCK_SHIPPING_CHECKS = [
-  { id: 1, agentName: 'FedEx代理', clientName: 'VIP005', outNo: 'OUT20260511005', refNo: 'REF-005', channel: 'FedEx Express', whName: '美西仓', orderType: '电商小包', weight: 1.2, freight: 15.00, addTime: '2026-05-11 11:00:00' },
-];
+const MOCK_SHIPPING_CHECKS = Array.from({ length: 18 }).map((_, i) => ({
+  id: i + 1,
+  agentName: ['FedEx代理', 'UPS代理', 'DHL代理', 'USPS代理'][i % 4],
+  clientName: `VIP00${(i % 9) + 1}`,
+  outNo: `OUT2026051100${i + 5}`,
+  refNo: `REF-00${i + 5}`,
+  channel: ['FedEx Express', 'UPS Ground', 'DHL Express', 'USPS Priority'][i % 4],
+  whName: ['美西仓', '美东仓', '欧洲仓', '澳洲仓'][i % 4],
+  orderType: ['电商小包', '一件代发', 'FBA转运', 'B2B托盘'][i % 4],
+  weight: parseFloat((Math.random() * 10 + 0.5).toFixed(2)),
+  freight: parseFloat((Math.random() * 100 + 5).toFixed(2)),
+  addTime: `2026-05-${10 + (i % 5)} 11:00:00`
+}));
 
 export function AgentSettlement({ mode }: AgentSettlementProps) {
   const getFeeTotals = () => {
@@ -260,7 +301,7 @@ export function AgentSettlement({ mode }: AgentSettlementProps) {
 
           {/* Table area */}
           <div className="overflow-auto flex-1 pb-16">
-            <table className="w-full border-collapse text-[12px] text-center min-w-max">
+            <table className="w-full border-collapse text-[12px] text-center min-w-max border-b border-gray-200">
               <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
                 <tr className="border-b border-gray-200">
                   <th className="px-3 py-3 border-r border-gray-200 w-16">
@@ -478,7 +519,13 @@ export function AgentSettlement({ mode }: AgentSettlementProps) {
             </div>
             
             <div className="flex items-center gap-2 text-[12px] text-gray-600">
-              <span>总计 2 个记录分为 1 页当前第 1 页，每页</span>
+              <span>总计 {
+            mode === 'agent-fee-list' ? MOCK_FEE_LIST.length :
+            mode === 'agent-pending-bill' ? MOCK_PENDING_BILLS.length :
+            mode === 'agent-shipping-check' ? MOCK_SHIPPING_CHECKS.length :
+            mode === 'agent-write-off-bill' ? MOCK_WRITE_OFF_BILLS.length :
+            mode === 'agent-done-bill' ? MOCK_DONE_BILLS.length : 15
+          } 个记录分为 1 页当前第 1 页，每页</span>
               <select className="border border-gray-300 rounded px-1 h-6 outline-none bg-white">
                 <option>10</option>
                 <option>50</option>
