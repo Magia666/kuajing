@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate, useParams } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { StatCards } from './components/StatCards';
 import { ActionSection } from './components/ActionSection';
 import { DashboardContent } from './components/DashboardContent';
@@ -144,7 +144,7 @@ function ViewSwitcher() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="flex h-screen overflow-hidden bg-[#f0f2f5]">
         <main className="flex-1 flex flex-col overflow-hidden bg-[#f0f2f5] min-h-0">
           <Routes>
@@ -153,6 +153,6 @@ export default function App() {
           </Routes>
         </main>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
