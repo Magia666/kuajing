@@ -2,7 +2,7 @@ import React from 'react';
 
 export function MaterialAdd() {
   return (
-    <div className="bg-white min-h-screen font-sans text-gray-700 p-6">
+    <div className="bg-white h-full overflow-hidden font-sans text-gray-700 p-6">
       <div className="mb-12 border-l-4 border-[#00a2e8] pl-2 flex items-center">
         <span className="text-[14px] font-bold text-[#00a2e8]">添加物料</span>
       </div>

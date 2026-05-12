@@ -577,10 +577,20 @@ const SYSTEM_ITEMS: SidebarItem[] = [
   }
 ];
 
+export const ALL_SIDEBAR_ITEMS = [
+  ...NEBULA_ITEMS,
+  ...ORDERS_ITEMS,
+  ...INVENTORY_ITEMS,
+  ...FINANCE_ITEMS,
+  ...CUSTOMER_ITEMS,
+  ...WEB_ITEMS,
+  ...SYSTEM_ITEMS
+];
+
 interface SidebarProps {
   activeModuleId: string;
   activeItemId: string;
-  setActiveItemId: (id: string) => void;
+  setActiveItemId: (id: string, label?: string) => void;
 }
 
 export function Sidebar({ activeModuleId, activeItemId, setActiveItemId }: SidebarProps) {
@@ -639,7 +649,13 @@ export function Sidebar({ activeModuleId, activeItemId, setActiveItemId }: Sideb
           return (
             <div key={item.id} className="mb-0.5">
               <button
-                onClick={() => handleItemClick(item)}
+                onClick={() => {
+                  if (item.subItems) {
+                    handleItemClick(item);
+                  } else {
+                    setActiveItemId(item.id, item.label);
+                  }
+                }}
                 className={cn(
                   "w-full flex items-center px-4 py-3 text-sm transition-all relative group",
                   (hasActiveChild || isActive) ? "bg-blue-600/10 text-white" : "text-gray-400 hover:text-white hover:bg-white/5",
@@ -675,7 +691,7 @@ export function Sidebar({ activeModuleId, activeItemId, setActiveItemId }: Sideb
                     {item.subItems.map((sub) => (
                       <button
                         key={sub.id}
-                        onClick={() => setActiveItemId(sub.id)}
+                        onClick={() => setActiveItemId(sub.id, sub.label)}
                         className={cn(
                           "w-full flex items-center pl-11 pr-4 py-2 text-xs transition-colors relative",
                           activeItemId === sub.id 

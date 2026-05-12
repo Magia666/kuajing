@@ -365,7 +365,7 @@ export function DropshipOrderList({ mode }: DropshipOrderListProps) {
   });
 
   return (
-    <div className="bg-white rounded-sm border border-gray-200 animate-in fade-in duration-500 w-full min-h-screen">
+    <div className="bg-white rounded-sm border border-gray-200 animate-in fade-in duration-500 w-full h-full overflow-hidden">
       {/* Search Bar */}
       <div className="p-2 border-b border-gray-100 flex flex-wrap items-center gap-2 bg-white overflow-x-hidden text-[12px]">
         <div className="flex items-center gap-1">
@@ -427,7 +427,7 @@ export function DropshipOrderList({ mode }: DropshipOrderListProps) {
       )}
 
       {/* Table Section */}
-      <div className="overflow-x-auto overflow-y-auto max-h-[calc(100vh-250px)] custom-scrollbar">
+      <div className="overflow-auto overflow-y-auto max-h-[calc(100vh-250px)] custom-scrollbar">
         <table className="w-full border-collapse text-[12px] text-left">
           <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
             <tr className="border-b border-gray-200">

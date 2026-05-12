@@ -7,7 +7,7 @@ export function AddOrder() {
   const [deliveryMethod, setDeliveryMethod] = useState('overseas'); // 自寄海外仓
 
   return (
-    <div className="bg-white rounded-sm border border-gray-200 animate-in fade-in duration-500 w-full min-h-screen pb-10">
+    <div className="bg-white rounded-sm border border-gray-200 animate-in fade-in duration-500 w-full h-full overflow-hidden pb-10">
       {/* Header */}
       <div className="bg-[#e4e7ed] px-4 py-2 flex items-center border-b border-gray-300">
         <div className="w-1 h-4 bg-blue-500 mr-2"></div>
@@ -185,7 +185,7 @@ export function AddOrder() {
 
       {/* Main Table Wrapper */}
       <div className="px-4 pb-4">
-        <div className="border border-gray-200 min-h-[400px] flex flex-col relative overflow-x-auto">
+        <div className="border border-gray-200 min-h-[400px] flex flex-col relative overflow-auto">
           <table className="w-full text-left text-[12px] border-collapse min-w-[1400px]">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr>

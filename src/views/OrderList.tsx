@@ -97,7 +97,7 @@ export function OrderList() {
   };
 
   return (
-    <div className="bg-white rounded-sm border border-gray-200 animate-in fade-in duration-500 w-full min-h-screen">
+    <div className="bg-white rounded-sm border border-gray-200 animate-in fade-in duration-500 w-full h-full overflow-hidden">
       {/* Top Filter Bar */}
       <div className="p-3 bg-[#f5f7fa] flex flex-wrap gap-y-3 gap-x-4 border-b border-gray-200 sticky top-0 z-10">
         <div className="flex items-center gap-2">
@@ -149,7 +149,7 @@ export function OrderList() {
       </div>
 
       {/* Main Table */}
-      <div className="overflow-x-auto">
+      <div className="overflow-auto">
         <table className="w-full text-[12px] text-left border-collapse min-w-[2000px]">
           <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
             <tr>

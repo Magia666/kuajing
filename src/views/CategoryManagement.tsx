@@ -52,7 +52,7 @@ export function CategoryManagement() {
       </div>
 
       {/* Main Table */}
-      <div className="overflow-x-auto border border-gray-200">
+      <div className="overflow-auto border border-gray-200">
         <table className="w-full text-[12px] text-left border-collapse min-w-full">
           <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
             <tr>

@@ -13,11 +13,11 @@ interface Stat {
 }
 
 const STATS: Stat[] = [
-  { id: '1', label: '产品待审核', count: 0, todayNew: 0, icon: Package, color: 'text-blue-500', bg: 'bg-blue-500' },
-  { id: '2', label: '头程待审核', count: 0, todayNew: 0, icon: FileText, color: 'text-rose-500', bg: 'bg-rose-500' },
-  { id: '3', label: '代发待审核', count: 3, todayNew: 0, icon: ShoppingCart, color: 'text-teal-500', bg: 'bg-teal-500' },
-  { id: '4', label: '换标待审核', count: 0, todayNew: 0, icon: RefreshCw, color: 'text-indigo-500', bg: 'bg-indigo-500' },
-  { id: '5', label: '中转待审核', count: 0, todayNew: 0, icon: Truck, color: 'text-amber-500', bg: 'bg-amber-500' },
+  { id: '1', label: '产品待审核', count: 12, todayNew: 3, icon: Package, color: 'text-blue-500', bg: 'bg-blue-500' },
+  { id: '2', label: '头程待审核', count: 5, todayNew: 2, icon: FileText, color: 'text-rose-500', bg: 'bg-rose-500' },
+  { id: '3', label: '代发待审核', count: 48, todayNew: 15, icon: ShoppingCart, color: 'text-teal-500', bg: 'bg-teal-500' },
+  { id: '4', label: '换标待审核', count: 8, todayNew: 1, icon: RefreshCw, color: 'text-indigo-500', bg: 'bg-indigo-500' },
+  { id: '5', label: '中转待审核', count: 19, todayNew: 7, icon: Truck, color: 'text-amber-500', bg: 'bg-amber-500' },
 ];
 
 export function StatCards() {

@@ -6,7 +6,7 @@ export function WhUsageRate() {
   ];
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       <div className="bg-white p-2 border-b border-gray-200 flex items-center gap-2">
         <div className="flex items-center border border-gray-300 h-8 px-2 bg-white rounded-sm shadow-sm">
            <span className="text-[12px] text-gray-500 whitespace-nowrap">仓库名称</span>
@@ -18,7 +18,7 @@ export function WhUsageRate() {
       </div>
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden shadow-sm">
-        <div className="overflow-x-auto">
+        <div className="overflow-auto">
           <table className="w-full border-collapse text-[12px] text-left">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr>

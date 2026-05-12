@@ -25,7 +25,7 @@ const MOCK_DATA: HSCodeData[] = [
 
 export function HSCodeManagement() {
   return (
-    <div className="bg-[#f5f7fa] animate-in fade-in duration-500 w-full min-h-screen">
+    <div className="bg-[#f5f7fa] animate-in fade-in duration-500 w-full h-full overflow-hidden">
       {/* Top Controls */}
       <div className="bg-white p-4 border-b border-gray-200">
         <div className="max-w-[1600px] mx-auto flex flex-wrap items-center justify-between gap-4">

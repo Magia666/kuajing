@@ -9,7 +9,7 @@ export function SortingStatus() {
   ];
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       {/* Search Header */}
       <div className="bg-white p-2 border-b border-gray-200 flex items-center justify-start">
         <button className="bg-[#00a2e8] hover:bg-blue-600 text-white px-8 h-8 text-[12px] rounded-sm transition-colors shadow-sm font-medium">查询</button>
@@ -17,7 +17,7 @@ export function SortingStatus() {
 
       {/* Table Section */}
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden shadow-sm">
-        <div className="overflow-x-auto">
+        <div className="overflow-auto">
           <table className="w-full border-collapse text-[12px] text-left">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr>

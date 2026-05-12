@@ -62,7 +62,7 @@ export function ReturnOrderList() {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
 
   return (
-    <div className="bg-white rounded-sm border border-gray-200 animate-in fade-in duration-500 w-full min-h-screen">
+    <div className="bg-white rounded-sm border border-gray-200 animate-in fade-in duration-500 w-full h-full overflow-hidden">
       {/* Top Filter Bar */}
       <div className="p-3 bg-[#f5f7fa] flex flex-wrap items-center gap-y-3 gap-x-4 border-b border-gray-200 sticky top-0 z-10">
         <div className="flex items-center gap-2">
@@ -117,7 +117,7 @@ export function ReturnOrderList() {
       </div>
 
       {/* Main Table */}
-      <div className="overflow-x-auto">
+      <div className="overflow-auto">
         <table className="w-full text-[12px] text-left border-collapse">
           <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
             <tr className="border-b border-gray-200">

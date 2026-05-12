@@ -229,14 +229,14 @@ export function InventoryManagement({ mode }: InventoryManagementProps) {
 
   if (mode !== 'inv-query') {
     return (
-      <div className="p-20 text-center text-gray-400 bg-white min-h-screen">
+      <div className="p-20 text-center text-gray-400 bg-white h-full overflow-hidden">
         页面开发中...
       </div>
     );
   }
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       {/* Search Bar */}
       <div className="bg-white p-2 border-b border-gray-200 flex flex-wrap items-center gap-2">
         <div className="flex items-center gap-1 border border-gray-200 h-7 px-1">
@@ -274,7 +274,7 @@ export function InventoryManagement({ mode }: InventoryManagementProps) {
 
       {/* Main Table Content */}
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden min-h-[calc(100vh-160px)]">
-        <div className="overflow-x-auto overflow-y-auto max-h-[calc(100vh-200px)]">
+        <div className="overflow-auto overflow-y-auto max-h-[calc(100vh-200px)]">
           <table className="w-full border-collapse text-[12px] text-left">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
@@ -387,7 +387,7 @@ function OwnerDistInv() {
   ];
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       <div className="bg-white p-2 border-b border-gray-200 flex flex-wrap items-center gap-2">
         <div className="flex items-center gap-1 border border-gray-200 h-7 px-1">
           <span className="text-[12px] text-gray-500 whitespace-nowrap">客户名称</span>
@@ -412,7 +412,7 @@ function OwnerDistInv() {
       </div>
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
-        <div className="overflow-x-auto">
+        <div className="overflow-auto">
           <table className="w-full border-collapse text-[12px] text-left">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
@@ -498,7 +498,7 @@ function CustDistInv() {
   ];
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       <div className="bg-white p-2 border-b border-gray-200 flex flex-wrap items-center gap-2">
         <div className="flex items-center gap-1 border border-gray-200 h-7 px-1">
           <span className="text-[12px] text-gray-500 whitespace-nowrap">客户名称</span>
@@ -528,7 +528,7 @@ function CustDistInv() {
       </div>
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
-        <div className="overflow-x-auto">
+        <div className="overflow-auto">
           <table className="w-full border-collapse text-[12px] text-left">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
@@ -622,7 +622,7 @@ function InvWarning() {
   ];
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       <div className="bg-white p-2 border-b border-gray-200 flex flex-wrap items-center gap-2">
         <div className="flex items-center gap-1 border border-gray-200 h-7 px-1">
           <span className="text-[12px] text-gray-500 whitespace-nowrap">客户名称</span>
@@ -658,7 +658,7 @@ function InvWarning() {
       </div>
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden min-h-[calc(100vh-160px)]">
-        <div className="overflow-x-auto overflow-y-auto max-h-[calc(100vh-200px)]">
+        <div className="overflow-auto overflow-y-auto max-h-[calc(100vh-200px)]">
           <table className="w-full border-collapse text-[12px] text-left">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
@@ -779,7 +779,7 @@ function InvDetail() {
   ];
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       {/* Top Search Bar */}
       <div className="bg-white p-2 border-b border-gray-200">
         <div className="flex flex-wrap items-center gap-2 mb-2">
@@ -834,7 +834,7 @@ function InvDetail() {
 
       {/* Main Table Content */}
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
-        <div className="overflow-x-auto">
+        <div className="overflow-auto">
           <table className="w-full border-collapse text-[12px] text-left">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
@@ -937,7 +937,7 @@ function InvAgeAnalysis() {
   ].sort((a, b) => b.value - a.value);
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       {/* Filter Bar */}
       <div className="bg-white p-2 border-b border-gray-200 flex items-center gap-2">
         <div className="flex items-center gap-1 border border-gray-200 h-7 px-1">
@@ -1003,7 +1003,7 @@ function InvAgeAnalysis() {
 
         {/* Row 2: Bar Charts */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
-          <div className="bg-white border border-gray-200 p-4 min-h-[500px]">
+          <div className="bg-white border border-gray-200 p-4 min-h-0">
              <div className="flex items-center justify-between mb-6">
                 <h3 className="font-bold text-gray-700">全部仓库代发在仓库存排行TOP15</h3>
                 <div className="flex items-center gap-1 text-[11px] text-gray-500">
@@ -1020,7 +1020,7 @@ function InvAgeAnalysis() {
                 </BarChart>
              </ResponsiveContainer>
           </div>
-          <div className="bg-white border border-gray-200 p-4 min-h-[500px]">
+          <div className="bg-white border border-gray-200 p-4 min-h-0">
              <div className="flex items-center justify-between mb-6">
                 <h3 className="font-bold text-gray-700">全部仓库中转在仓库存排行TOP15</h3>
                 <div className="flex items-center gap-1 text-[11px] text-gray-500">
@@ -1045,7 +1045,7 @@ function InvQueryCombo() {
   ];
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       {/* Search Bar */}
       <div className="bg-white p-2 border-b border-gray-200 flex flex-wrap items-center gap-2">
         <div className="flex items-center gap-1 border border-gray-200 h-7 px-1">
@@ -1068,7 +1068,7 @@ function InvQueryCombo() {
 
       {/* Main Table Content */}
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
-        <div className="overflow-x-auto">
+        <div className="overflow-auto">
           <table className="w-full border-collapse text-[12px] text-left">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
@@ -1140,7 +1140,7 @@ function TransitDetail() {
   ];
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       {/* Top Search Bar */}
       <div className="bg-white p-2 border-b border-gray-200">
         <div className="flex flex-wrap items-center gap-2">
@@ -1199,7 +1199,7 @@ function TransitDetail() {
 
       {/* Main Table Content */}
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
-        <div className="overflow-x-auto">
+        <div className="overflow-auto">
           <table className="w-full border-collapse text-[12px] text-left">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
@@ -1291,7 +1291,7 @@ function InvHistory() {
   ];
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       {/* Top Search Bar */}
       <div className="bg-white p-2 border-b border-gray-200">
         <div className="flex flex-wrap items-center gap-2">
@@ -1350,7 +1350,7 @@ function InvHistory() {
 
       {/* Main Table Content */}
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
-        <div className="overflow-x-auto">
+        <div className="overflow-auto">
           <table className="w-full border-collapse text-[12px] text-left">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
@@ -1449,7 +1449,7 @@ function InvHistory() {
 
 function MaterialAdd() {
   return (
-    <div className="p-8 bg-white min-h-screen font-sans text-[12px]">
+    <div className="p-8 bg-white h-full overflow-hidden font-sans text-[12px]">
       <div className="flex items-center gap-2 mb-12">
         <div className="w-1 h-5 bg-[#00a2e8]"></div>
         <h2 className="text-[14px] font-bold text-[#00a2e8]">添加物料</h2>
@@ -1540,7 +1540,7 @@ function MaterialList() {
   ];
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       <div className="bg-[#efefef] p-2 border-b border-gray-200">
         <div className="flex flex-wrap items-center gap-2">
           <div className="flex items-center border border-gray-200 h-7 bg-white">
@@ -1572,7 +1572,7 @@ function MaterialList() {
       </div>
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
-        <div className="overflow-x-auto">
+        <div className="overflow-auto">
           <table className="w-full border-collapse text-[12px] text-left">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr>
@@ -1658,7 +1658,7 @@ function PendingOffShelf() {
   ];
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       <div className="bg-white p-2 border-b border-gray-200 flex flex-wrap items-center gap-2">
         <div className="flex items-center gap-1 border border-gray-200 h-7 px-1">
           <span className="text-[12px] text-gray-500 whitespace-nowrap">客户名称</span>
@@ -1675,7 +1675,7 @@ function PendingOffShelf() {
       </div>
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
-        <div className="overflow-x-auto">
+        <div className="overflow-auto">
           <table className="w-full border-collapse text-[12px] text-left">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
@@ -1763,7 +1763,7 @@ function DoneOffShelf() {
   ];
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       <div className="bg-white p-2 border-b border-gray-200 flex flex-wrap items-center gap-2">
         <div className="flex items-center gap-1 border border-gray-200 h-7 px-1">
           <span className="text-[12px] text-gray-500 whitespace-nowrap">客户名称</span>
@@ -1780,7 +1780,7 @@ function DoneOffShelf() {
       </div>
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
-        <div className="overflow-x-auto">
+        <div className="overflow-auto">
           <table className="w-full border-collapse text-[12px] text-left">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr className="hover:bg-gray-50 transition-colors">
@@ -1854,7 +1854,7 @@ function MaterialRecord() {
   ];
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       <div className="bg-[#efefef] p-2 border-b border-gray-200">
         <div className="flex flex-wrap items-center gap-2">
           <div className="flex items-center border border-gray-200 h-7 bg-white">
@@ -1886,7 +1886,7 @@ function MaterialRecord() {
       </div>
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden">
-        <div className="overflow-x-auto">
+        <div className="overflow-auto">
           <table className="w-full border-collapse text-[12px] text-left">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr>

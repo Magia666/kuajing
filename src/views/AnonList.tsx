@@ -66,7 +66,7 @@ export function AnonList() {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
 
   return (
-    <div className="bg-white rounded-sm border border-gray-200 animate-in fade-in duration-500 w-full min-h-screen font-sans">
+    <div className="bg-white rounded-sm border border-gray-200 animate-in fade-in duration-500 w-full h-full overflow-hidden font-sans">
       {/* Top Filter Bar */}
       <div className="p-2 bg-gray-50/50 flex flex-wrap items-center gap-2 border-b border-gray-100">
         <div className="flex items-center gap-1 border border-gray-300 rounded-sm px-2 h-7 bg-white">
@@ -148,7 +148,7 @@ export function AnonList() {
       </div>
 
       {/* Main Table */}
-      <div className="overflow-x-auto">
+      <div className="overflow-auto">
         <table className="w-full text-[12px] text-left border-collapse">
           <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
             <tr className="hover:bg-gray-50 transition-colors">

@@ -5,7 +5,7 @@ export function SortingPortManagement() {
 
   if (view === 'add') {
     return (
-      <div className="bg-white min-h-screen font-sans text-gray-700 p-4">
+      <div className="bg-white h-full overflow-hidden font-sans text-gray-700 p-4">
         <div className="flex items-center gap-2 mb-8 border-l-4 border-blue-500 pl-2">
           <span className="text-[14px] font-bold text-blue-500">添加工单</span>
         </div>
@@ -57,7 +57,7 @@ export function SortingPortManagement() {
   }
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       {/* Search Header */}
       <div className="bg-white p-2 border-b border-gray-200 flex flex-wrap items-center gap-2">
         <div className="flex items-center gap-1 border border-gray-300 h-8 px-2 bg-white rounded-sm">
@@ -76,7 +76,7 @@ export function SortingPortManagement() {
 
       {/* Table Section */}
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden shadow-sm">
-        <div className="overflow-x-auto">
+        <div className="overflow-auto">
           <table className="w-full border-collapse text-[12px] text-left">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr>

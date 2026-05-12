@@ -18,7 +18,7 @@ export function DropshipPendingShelf() {
   const totalQty = MOCK_DATA.reduce((acc, curr) => acc + curr.qty, 0);
 
   return (
-    <div className="bg-[#f0f2f5] min-h-screen font-sans text-gray-700">
+    <div className="bg-[#f0f2f5] h-full overflow-hidden font-sans text-gray-700">
       <div className="bg-white p-2 border-b border-gray-200 flex flex-wrap items-center gap-2">
         <div className="flex items-center">
           <select className="h-7 border border-gray-300 text-[12px] outline-none px-1 bg-white border-r-0 rounded-l-sm">
@@ -68,7 +68,7 @@ export function DropshipPendingShelf() {
       </div>
 
       <div className="bg-white m-2 border border-gray-200 rounded-sm overflow-hidden shadow-sm">
-        <div className="overflow-x-auto">
+        <div className="overflow-auto">
           <table className="w-full border-collapse text-[12px] text-left">
             <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
               <tr>

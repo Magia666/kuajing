@@ -4,7 +4,7 @@ import { cn } from '../lib/utils';
 
 export function AddDropshipOrder() {
   return (
-    <div className="bg-[#f5f7fa] animate-in fade-in duration-500 w-full min-h-screen pb-20">
+    <div className="bg-[#f5f7fa] animate-in fade-in duration-500 w-full h-full overflow-hidden pb-20">
       {/* Header */}
       <div className="bg-[#e4e7ed] px-4 py-2 flex items-center justify-between border-b border-gray-300">
         <div className="flex items-center">
@@ -178,7 +178,7 @@ export function AddDropshipOrder() {
               添加产品
             </button>
           </div>
-          <div className="bg-white overflow-x-auto">
+          <div className="bg-white overflow-auto">
             <table className="w-full text-[12px] border-collapse text-left">
               <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
                 <tr className="bg-gray-100 text-gray-600">

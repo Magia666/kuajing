@@ -61,7 +61,7 @@ export function ReturnOrderRecycleBin() {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
 
   return (
-    <div className="bg-white rounded-sm border border-gray-200 animate-in fade-in duration-500 w-full min-h-screen">
+    <div className="bg-white rounded-sm border border-gray-200 animate-in fade-in duration-500 w-full h-full overflow-hidden">
       {/* Top Filter Bar */}
       <div className="p-3 border-b border-gray-100 flex flex-wrap items-center gap-3 bg-gray-50/50">
         <div className="flex items-center gap-2">
@@ -107,7 +107,7 @@ export function ReturnOrderRecycleBin() {
       </div>
 
       {/* Table Section */}
-      <div className="overflow-x-auto overflow-y-auto max-h-[calc(100vh-220px)] custom-scrollbar">
+      <div className="overflow-auto overflow-y-auto max-h-[calc(100vh-220px)] custom-scrollbar">
         <table className="w-full border-collapse text-[12px] text-left">
           <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
             <tr className="border-b border-gray-200">

@@ -61,7 +61,7 @@ interface TrackManagementProps {
 export function TrackManagement({ mode }: TrackManagementProps) {
   if (mode === 'track-analysis') {
     return (
-      <div className="bg-[#f0f2f5] p-3 animate-in fade-in duration-500 w-full min-h-screen font-sans">
+      <div className="bg-[#f0f2f5] p-3 animate-in fade-in duration-500 w-full h-full overflow-hidden font-sans">
         {/* Summary Info Bar (similar to DropshipOrderList) */}
         <div className="px-4 py-2 bg-[#fff7e6] border border-[#ffe58f] flex items-center justify-between text-[12px] mb-3 rounded-sm">
           <div className="flex items-center gap-1 text-gray-700">
@@ -208,8 +208,8 @@ export function TrackManagement({ mode }: TrackManagementProps) {
 
   if (mode === 'track-rules') {
     return (
-      <div className="bg-white rounded-sm border border-gray-200 animate-in fade-in duration-500 w-full min-h-screen font-sans">
-        <div className="p-2 border-b border-gray-100 flex flex-wrap items-center gap-2 bg-gray-50/50">
+      <div className="bg-white rounded-sm border border-gray-200 animate-in fade-in duration-500 w-full h-full flex flex-col font-sans min-h-0">
+        <div className="p-2 border-b border-gray-100 flex flex-wrap items-center gap-2 bg-gray-50/50 shrink-0">
           <div className="flex items-center border border-gray-300 rounded-sm px-2 h-7 bg-white">
             <span className="text-[12px] text-gray-500 pr-2 border-r border-gray-200 mr-2">关键词</span>
             <input type="text" className="outline-none text-[12px] w-32 h-5" placeholder="请输入关键词" />
@@ -230,7 +230,7 @@ export function TrackManagement({ mode }: TrackManagementProps) {
           </button>
         </div>
 
-        <div className="overflow-auto max-h-[calc(100vh-200px)]">
+        <div className="flex-1 overflow-auto min-h-0">
            <table className="w-full border-collapse text-[12px] text-left">
               <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
                  <tr className="hover:bg-gray-50 transition-colors">
@@ -290,9 +290,9 @@ export function TrackManagement({ mode }: TrackManagementProps) {
   });
 
   return (
-    <div className="bg-white rounded-sm border border-gray-200 animate-in fade-in duration-500 w-full min-h-screen font-sans">
+    <div className="bg-white rounded-sm border border-gray-200 animate-in fade-in duration-500 w-full h-full flex flex-col font-sans min-h-0">
       {/* Search Filter Bar */}
-      <div className="p-2 border-b border-gray-100 flex flex-wrap items-center gap-2 bg-gray-50/50">
+      <div className="p-2 border-b border-gray-100 flex flex-wrap items-center gap-2 bg-gray-50/50 shrink-0">
         <div className="flex items-center gap-1 border border-gray-300 rounded-sm px-2 h-7 bg-white">
            <select className="outline-none text-[12px] bg-transparent border-r pr-2 border-gray-200 h-full">
               <option>参考单号</option>
@@ -331,7 +331,7 @@ export function TrackManagement({ mode }: TrackManagementProps) {
       </div>
 
       {/* Summary Info Bar (similar to DropshipOrderList) */}
-      <div className="px-4 py-2 bg-gray-50 border-b border-gray-200 flex items-center justify-between text-[11px]">
+      <div className="px-4 py-2 bg-gray-50 border-b border-gray-200 flex items-center justify-between text-[11px] shrink-0">
         <div className="flex items-center gap-1 text-gray-700">
           <span>当前订单总数为:<span className="text-red-500 font-bold">{filteredOrders.length}</span>个, 异常轨迹:<span className="text-red-500 font-bold">1</span>个, 待跟进:<span className="text-red-500 font-bold">2</span>个</span>
         </div>
@@ -342,7 +342,7 @@ export function TrackManagement({ mode }: TrackManagementProps) {
       </div>
 
       {/* Table Section */}
-      <div className="overflow-x-auto overflow-y-auto max-h-[calc(100vh-250px)]">
+      <div className="flex-1 overflow-auto min-h-0">
         <table className="w-full border-collapse text-[12px] text-left">
           <thead className="bg-[#f5f7fa] text-gray-600 font-medium">
             <tr className="hover:bg-gray-50 transition-colors">
