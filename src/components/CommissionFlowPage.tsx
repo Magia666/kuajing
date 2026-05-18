@@ -38,10 +38,55 @@ const CommissionFlowPage: React.FC = () => {
         <Table 
           columns={columns} 
           dataSource={[
-            { key: '1', flowType: '邀请奖励', amount: '+ ￥ 50.00', remainingAmount: '￥ 550.00', remark: '邀请用户 seller_mike 注册成功', createTime: '2023-11-02 14:15:22' },
-            { key: '2', flowType: '提现扣除', amount: '- ￥ 500.00', remainingAmount: '￥ 50.00', remark: '申请体现到支付宝', createTime: '2024-01-15 11:20:00' },
-            { key: '3', flowType: '订单返利', amount: '+ ￥ 12.50', remainingAmount: '￥ 62.50', remark: '下级用户生成运单号: YT123456789', createTime: '2024-02-10 10:00:00' }
-          ]} 
+  {
+    key: "1",
+    flowType: "电子产品",
+    amount: "128.00",
+    remainingAmount: "128.00",
+    remark: "客户要求加急发货",
+    createTime: "2024-05-10 14:10:00"
+  },
+  {
+    key: "2",
+    flowType: "服装服饰",
+    amount: "194.50",
+    remainingAmount: "194.50",
+    remark: "商品存在轻微瑕疵",
+    createTime: "2024-05-11 14:15:00"
+  },
+  {
+    key: "3",
+    flowType: "家居日用",
+    amount: "261.00",
+    remainingAmount: "261.00",
+    remark: "包裹外包装破损",
+    createTime: "2024-05-12 14:20:00"
+  },
+  {
+    key: "4",
+    flowType: "户外运动",
+    amount: "327.50",
+    remainingAmount: "327.50",
+    remark: "尺码拍错，要求换货",
+    createTime: "2024-05-13 14:25:00"
+  },
+  {
+    key: "5",
+    flowType: "美妆个护",
+    amount: "394.00",
+    remainingAmount: "394.00",
+    remark: "地址填写错误，已更正",
+    createTime: "2024-05-14 14:30:00"
+  },
+  {
+    key: "6",
+    flowType: "电子产品",
+    amount: "460.50",
+    remainingAmount: "460.50",
+    remark: "客户要求加急发货",
+    createTime: "2024-05-15 14:35:00"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

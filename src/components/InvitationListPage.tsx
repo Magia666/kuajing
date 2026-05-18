@@ -34,10 +34,43 @@ const InvitationListPage: React.FC = () => {
         <Table 
           columns={columns} 
           dataSource={[
-            { key: '1', account: 'testuser001', phone: '138****1234', registerTime: '2023-10-25 10:30:00' },
-            { key: '2', account: 'seller_mike', phone: '139****5678', registerTime: '2023-11-02 14:15:22' },
-            { key: '3', account: 'jane_doe', phone: '186****9012', registerTime: '2023-12-10 09:45:11' }
-          ]} 
+  {
+    key: "1",
+    account: "张无忌",
+    phone: "13880000000",
+    registerTime: "2024-05-10 14:10:00"
+  },
+  {
+    key: "2",
+    account: "李寻欢",
+    phone: "13880012345",
+    registerTime: "2024-05-11 14:15:00"
+  },
+  {
+    key: "3",
+    account: "王语嫣",
+    phone: "13880024690",
+    registerTime: "2024-05-12 14:20:00"
+  },
+  {
+    key: "4",
+    account: "赵敏",
+    phone: "13880037035",
+    registerTime: "2024-05-13 14:25:00"
+  },
+  {
+    key: "5",
+    account: "系统管理员",
+    phone: "13880049380",
+    registerTime: "2024-05-14 14:30:00"
+  },
+  {
+    key: "6",
+    account: "运营专员",
+    phone: "13880061725",
+    registerTime: "2024-05-15 14:35:00"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

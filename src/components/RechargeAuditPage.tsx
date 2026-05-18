@@ -29,12 +29,61 @@ const RechargeAuditPage: React.FC = () => {
   ];
 
   const dataSource: RechargeAuditData[] = [
-    { key: '1', rechargeAmount: 50, currency: 'CNY', rechargeAccount: '支付宝', account: '支付宝', auditStatus: '通过', rechargeTime: '2025-10-31 18:41:24' },
-    { key: '2', rechargeAmount: 66.71, currency: 'CNY', rechargeAccount: '支付宝', account: '支付宝', auditStatus: '通过', rechargeTime: '2025-07-01 19:06:11' },
-    { key: '3', rechargeAmount: 500, currency: 'CNY', rechargeAccount: '支付宝', account: '支付宝', auditStatus: '通过', rechargeTime: '2025-06-27 11:54:46' },
-    { key: '4', rechargeAmount: 500, currency: 'CNY', rechargeAccount: '支付宝', account: '支付宝', auditStatus: '通过', rechargeTime: '2025-06-13 10:42:28' },
-    { key: '5', rechargeAmount: 400, currency: 'CNY', rechargeAccount: '支付宝', account: '支付宝', auditStatus: '通过', rechargeTime: '2025-05-16 15:42:01' },
-  ];
+  {
+    key: "1",
+    rechargeAmount: "128.00",
+    currency: "USD",
+    rechargeAccount: "张无忌",
+    account: "张无忌",
+    auditStatus: "处理中",
+    rechargeTime: "2024-05-10 14:10:00"
+  },
+  {
+    key: "2",
+    rechargeAmount: "194.50",
+    currency: "CNY",
+    rechargeAccount: "李寻欢",
+    account: "李寻欢",
+    auditStatus: "已发货",
+    rechargeTime: "2024-05-11 14:15:00"
+  },
+  {
+    key: "3",
+    rechargeAmount: "261.00",
+    currency: "EUR",
+    rechargeAccount: "王语嫣",
+    account: "王语嫣",
+    auditStatus: "待付款",
+    rechargeTime: "2024-05-12 14:20:00"
+  },
+  {
+    key: "4",
+    rechargeAmount: "327.50",
+    currency: "GBP",
+    rechargeAccount: "赵敏",
+    account: "赵敏",
+    auditStatus: "已完成",
+    rechargeTime: "2024-05-13 14:25:00"
+  },
+  {
+    key: "5",
+    rechargeAmount: "394.00",
+    currency: "JPY",
+    rechargeAccount: "系统管理员",
+    account: "系统管理员",
+    auditStatus: "已取消",
+    rechargeTime: "2024-05-14 14:30:00"
+  },
+  {
+    key: "6",
+    rechargeAmount: "460.50",
+    currency: "USD",
+    rechargeAccount: "运营专员",
+    account: "运营专员",
+    auditStatus: "退款中",
+    rechargeTime: "2024-05-15 14:35:00"
+  }
+];
 
   const topTabs: TabsProps['items'] = [
     { key: 'home', label: '首页' },

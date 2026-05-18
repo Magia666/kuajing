@@ -64,43 +64,51 @@ const DistributionAccountPage: React.FC = () => {
           dataSource={[
   {
     key: "1",
-    transactionNumber: "测试数据 1",
-    amount: 100,
-    applicationTime: "2024-03-21",
-    paymentTime: "2024-03-21",
+    transactionNumber: "SO202405181000",
+    amount: "128.00",
+    applicationTime: "2024-05-10 14:10:00",
+    paymentTime: "2024-05-10 14:10:00",
     status: "处理中"
   },
   {
     key: "2",
-    transactionNumber: "测试数据 2",
-    amount: 200,
-    applicationTime: "2024-03-22",
-    paymentTime: "2024-03-22",
-    status: "成功"
+    transactionNumber: "PO202405181007",
+    amount: "194.50",
+    applicationTime: "2024-05-11 14:15:00",
+    paymentTime: "2024-05-11 14:15:00",
+    status: "已发货"
   },
   {
     key: "3",
-    transactionNumber: "测试数据 3",
-    amount: 300,
-    applicationTime: "2024-03-23",
-    paymentTime: "2024-03-23",
-    status: "处理中"
+    transactionNumber: "RO202405181014",
+    amount: "261.00",
+    applicationTime: "2024-05-12 14:20:00",
+    paymentTime: "2024-05-12 14:20:00",
+    status: "待付款"
   },
   {
     key: "4",
-    transactionNumber: "测试数据 4",
-    amount: 400,
-    applicationTime: "2024-03-24",
-    paymentTime: "2024-03-24",
-    status: "成功"
+    transactionNumber: "TR202405181021",
+    amount: "327.50",
+    applicationTime: "2024-05-13 14:25:00",
+    paymentTime: "2024-05-13 14:25:00",
+    status: "已完成"
   },
   {
     key: "5",
-    transactionNumber: "测试数据 5",
-    amount: 500,
-    applicationTime: "2024-03-25",
-    paymentTime: "2024-03-25",
-    status: "处理中"
+    transactionNumber: "WO202405181028",
+    amount: "394.00",
+    applicationTime: "2024-05-14 14:30:00",
+    paymentTime: "2024-05-14 14:30:00",
+    status: "已取消"
+  },
+  {
+    key: "6",
+    transactionNumber: "SO202405181035",
+    amount: "460.50",
+    applicationTime: "2024-05-15 14:35:00",
+    paymentTime: "2024-05-15 14:35:00",
+    status: "退款中"
   }
 ]} 
           locale={{ emptyText: '暂无数据' }}

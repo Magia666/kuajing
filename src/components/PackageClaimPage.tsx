@@ -68,48 +68,57 @@ const PackageClaimPage: React.FC = () => {
           dataSource={[
   {
     key: "1",
-    productInfo: "测试数据 1",
-    originalOrderInfo: "测试数据 1",
-    packageInfo: "测试数据 1",
-    shelfInfo: "测试数据 1",
-    time: "2024-03-21",
-    remark: "测试数据 1"
+    productInfo: "2024新款智能手表监控防水运动手环",
+    originalOrderInfo: "SO202405181000",
+    packageInfo: "采购单-20240518",
+    shelfInfo: "采购单-20240518",
+    time: "2024-05-10 14:10:00",
+    remark: "客户要求加急发货"
   },
   {
     key: "2",
-    productInfo: "测试数据 2",
-    originalOrderInfo: "测试数据 2",
-    packageInfo: "测试数据 2",
-    shelfInfo: "测试数据 2",
-    time: "2024-03-22",
-    remark: "测试数据 2"
+    productInfo: "无线蓝牙耳机降噪入耳式长续航",
+    originalOrderInfo: "PO202405181007",
+    packageInfo: "物流包裹-YD998123",
+    shelfInfo: "物流包裹-YD998123",
+    time: "2024-05-11 14:15:00",
+    remark: "商品存在轻微瑕疵"
   },
   {
     key: "3",
-    productInfo: "测试数据 3",
-    originalOrderInfo: "测试数据 3",
-    packageInfo: "测试数据 3",
-    shelfInfo: "测试数据 3",
-    time: "2024-03-23",
-    remark: "测试数据 3"
+    productInfo: "纯棉短袖T恤男夏季宽松百搭",
+    originalOrderInfo: "RO202405181014",
+    packageInfo: "A区-05货架-03层",
+    shelfInfo: "A区-05货架-03层",
+    time: "2024-05-12 14:20:00",
+    remark: "包裹外包装破损"
   },
   {
     key: "4",
-    productInfo: "测试数据 4",
-    originalOrderInfo: "测试数据 4",
-    packageInfo: "测试数据 4",
-    shelfInfo: "测试数据 4",
-    time: "2024-03-24",
-    remark: "测试数据 4"
+    productInfo: "户外便携运动水杯大容量防漏",
+    originalOrderInfo: "TR202405181021",
+    packageInfo: "采购单-20240518",
+    shelfInfo: "采购单-20240518",
+    time: "2024-05-13 14:25:00",
+    remark: "尺码拍错，要求换货"
   },
   {
     key: "5",
-    productInfo: "测试数据 5",
-    originalOrderInfo: "测试数据 5",
-    packageInfo: "测试数据 5",
-    shelfInfo: "测试数据 5",
-    time: "2024-03-25",
-    remark: "测试数据 5"
+    productInfo: "家用多功能颈椎按摩仪护颈",
+    originalOrderInfo: "WO202405181028",
+    packageInfo: "物流包裹-YD998123",
+    shelfInfo: "物流包裹-YD998123",
+    time: "2024-05-14 14:30:00",
+    remark: "地址填写错误，已更正"
+  },
+  {
+    key: "6",
+    productInfo: "2024新款智能手表监控防水运动手环",
+    originalOrderInfo: "SO202405181035",
+    packageInfo: "A区-05货架-03层",
+    shelfInfo: "A区-05货架-03层",
+    time: "2024-05-15 14:35:00",
+    remark: "客户要求加急发货"
   }
 ]} 
           locale={{ emptyText: '暂无数据' }}

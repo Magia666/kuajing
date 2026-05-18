@@ -44,44 +44,52 @@ const Authorization1688Page: React.FC = () => {
           columns={columns} 
           dataSource={[
   {
-    key: "测试数据 1",
-    account: "测试数据 1",
-    remark: "测试数据 1",
-    authTime: "2024-03-21",
-    authStatus: "处理中",
-    expirationTime: "2024-03-21"
+    key: "1",
+    account: "ali_test_user_01",
+    remark: "主采购账号",
+    authTime: "2024-05-10 14:10:00",
+    authStatus: "已授权",
+    expirationTime: "2025-05-10 14:10:00"
   },
   {
-    key: "测试数据 2",
-    account: "测试数据 2",
-    remark: "测试数据 2",
-    authTime: "2024-03-22",
-    authStatus: "成功",
-    expirationTime: "2024-03-22"
+    key: "2",
+    account: "ali_buyer_02",
+    remark: "服装类目采购",
+    authTime: "2024-05-11 14:15:00",
+    authStatus: "已授权",
+    expirationTime: "2025-05-11 14:15:00"
   },
   {
-    key: "测试数据 3",
-    account: "测试数据 3",
-    remark: "测试数据 3",
-    authTime: "2024-03-23",
-    authStatus: "处理中",
-    expirationTime: "2024-03-23"
+    key: "3",
+    account: "supplier_sync_03",
+    remark: "自动发货接口账号",
+    authTime: "2024-05-12 14:20:00",
+    authStatus: "授权失效",
+    expirationTime: "2024-01-12 14:20:00"
   },
   {
-    key: "测试数据 4",
-    account: "测试数据 4",
-    remark: "测试数据 4",
-    authTime: "2024-03-24",
-    authStatus: "成功",
-    expirationTime: "2024-03-24"
+    key: "4",
+    account: "electronics_purchaser",
+    remark: "电子产品采购专员",
+    authTime: "2024-05-13 14:25:00",
+    authStatus: "已授权",
+    expirationTime: "2025-05-13 14:25:00"
   },
   {
-    key: "测试数据 5",
-    account: "测试数据 5",
-    remark: "测试数据 5",
-    authTime: "2024-03-25",
-    authStatus: "处理中",
-    expirationTime: "2024-03-25"
+    key: "5",
+    account: "shop_mgr_05",
+    remark: "备用账号",
+    authTime: "2024-05-14 14:30:00",
+    authStatus: "未授权",
+    expirationTime: "-"
+  },
+  {
+    key: "6",
+    account: "ali_buyer_06",
+    remark: "家居类采购",
+    authTime: "2024-05-15 14:35:00",
+    authStatus: "授权失效",
+    expirationTime: "2024-03-15 14:35:00"
   }
 ]} 
           locale={{ emptyText: '暂无数据' }}

@@ -22,7 +22,50 @@ const ShippedOrderManagementPage: React.FC = () => {
     { title: '操作', dataIndex: 'operation', key: 'operation', render: () => <a>操作</a> },
   ];
 
-  const dataSource: OrderData[] = [{ key: "1", orderNumber: "ORD-001", customer: "John Doe", title: "Test Item", status: "处理中", total: 100, roleName: "管理员", accountName: "test_user", phone: "13800138000", amount: 100, operation: "操作" }, { key: "2", orderNumber: "ORD-002", customer: "Jane Doe", title: "Test Item 2", status: "已完成", total: 200, roleName: "普通职员", accountName: "normal_user", phone: "13800138001", amount: 200, operation: "操作" }];
+  const dataSource: OrderData[] = [
+  {
+    key: "1",
+    orderNumber: "SO202405181000",
+    customer: "张无忌",
+    status: "处理中",
+    total: "128.00"
+  },
+  {
+    key: "2",
+    orderNumber: "PO202405181007",
+    customer: "李寻欢",
+    status: "已发货",
+    total: "194.50"
+  },
+  {
+    key: "3",
+    orderNumber: "RO202405181014",
+    customer: "王语嫣",
+    status: "待付款",
+    total: "261.00"
+  },
+  {
+    key: "4",
+    orderNumber: "TR202405181021",
+    customer: "赵敏",
+    status: "已完成",
+    total: "327.50"
+  },
+  {
+    key: "5",
+    orderNumber: "WO202405181028",
+    customer: "系统管理员",
+    status: "已取消",
+    total: "394.00"
+  },
+  {
+    key: "6",
+    orderNumber: "SO202405181035",
+    customer: "运营专员",
+    status: "退款中",
+    total: "460.50"
+  }
+];
 
   const topTabs: TabsProps['items'] = [
     { key: 'shipped', label: '已发货订单' },

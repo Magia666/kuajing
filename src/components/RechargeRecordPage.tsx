@@ -45,43 +45,51 @@ const RechargeRecordPage: React.FC = () => {
           dataSource={[
   {
     key: "1",
-    orderNumber: "测试数据 1",
-    transactionAmount: 100,
-    remainingPoints: "测试数据 1",
-    description: "测试数据 1",
-    transactionTime: "2024-03-21"
+    orderNumber: "SO202405181000",
+    transactionAmount: "128.00",
+    remainingPoints: 100,
+    description: "客户要求加急发货",
+    transactionTime: "2024-05-10 14:10:00"
   },
   {
     key: "2",
-    orderNumber: "测试数据 2",
-    transactionAmount: 200,
-    remainingPoints: "测试数据 2",
-    description: "测试数据 2",
-    transactionTime: "2024-03-22"
+    orderNumber: "PO202405181007",
+    transactionAmount: "194.50",
+    remainingPoints: 150,
+    description: "商品存在轻微瑕疵",
+    transactionTime: "2024-05-11 14:15:00"
   },
   {
     key: "3",
-    orderNumber: "测试数据 3",
-    transactionAmount: 300,
-    remainingPoints: "测试数据 3",
-    description: "测试数据 3",
-    transactionTime: "2024-03-23"
+    orderNumber: "RO202405181014",
+    transactionAmount: "261.00",
+    remainingPoints: 200,
+    description: "包裹外包装破损",
+    transactionTime: "2024-05-12 14:20:00"
   },
   {
     key: "4",
-    orderNumber: "测试数据 4",
-    transactionAmount: 400,
-    remainingPoints: "测试数据 4",
-    description: "测试数据 4",
-    transactionTime: "2024-03-24"
+    orderNumber: "TR202405181021",
+    transactionAmount: "327.50",
+    remainingPoints: 250,
+    description: "尺码拍错，要求换货",
+    transactionTime: "2024-05-13 14:25:00"
   },
   {
     key: "5",
-    orderNumber: "测试数据 5",
-    transactionAmount: 500,
-    remainingPoints: "测试数据 5",
-    description: "测试数据 5",
-    transactionTime: "2024-03-25"
+    orderNumber: "WO202405181028",
+    transactionAmount: "394.00",
+    remainingPoints: 300,
+    description: "地址填写错误，已更正",
+    transactionTime: "2024-05-14 14:30:00"
+  },
+  {
+    key: "6",
+    orderNumber: "SO202405181035",
+    transactionAmount: "460.50",
+    remainingPoints: 350,
+    description: "客户要求加急发货",
+    transactionTime: "2024-05-15 14:35:00"
   }
 ]} 
           locale={{ emptyText: '暂无数据' }}

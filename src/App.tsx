@@ -1,5 +1,7 @@
 import React from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { FloatButton } from "antd";
+import { AppstoreOutlined } from "@ant-design/icons";
 
 import { KPICards, CoreCharts } from "@/components/dashboard/Module1";
 import { BusinessModuleDashboard } from "@/components/dashboard/Module2";
@@ -59,6 +61,20 @@ import CommissionFlowPage from "@/components/CommissionFlowPage";
 import FileDownloadTaskPage from "@/components/FileDownloadTaskPage";
 import ProductCollectionPage from "@/components/ProductCollectionPage";
 import InventorySyncPage from "@/components/InventorySyncPage";
+import NavigationPage from "@/components/NavigationPage";
+
+function GlobalNavButton() {
+  const navigate = useNavigate();
+  return (
+    <FloatButton 
+      icon={<AppstoreOutlined />} 
+      type="primary" 
+      style={{ right: 24, bottom: 24, width: 48, height: 48 }}
+      tooltip="全页面导航"
+      onClick={() => navigate("/navigation")} 
+    />
+  );
+}
 
 function Dashboard() {
   return (
@@ -104,6 +120,7 @@ export default function App() {
         <main className="max-w-[1920px] mx-auto w-full">
           <Routes>
             <Route path="/" element={<div className="p-6"><Dashboard /></div>} />
+            <Route path="/navigation" element={<NavigationPage />} />
             <Route path="/ai-selection" element={<AISelection />} />
             <Route path="/ai-customer-service" element={<AICustomerService />} />
             <Route path="/inventory-warning" element={<InventoryWarning />} />
@@ -157,6 +174,7 @@ export default function App() {
             <Route path="/commission-flow" element={<CommissionFlowPage />} />
             <Route path="/file-download-task" element={<FileDownloadTaskPage />} />
           </Routes>
+          <GlobalNavButton />
         </main>
       </div>
     </HashRouter>

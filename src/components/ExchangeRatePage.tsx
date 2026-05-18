@@ -52,9 +52,37 @@ const ExchangeRatePage: React.FC = () => {
         <Table 
           columns={columns} 
           dataSource={[
-            { key: '1', rule: '人民币对美元汇率', formula: '1 RMB = 0.14 USD' },
-            { key: '2', rule: '人民币对欧元汇率', formula: '1 RMB = 0.13 EUR' }
-          ]} 
+  {
+    key: "1",
+    rule: "固定汇率",
+    formula: "固定汇率"
+  },
+  {
+    key: "2",
+    rule: "实时浮动汇率",
+    formula: "实时浮动汇率"
+  },
+  {
+    key: "3",
+    rule: "平台结算汇率",
+    formula: "平台结算汇率"
+  },
+  {
+    key: "4",
+    rule: "固定汇率",
+    formula: "固定汇率"
+  },
+  {
+    key: "5",
+    rule: "实时浮动汇率",
+    formula: "实时浮动汇率"
+  },
+  {
+    key: "6",
+    rule: "平台结算汇率",
+    formula: "平台结算汇率"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

@@ -37,10 +37,55 @@ const InvitationWithdrawalPage: React.FC = () => {
         <Table 
           columns={columns} 
           dataSource={[
-            { key: '1', withdrawTime: '2024-01-15 11:20:00', withdrawAmount: '￥ 500.00', accountType: '支付宝', withdrawAccount: 'user@example.com', status: '已打款' },
-            { key: '2', withdrawTime: '2024-02-01 09:10:30', withdrawAmount: '￥ 200.00', accountType: '微信', withdrawAccount: 'wxid_123456789', status: '处理中' },
-            { key: '3', withdrawTime: '2024-02-28 16:45:10', withdrawAmount: '￥ 1000.00', accountType: '银行卡', withdrawAccount: '622202********1234', status: '审核驳回' }
-          ]} 
+  {
+    key: "1",
+    withdrawTime: "2024-05-10 14:10:00",
+    withdrawAmount: "128.00",
+    accountType: "张无忌",
+    withdrawAccount: "张无忌",
+    status: "处理中"
+  },
+  {
+    key: "2",
+    withdrawTime: "2024-05-11 14:15:00",
+    withdrawAmount: "194.50",
+    accountType: "李寻欢",
+    withdrawAccount: "李寻欢",
+    status: "已发货"
+  },
+  {
+    key: "3",
+    withdrawTime: "2024-05-12 14:20:00",
+    withdrawAmount: "261.00",
+    accountType: "王语嫣",
+    withdrawAccount: "王语嫣",
+    status: "待付款"
+  },
+  {
+    key: "4",
+    withdrawTime: "2024-05-13 14:25:00",
+    withdrawAmount: "327.50",
+    accountType: "赵敏",
+    withdrawAccount: "赵敏",
+    status: "已完成"
+  },
+  {
+    key: "5",
+    withdrawTime: "2024-05-14 14:30:00",
+    withdrawAmount: "394.00",
+    accountType: "系统管理员",
+    withdrawAccount: "系统管理员",
+    status: "已取消"
+  },
+  {
+    key: "6",
+    withdrawTime: "2024-05-15 14:35:00",
+    withdrawAmount: "460.50",
+    accountType: "运营专员",
+    withdrawAccount: "运营专员",
+    status: "退款中"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

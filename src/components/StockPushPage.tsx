@@ -55,49 +55,58 @@ const StockPushPage: React.FC = () => {
           columns={columns} 
           dataSource={[
   {
-    key: "测试数据 1",
-    ruleName: "测试数据 1",
-    productSku: "测试数据 1",
-    storeName: "测试数据 1",
-    warehouse: "测试数据 1",
-    time: "2024-03-21",
+    key: "1",
+    ruleName: "2024新款智能手表监控防水运动手环",
+    productSku: "2024新款智能手表监控防水运动手环",
+    storeName: "跨境小店 US",
+    warehouse: "美西一仓",
+    time: "2024-05-10 14:10:00",
     status: "处理中"
   },
   {
-    key: "测试数据 2",
-    ruleName: "测试数据 2",
-    productSku: "测试数据 2",
-    storeName: "测试数据 2",
-    warehouse: "测试数据 2",
-    time: "2024-03-22",
-    status: "成功"
+    key: "2",
+    ruleName: "无线蓝牙耳机降噪入耳式长续航",
+    productSku: "无线蓝牙耳机降噪入耳式长续航",
+    storeName: "跨境小店 UK",
+    warehouse: "深圳总仓",
+    time: "2024-05-11 14:15:00",
+    status: "已发货"
   },
   {
-    key: "测试数据 3",
-    ruleName: "测试数据 3",
-    productSku: "测试数据 3",
-    storeName: "测试数据 3",
-    warehouse: "测试数据 3",
-    time: "2024-03-23",
-    status: "处理中"
+    key: "3",
+    ruleName: "纯棉短袖T恤男夏季宽松百搭",
+    productSku: "纯棉短袖T恤男夏季宽松百搭",
+    storeName: "跨境小店 SG",
+    warehouse: "义乌中转仓",
+    time: "2024-05-12 14:20:00",
+    status: "待付款"
   },
   {
-    key: "测试数据 4",
-    ruleName: "测试数据 4",
-    productSku: "测试数据 4",
-    storeName: "测试数据 4",
-    warehouse: "测试数据 4",
-    time: "2024-03-24",
-    status: "成功"
+    key: "4",
+    ruleName: "户外便携运动水杯大容量防漏",
+    productSku: "户外便携运动水杯大容量防漏",
+    storeName: "跨境小店 MY",
+    warehouse: "美东二仓",
+    time: "2024-05-13 14:25:00",
+    status: "已完成"
   },
   {
-    key: "测试数据 5",
-    ruleName: "测试数据 5",
-    productSku: "测试数据 5",
-    storeName: "测试数据 5",
-    warehouse: "测试数据 5",
-    time: "2024-03-25",
-    status: "处理中"
+    key: "5",
+    ruleName: "家用多功能颈椎按摩仪护颈",
+    productSku: "家用多功能颈椎按摩仪护颈",
+    storeName: "跨境小店 PH",
+    warehouse: "法兰克福仓",
+    time: "2024-05-14 14:30:00",
+    status: "已取消"
+  },
+  {
+    key: "6",
+    ruleName: "2024新款智能手表监控防水运动手环",
+    productSku: "2024新款智能手表监控防水运动手环",
+    storeName: "跨境小店 US",
+    warehouse: "美西一仓",
+    time: "2024-05-15 14:35:00",
+    status: "退款中"
   }
 ]} 
           locale={{ emptyText: '暂无数据' }}

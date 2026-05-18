@@ -31,10 +31,43 @@ const FileDownloadTaskPage: React.FC = () => {
         <Table 
           columns={columns} 
           dataSource={[
-            { key: '1', downloadTime: '2024-03-01 10:00:00', status: '成功', remark: '导出2024年2月订单报表.xlsx' },
-            { key: '2', downloadTime: '2024-03-02 14:30:15', status: '处理中', remark: '导出库存明细数据.csv' },
-            { key: '3', downloadTime: '2024-03-05 09:15:00', status: '失败', remark: '系统超时，请重试' }
-          ]} 
+  {
+    key: "1",
+    downloadTime: "2024-05-10 14:10:00",
+    status: "处理中",
+    remark: "客户要求加急发货"
+  },
+  {
+    key: "2",
+    downloadTime: "2024-05-11 14:15:00",
+    status: "已发货",
+    remark: "商品存在轻微瑕疵"
+  },
+  {
+    key: "3",
+    downloadTime: "2024-05-12 14:20:00",
+    status: "待付款",
+    remark: "包裹外包装破损"
+  },
+  {
+    key: "4",
+    downloadTime: "2024-05-13 14:25:00",
+    status: "已完成",
+    remark: "尺码拍错，要求换货"
+  },
+  {
+    key: "5",
+    downloadTime: "2024-05-14 14:30:00",
+    status: "已取消",
+    remark: "地址填写错误，已更正"
+  },
+  {
+    key: "6",
+    downloadTime: "2024-05-15 14:35:00",
+    status: "退款中",
+    remark: "客户要求加急发货"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

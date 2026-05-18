@@ -26,7 +26,62 @@ const LocalProductPage: React.FC = () => {
     { title: '操作', dataIndex: 'operation', key: 'operation', render: () => <a>操作</a> },
   ];
 
-  const dataSource: ProductData[] = [{ key: "1", orderNumber: "ORD-001", customer: "John Doe", title: "Test Item", status: "处理中", total: 100, roleName: "管理员", accountName: "test_user", phone: "13800138000", amount: 100, operation: "操作" }, { key: "2", orderNumber: "ORD-002", customer: "Jane Doe", title: "Test Item 2", status: "已完成", total: 200, roleName: "普通职员", accountName: "normal_user", phone: "13800138001", amount: 200, operation: "操作" }];
+  const dataSource: ProductData[] = [
+  {
+    key: "1",
+    localCode: "SO202405181000",
+    productName: "2024新款智能手表监控防水运动手环",
+    sku: "SKU-24C000X",
+    matchedSku: "SKU-24C000X",
+    dimensions: "10x20x30 cm",
+    cost: "128.00"
+  },
+  {
+    key: "2",
+    localCode: "PO202405181007",
+    productName: "无线蓝牙耳机降噪入耳式长续航",
+    sku: "SKU-24C001X",
+    matchedSku: "SKU-24C001X",
+    dimensions: "11x21x31 cm",
+    cost: "194.50"
+  },
+  {
+    key: "3",
+    localCode: "RO202405181014",
+    productName: "纯棉短袖T恤男夏季宽松百搭",
+    sku: "SKU-24C002X",
+    matchedSku: "SKU-24C002X",
+    dimensions: "12x22x32 cm",
+    cost: "261.00"
+  },
+  {
+    key: "4",
+    localCode: "TR202405181021",
+    productName: "户外便携运动水杯大容量防漏",
+    sku: "SKU-24C003X",
+    matchedSku: "SKU-24C003X",
+    dimensions: "13x23x33 cm",
+    cost: "327.50"
+  },
+  {
+    key: "5",
+    localCode: "WO202405181028",
+    productName: "家用多功能颈椎按摩仪护颈",
+    sku: "SKU-24C004X",
+    matchedSku: "SKU-24C004X",
+    dimensions: "14x24x34 cm",
+    cost: "394.00"
+  },
+  {
+    key: "6",
+    localCode: "SO202405181035",
+    productName: "2024新款智能手表监控防水运动手环",
+    sku: "SKU-24C005X",
+    matchedSku: "SKU-24C005X",
+    dimensions: "15x25x35 cm",
+    cost: "460.50"
+  }
+];
 
   const items: TabsProps['items'] = [
     { key: 'single', label: '单sku' },

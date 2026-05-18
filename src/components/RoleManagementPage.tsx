@@ -20,7 +20,50 @@ const RoleManagementPage: React.FC = () => {
     { title: '操作', dataIndex: 'operation', key: 'operation', render: () => <a>操作</a> },
   ];
 
-  const dataSource: RoleData[] = [{ key: "1", orderNumber: "ORD-001", customer: "John Doe", title: "Test Item", status: "处理中", total: 100, roleName: "管理员", accountName: "test_user", phone: "13800138000", amount: 100, operation: "操作" }, { key: "2", orderNumber: "ORD-002", customer: "Jane Doe", title: "Test Item 2", status: "已完成", total: 200, roleName: "普通职员", accountName: "normal_user", phone: "13800138001", amount: 200, operation: "操作" }];
+  const dataSource: RoleData[] = [
+  {
+    key: "1",
+    roleCode: "张无忌",
+    roleName: "张无忌",
+    createTime: "2024-05-10 14:10:00",
+    note: "SO202405181000"
+  },
+  {
+    key: "2",
+    roleCode: "李寻欢",
+    roleName: "李寻欢",
+    createTime: "2024-05-11 14:15:00",
+    note: "PO202405181007"
+  },
+  {
+    key: "3",
+    roleCode: "王语嫣",
+    roleName: "王语嫣",
+    createTime: "2024-05-12 14:20:00",
+    note: "RO202405181014"
+  },
+  {
+    key: "4",
+    roleCode: "赵敏",
+    roleName: "赵敏",
+    createTime: "2024-05-13 14:25:00",
+    note: "TR202405181021"
+  },
+  {
+    key: "5",
+    roleCode: "系统管理员",
+    roleName: "系统管理员",
+    createTime: "2024-05-14 14:30:00",
+    note: "WO202405181028"
+  },
+  {
+    key: "6",
+    roleCode: "运营专员",
+    roleName: "运营专员",
+    createTime: "2024-05-15 14:35:00",
+    note: "SO202405181035"
+  }
+];
 
   return (
     <div className="p-6 bg-slate-50 min-h-screen">

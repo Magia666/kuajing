@@ -50,49 +50,58 @@ const ExpressClaimPage: React.FC = () => {
           columns={columns} 
           dataSource={[
   {
-    key: "测试数据 1",
-    expressNumber: "测试数据 1",
-    express: "测试数据 1",
-    warehouse: "测试数据 1",
+    key: "1",
+    expressNumber: "SO202405181000",
+    express: "顺丰国际",
+    warehouse: "美西一仓",
     status: "处理中",
-    receiveTime: "2024-03-21",
-    photo: "测试数据 1"
+    receiveTime: "2024-05-10 14:10:00",
+    photo: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=150&q=80"
   },
   {
-    key: "测试数据 2",
-    expressNumber: "测试数据 2",
-    express: "测试数据 2",
-    warehouse: "测试数据 2",
-    status: "成功",
-    receiveTime: "2024-03-22",
-    photo: "测试数据 2"
+    key: "2",
+    expressNumber: "PO202405181007",
+    express: "云途物流",
+    warehouse: "深圳总仓",
+    status: "已发货",
+    receiveTime: "2024-05-11 14:15:00",
+    photo: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=150&q=80"
   },
   {
-    key: "测试数据 3",
-    expressNumber: "测试数据 3",
-    express: "测试数据 3",
-    warehouse: "测试数据 3",
-    status: "处理中",
-    receiveTime: "2024-03-23",
-    photo: "测试数据 3"
+    key: "3",
+    expressNumber: "RO202405181014",
+    express: "燕文物流",
+    warehouse: "义乌中转仓",
+    status: "待付款",
+    receiveTime: "2024-05-12 14:20:00",
+    photo: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=150&q=80"
   },
   {
-    key: "测试数据 4",
-    expressNumber: "测试数据 4",
-    express: "测试数据 4",
-    warehouse: "测试数据 4",
-    status: "成功",
-    receiveTime: "2024-03-24",
-    photo: "测试数据 4"
+    key: "4",
+    expressNumber: "TR202405181021",
+    express: "DHL Express",
+    warehouse: "美东二仓",
+    status: "已完成",
+    receiveTime: "2024-05-13 14:25:00",
+    photo: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=150&q=80"
   },
   {
-    key: "测试数据 5",
-    expressNumber: "测试数据 5",
-    express: "测试数据 5",
-    warehouse: "测试数据 5",
-    status: "处理中",
-    receiveTime: "2024-03-25",
-    photo: "测试数据 5"
+    key: "5",
+    expressNumber: "WO202405181028",
+    express: "FedEx",
+    warehouse: "法兰克福仓",
+    status: "已取消",
+    receiveTime: "2024-05-14 14:30:00",
+    photo: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=150&q=80"
+  },
+  {
+    key: "6",
+    expressNumber: "SO202405181035",
+    express: "顺丰国际",
+    warehouse: "美西一仓",
+    status: "退款中",
+    receiveTime: "2024-05-15 14:35:00",
+    photo: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=150&q=80"
   }
 ]} 
           locale={{ emptyText: '暂无数据' }}

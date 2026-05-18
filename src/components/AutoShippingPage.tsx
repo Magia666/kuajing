@@ -52,9 +52,79 @@ const AutoShippingPage: React.FC = () => {
         <Table 
           columns={columns} 
           dataSource={[
-            { key: '1', ruleName: '美国仓自动发货', warehouse: '美东仓库', shippingMethod: 'USPS_FirstClass', allowedStores: 'Shopee_US_1, Amazon_US_Main', excludedStores: 'None', shippingDate: '每天 14:00', orderStatus: '待发货', buyerNote: '排除', status: '开启' },
-            { key: '2', ruleName: '欧洲海外仓规则', warehouse: '法兰克福仓', shippingMethod: 'DHL_Parcel', allowedStores: 'All European Stores', excludedStores: 'Shopify_UK_Test', shippingDate: '周一至周五 16:00', orderStatus: '已支付', buyerNote: '包含', status: '停用' }
-          ]} 
+  {
+    key: "1",
+    ruleName: "2024新款智能手表监控防水运动手环",
+    warehouse: "美西一仓",
+    shippingMethod: "微信支付",
+    allowedStores: "跨境小店 US",
+    excludedStores: "跨境小店 US",
+    shippingDate: "2024-05-10 14:10:00",
+    orderStatus: "处理中",
+    buyerNote: "张无忌",
+    status: "处理中"
+  },
+  {
+    key: "2",
+    ruleName: "无线蓝牙耳机降噪入耳式长续航",
+    warehouse: "深圳总仓",
+    shippingMethod: "支付宝",
+    allowedStores: "跨境小店 UK",
+    excludedStores: "跨境小店 UK",
+    shippingDate: "2024-05-11 14:15:00",
+    orderStatus: "已发货",
+    buyerNote: "李寻欢",
+    status: "已发货"
+  },
+  {
+    key: "3",
+    ruleName: "纯棉短袖T恤男夏季宽松百搭",
+    warehouse: "义乌中转仓",
+    shippingMethod: "信用卡",
+    allowedStores: "跨境小店 SG",
+    excludedStores: "跨境小店 SG",
+    shippingDate: "2024-05-12 14:20:00",
+    orderStatus: "待付款",
+    buyerNote: "王语嫣",
+    status: "待付款"
+  },
+  {
+    key: "4",
+    ruleName: "户外便携运动水杯大容量防漏",
+    warehouse: "美东二仓",
+    shippingMethod: "PayPal",
+    allowedStores: "跨境小店 MY",
+    excludedStores: "跨境小店 MY",
+    shippingDate: "2024-05-13 14:25:00",
+    orderStatus: "已完成",
+    buyerNote: "赵敏",
+    status: "已完成"
+  },
+  {
+    key: "5",
+    ruleName: "家用多功能颈椎按摩仪护颈",
+    warehouse: "法兰克福仓",
+    shippingMethod: "余额抵扣",
+    allowedStores: "跨境小店 PH",
+    excludedStores: "跨境小店 PH",
+    shippingDate: "2024-05-14 14:30:00",
+    orderStatus: "已取消",
+    buyerNote: "系统管理员",
+    status: "已取消"
+  },
+  {
+    key: "6",
+    ruleName: "2024新款智能手表监控防水运动手环",
+    warehouse: "美西一仓",
+    shippingMethod: "微信支付",
+    allowedStores: "跨境小店 US",
+    excludedStores: "跨境小店 US",
+    shippingDate: "2024-05-15 14:35:00",
+    orderStatus: "退款中",
+    buyerNote: "运营专员",
+    status: "退款中"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

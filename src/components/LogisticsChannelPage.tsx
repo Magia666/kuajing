@@ -31,23 +31,27 @@ const LogisticsChannelPage: React.FC = () => {
           dataSource={[
   {
     key: "1",
-    channelName: "测试数据 1"
+    channelName: "2024新款智能手表监控防水运动手环"
   },
   {
     key: "2",
-    channelName: "测试数据 2"
+    channelName: "无线蓝牙耳机降噪入耳式长续航"
   },
   {
     key: "3",
-    channelName: "测试数据 3"
+    channelName: "纯棉短袖T恤男夏季宽松百搭"
   },
   {
     key: "4",
-    channelName: "测试数据 4"
+    channelName: "户外便携运动水杯大容量防漏"
   },
   {
     key: "5",
-    channelName: "测试数据 5"
+    channelName: "家用多功能颈椎按摩仪护颈"
+  },
+  {
+    key: "6",
+    channelName: "2024新款智能手表监控防水运动手环"
   }
 ]} 
           locale={{ emptyText: '暂无数据' }}

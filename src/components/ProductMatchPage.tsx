@@ -24,7 +24,56 @@ const ProductMatchPage: React.FC = () => {
     { title: '操作', dataIndex: 'operation', key: 'operation', render: () => <a>操作</a> },
   ];
 
-  const dataSource: ProductData[] = [{ key: "1", orderNumber: "ORD-001", customer: "John Doe", title: "Test Item", status: "处理中", total: 100, roleName: "管理员", accountName: "test_user", phone: "13800138000", amount: 100, operation: "操作" }, { key: "2", orderNumber: "ORD-002", customer: "Jane Doe", title: "Test Item 2", status: "已完成", total: 200, roleName: "普通职员", accountName: "normal_user", phone: "13800138001", amount: 200, operation: "操作" }]; // Empty for now
+  const dataSource: ProductData[] = [
+  {
+    key: "1",
+    product: "2024新款智能手表监控防水运动手环",
+    skuSpecs: "SKU-24C000X",
+    matchStatus: "处理中",
+    localProductInfo: "2024新款智能手表监控防水运动手环",
+    productSku: "2024新款智能手表监控防水运动手环"
+  },
+  {
+    key: "2",
+    product: "无线蓝牙耳机降噪入耳式长续航",
+    skuSpecs: "SKU-24C001X",
+    matchStatus: "已发货",
+    localProductInfo: "无线蓝牙耳机降噪入耳式长续航",
+    productSku: "无线蓝牙耳机降噪入耳式长续航"
+  },
+  {
+    key: "3",
+    product: "纯棉短袖T恤男夏季宽松百搭",
+    skuSpecs: "SKU-24C002X",
+    matchStatus: "待付款",
+    localProductInfo: "纯棉短袖T恤男夏季宽松百搭",
+    productSku: "纯棉短袖T恤男夏季宽松百搭"
+  },
+  {
+    key: "4",
+    product: "户外便携运动水杯大容量防漏",
+    skuSpecs: "SKU-24C003X",
+    matchStatus: "已完成",
+    localProductInfo: "户外便携运动水杯大容量防漏",
+    productSku: "户外便携运动水杯大容量防漏"
+  },
+  {
+    key: "5",
+    product: "家用多功能颈椎按摩仪护颈",
+    skuSpecs: "SKU-24C004X",
+    matchStatus: "已取消",
+    localProductInfo: "家用多功能颈椎按摩仪护颈",
+    productSku: "家用多功能颈椎按摩仪护颈"
+  },
+  {
+    key: "6",
+    product: "2024新款智能手表监控防水运动手环",
+    skuSpecs: "SKU-24C005X",
+    matchStatus: "退款中",
+    localProductInfo: "2024新款智能手表监控防水运动手环",
+    productSku: "2024新款智能手表监控防水运动手环"
+  }
+]; // Empty for now
 
   const items: TabsProps['items'] = [
     { key: 'all', label: <Badge count={0} offset={[10, 0]}>全部</Badge> },

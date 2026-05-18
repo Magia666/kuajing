@@ -64,54 +64,64 @@ const ReturnApplicationPage: React.FC = () => {
           columns={columns} 
           dataSource={[
   {
-    key: "测试数据 1",
-    returnWarehouse: "测试数据 1",
-    applicationPackage: "测试数据 1",
-    applicationRemark: "测试数据 1",
-    returnAddress: "测试数据 1",
-    packageFee: "测试数据 1",
-    applicationInfo: "测试数据 1",
-    packageInfo: "测试数据 1"
+    key: "1",
+    returnWarehouse: "美西一仓",
+    applicationPackage: "采购单-20240518",
+    applicationRemark: "客户要求加急发货",
+    returnAddress: "广东省深圳市南山区科兴科学园1栋600室",
+    packageFee: "128.00",
+    applicationInfo: "采购单-20240518",
+    packageInfo: "采购单-20240518"
   },
   {
-    key: "测试数据 2",
-    returnWarehouse: "测试数据 2",
-    applicationPackage: "测试数据 2",
-    applicationRemark: "测试数据 2",
-    returnAddress: "测试数据 2",
-    packageFee: "测试数据 2",
-    applicationInfo: "测试数据 2",
-    packageInfo: "测试数据 2"
+    key: "2",
+    returnWarehouse: "深圳总仓",
+    applicationPackage: "物流包裹-YD998123",
+    applicationRemark: "商品存在轻微瑕疵",
+    returnAddress: "广东省深圳市南山区科兴科学园2栋601室",
+    packageFee: "194.50",
+    applicationInfo: "物流包裹-YD998123",
+    packageInfo: "物流包裹-YD998123"
   },
   {
-    key: "测试数据 3",
-    returnWarehouse: "测试数据 3",
-    applicationPackage: "测试数据 3",
-    applicationRemark: "测试数据 3",
-    returnAddress: "测试数据 3",
-    packageFee: "测试数据 3",
-    applicationInfo: "测试数据 3",
-    packageInfo: "测试数据 3"
+    key: "3",
+    returnWarehouse: "义乌中转仓",
+    applicationPackage: "A区-05货架-03层",
+    applicationRemark: "包裹外包装破损",
+    returnAddress: "广东省深圳市南山区科兴科学园3栋602室",
+    packageFee: "261.00",
+    applicationInfo: "A区-05货架-03层",
+    packageInfo: "A区-05货架-03层"
   },
   {
-    key: "测试数据 4",
-    returnWarehouse: "测试数据 4",
-    applicationPackage: "测试数据 4",
-    applicationRemark: "测试数据 4",
-    returnAddress: "测试数据 4",
-    packageFee: "测试数据 4",
-    applicationInfo: "测试数据 4",
-    packageInfo: "测试数据 4"
+    key: "4",
+    returnWarehouse: "美东二仓",
+    applicationPackage: "采购单-20240518",
+    applicationRemark: "尺码拍错，要求换货",
+    returnAddress: "广东省深圳市南山区科兴科学园4栋603室",
+    packageFee: "327.50",
+    applicationInfo: "采购单-20240518",
+    packageInfo: "采购单-20240518"
   },
   {
-    key: "测试数据 5",
-    returnWarehouse: "测试数据 5",
-    applicationPackage: "测试数据 5",
-    applicationRemark: "测试数据 5",
-    returnAddress: "测试数据 5",
-    packageFee: "测试数据 5",
-    applicationInfo: "测试数据 5",
-    packageInfo: "测试数据 5"
+    key: "5",
+    returnWarehouse: "法兰克福仓",
+    applicationPackage: "物流包裹-YD998123",
+    applicationRemark: "地址填写错误，已更正",
+    returnAddress: "广东省深圳市南山区科兴科学园5栋604室",
+    packageFee: "394.00",
+    applicationInfo: "物流包裹-YD998123",
+    packageInfo: "物流包裹-YD998123"
+  },
+  {
+    key: "6",
+    returnWarehouse: "美西一仓",
+    applicationPackage: "A区-05货架-03层",
+    applicationRemark: "客户要求加急发货",
+    returnAddress: "广东省深圳市南山区科兴科学园6栋605室",
+    packageFee: "460.50",
+    applicationInfo: "A区-05货架-03层",
+    packageInfo: "A区-05货架-03层"
   }
 ]} 
           locale={{ emptyText: '暂无数据' }}

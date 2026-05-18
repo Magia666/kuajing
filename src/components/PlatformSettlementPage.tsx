@@ -68,43 +68,51 @@ const PlatformSettlementPage: React.FC = () => {
           dataSource={[
   {
     key: "1",
-    orderNumber: "测试数据 1",
-    platformType: "测试数据 1",
-    storeName: "测试数据 1",
-    estimatedAmount: 100,
-    completionTime: "2024-03-21"
+    orderNumber: "SO202405181000",
+    platformType: "淘宝",
+    storeName: "跨境小店 US",
+    estimatedAmount: "128.00",
+    completionTime: "2024-05-10 14:10:00"
   },
   {
     key: "2",
-    orderNumber: "测试数据 2",
-    platformType: "测试数据 2",
-    storeName: "测试数据 2",
-    estimatedAmount: 200,
-    completionTime: "2024-03-22"
+    orderNumber: "PO202405181007",
+    platformType: "1688联盟",
+    storeName: "跨境小店 UK",
+    estimatedAmount: "194.50",
+    completionTime: "2024-05-11 14:15:00"
   },
   {
     key: "3",
-    orderNumber: "测试数据 3",
-    platformType: "测试数据 3",
-    storeName: "测试数据 3",
-    estimatedAmount: 300,
-    completionTime: "2024-03-23"
+    orderNumber: "RO202405181014",
+    platformType: "独立站 Shopify",
+    storeName: "跨境小店 SG",
+    estimatedAmount: "261.00",
+    completionTime: "2024-05-12 14:20:00"
   },
   {
     key: "4",
-    orderNumber: "测试数据 4",
-    platformType: "测试数据 4",
-    storeName: "测试数据 4",
-    estimatedAmount: 400,
-    completionTime: "2024-03-24"
+    orderNumber: "TR202405181021",
+    platformType: "Amazon US",
+    storeName: "跨境小店 MY",
+    estimatedAmount: "327.50",
+    completionTime: "2024-05-13 14:25:00"
   },
   {
     key: "5",
-    orderNumber: "测试数据 5",
-    platformType: "测试数据 5",
-    storeName: "测试数据 5",
-    estimatedAmount: 500,
-    completionTime: "2024-03-25"
+    orderNumber: "WO202405181028",
+    platformType: "Shopee MY",
+    storeName: "跨境小店 PH",
+    estimatedAmount: "394.00",
+    completionTime: "2024-05-14 14:30:00"
+  },
+  {
+    key: "6",
+    orderNumber: "SO202405181035",
+    platformType: "京东",
+    storeName: "跨境小店 US",
+    estimatedAmount: "460.50",
+    completionTime: "2024-05-15 14:35:00"
   }
 ]} 
           locale={{ emptyText: '暂无数据' }}

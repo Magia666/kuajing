@@ -91,58 +91,69 @@ const WarehouseInboundPage: React.FC = () => {
           dataSource={[
   {
     key: "1",
-    inboundNumber: "测试数据 1",
+    inboundNumber: "SO202405181000",
     status: "处理中",
-    type: "测试数据 1",
-    waybillNumber: "测试数据 1",
-    createTime: "2024-03-21",
-    inboundTime: "2024-03-21",
-    sku: "测试数据 1",
-    systemCode: "测试数据 1"
+    type: "电子产品",
+    waybillNumber: "SO202405181000",
+    createTime: "2024-05-10 14:10:00",
+    inboundTime: "2024-05-10 14:10:00",
+    sku: "SKU-24C000X",
+    systemCode: "SO202405181000"
   },
   {
     key: "2",
-    inboundNumber: "测试数据 2",
-    status: "成功",
-    type: "测试数据 2",
-    waybillNumber: "测试数据 2",
-    createTime: "2024-03-22",
-    inboundTime: "2024-03-22",
-    sku: "测试数据 2",
-    systemCode: "测试数据 2"
+    inboundNumber: "PO202405181007",
+    status: "已发货",
+    type: "服装服饰",
+    waybillNumber: "PO202405181007",
+    createTime: "2024-05-11 14:15:00",
+    inboundTime: "2024-05-11 14:15:00",
+    sku: "SKU-24C001X",
+    systemCode: "PO202405181007"
   },
   {
     key: "3",
-    inboundNumber: "测试数据 3",
-    status: "处理中",
-    type: "测试数据 3",
-    waybillNumber: "测试数据 3",
-    createTime: "2024-03-23",
-    inboundTime: "2024-03-23",
-    sku: "测试数据 3",
-    systemCode: "测试数据 3"
+    inboundNumber: "RO202405181014",
+    status: "待付款",
+    type: "家居日用",
+    waybillNumber: "RO202405181014",
+    createTime: "2024-05-12 14:20:00",
+    inboundTime: "2024-05-12 14:20:00",
+    sku: "SKU-24C002X",
+    systemCode: "RO202405181014"
   },
   {
     key: "4",
-    inboundNumber: "测试数据 4",
-    status: "成功",
-    type: "测试数据 4",
-    waybillNumber: "测试数据 4",
-    createTime: "2024-03-24",
-    inboundTime: "2024-03-24",
-    sku: "测试数据 4",
-    systemCode: "测试数据 4"
+    inboundNumber: "TR202405181021",
+    status: "已完成",
+    type: "户外运动",
+    waybillNumber: "TR202405181021",
+    createTime: "2024-05-13 14:25:00",
+    inboundTime: "2024-05-13 14:25:00",
+    sku: "SKU-24C003X",
+    systemCode: "TR202405181021"
   },
   {
     key: "5",
-    inboundNumber: "测试数据 5",
-    status: "处理中",
-    type: "测试数据 5",
-    waybillNumber: "测试数据 5",
-    createTime: "2024-03-25",
-    inboundTime: "2024-03-25",
-    sku: "测试数据 5",
-    systemCode: "测试数据 5"
+    inboundNumber: "WO202405181028",
+    status: "已取消",
+    type: "美妆个护",
+    waybillNumber: "WO202405181028",
+    createTime: "2024-05-14 14:30:00",
+    inboundTime: "2024-05-14 14:30:00",
+    sku: "SKU-24C004X",
+    systemCode: "WO202405181028"
+  },
+  {
+    key: "6",
+    inboundNumber: "SO202405181035",
+    status: "退款中",
+    type: "电子产品",
+    waybillNumber: "SO202405181035",
+    createTime: "2024-05-15 14:35:00",
+    inboundTime: "2024-05-15 14:35:00",
+    sku: "SKU-24C005X",
+    systemCode: "SO202405181035"
   }
 ]} 
           locale={{ emptyText: '暂无数据' }}

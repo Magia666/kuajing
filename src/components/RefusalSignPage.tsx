@@ -42,49 +42,58 @@ const RefusalSignPage: React.FC = () => {
           columns={columns} 
           dataSource={[
   {
-    key: "测试数据 1",
-    createTime: "2024-03-21",
-    refusalOrderNumber: "测试数据 1",
-    originalWarehouse: "测试数据 1",
+    key: "1",
+    createTime: "2024-05-10 14:10:00",
+    refusalOrderNumber: "SO202405181000",
+    originalWarehouse: "美西一仓",
     status: "处理中",
-    expressName: "测试数据 1",
-    remark: "测试数据 1"
+    expressName: "2024新款智能手表监控防水运动手环",
+    remark: "客户要求加急发货"
   },
   {
-    key: "测试数据 2",
-    createTime: "2024-03-22",
-    refusalOrderNumber: "测试数据 2",
-    originalWarehouse: "测试数据 2",
-    status: "成功",
-    expressName: "测试数据 2",
-    remark: "测试数据 2"
+    key: "2",
+    createTime: "2024-05-11 14:15:00",
+    refusalOrderNumber: "PO202405181007",
+    originalWarehouse: "深圳总仓",
+    status: "已发货",
+    expressName: "无线蓝牙耳机降噪入耳式长续航",
+    remark: "商品存在轻微瑕疵"
   },
   {
-    key: "测试数据 3",
-    createTime: "2024-03-23",
-    refusalOrderNumber: "测试数据 3",
-    originalWarehouse: "测试数据 3",
-    status: "处理中",
-    expressName: "测试数据 3",
-    remark: "测试数据 3"
+    key: "3",
+    createTime: "2024-05-12 14:20:00",
+    refusalOrderNumber: "RO202405181014",
+    originalWarehouse: "义乌中转仓",
+    status: "待付款",
+    expressName: "纯棉短袖T恤男夏季宽松百搭",
+    remark: "包裹外包装破损"
   },
   {
-    key: "测试数据 4",
-    createTime: "2024-03-24",
-    refusalOrderNumber: "测试数据 4",
-    originalWarehouse: "测试数据 4",
-    status: "成功",
-    expressName: "测试数据 4",
-    remark: "测试数据 4"
+    key: "4",
+    createTime: "2024-05-13 14:25:00",
+    refusalOrderNumber: "TR202405181021",
+    originalWarehouse: "美东二仓",
+    status: "已完成",
+    expressName: "户外便携运动水杯大容量防漏",
+    remark: "尺码拍错，要求换货"
   },
   {
-    key: "测试数据 5",
-    createTime: "2024-03-25",
-    refusalOrderNumber: "测试数据 5",
-    originalWarehouse: "测试数据 5",
-    status: "处理中",
-    expressName: "测试数据 5",
-    remark: "测试数据 5"
+    key: "5",
+    createTime: "2024-05-14 14:30:00",
+    refusalOrderNumber: "WO202405181028",
+    originalWarehouse: "法兰克福仓",
+    status: "已取消",
+    expressName: "家用多功能颈椎按摩仪护颈",
+    remark: "地址填写错误，已更正"
+  },
+  {
+    key: "6",
+    createTime: "2024-05-15 14:35:00",
+    refusalOrderNumber: "SO202405181035",
+    originalWarehouse: "美西一仓",
+    status: "退款中",
+    expressName: "2024新款智能手表监控防水运动手环",
+    remark: "客户要求加急发货"
   }
 ]} 
           locale={{ emptyText: '暂无数据' }}

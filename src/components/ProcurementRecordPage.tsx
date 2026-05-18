@@ -83,49 +83,58 @@ const ProcurementRecordPage: React.FC = () => {
           columns={columns} 
           dataSource={[
   {
-    key: "测试数据 1",
-    storeInfo: "测试数据 1",
-    shippingAddress: "测试数据 1",
-    procurementInfo: "测试数据 1",
-    orderInfo: "测试数据 1",
-    time: "2024-03-21",
-    productInfo: "测试数据 1"
+    key: "1",
+    storeInfo: "跨境小店 US",
+    shippingAddress: "广东省深圳市南山区科兴科学园1栋600室",
+    procurementInfo: "采购单-20240518",
+    orderInfo: "SO202405181000",
+    time: "2024-05-10 14:10:00",
+    productInfo: "2024新款智能手表监控防水运动手环"
   },
   {
-    key: "测试数据 2",
-    storeInfo: "测试数据 2",
-    shippingAddress: "测试数据 2",
-    procurementInfo: "测试数据 2",
-    orderInfo: "测试数据 2",
-    time: "2024-03-22",
-    productInfo: "测试数据 2"
+    key: "2",
+    storeInfo: "跨境小店 UK",
+    shippingAddress: "广东省深圳市南山区科兴科学园2栋601室",
+    procurementInfo: "物流包裹-YD998123",
+    orderInfo: "PO202405181007",
+    time: "2024-05-11 14:15:00",
+    productInfo: "无线蓝牙耳机降噪入耳式长续航"
   },
   {
-    key: "测试数据 3",
-    storeInfo: "测试数据 3",
-    shippingAddress: "测试数据 3",
-    procurementInfo: "测试数据 3",
-    orderInfo: "测试数据 3",
-    time: "2024-03-23",
-    productInfo: "测试数据 3"
+    key: "3",
+    storeInfo: "跨境小店 SG",
+    shippingAddress: "广东省深圳市南山区科兴科学园3栋602室",
+    procurementInfo: "A区-05货架-03层",
+    orderInfo: "RO202405181014",
+    time: "2024-05-12 14:20:00",
+    productInfo: "纯棉短袖T恤男夏季宽松百搭"
   },
   {
-    key: "测试数据 4",
-    storeInfo: "测试数据 4",
-    shippingAddress: "测试数据 4",
-    procurementInfo: "测试数据 4",
-    orderInfo: "测试数据 4",
-    time: "2024-03-24",
-    productInfo: "测试数据 4"
+    key: "4",
+    storeInfo: "跨境小店 MY",
+    shippingAddress: "广东省深圳市南山区科兴科学园4栋603室",
+    procurementInfo: "采购单-20240518",
+    orderInfo: "TR202405181021",
+    time: "2024-05-13 14:25:00",
+    productInfo: "户外便携运动水杯大容量防漏"
   },
   {
-    key: "测试数据 5",
-    storeInfo: "测试数据 5",
-    shippingAddress: "测试数据 5",
-    procurementInfo: "测试数据 5",
-    orderInfo: "测试数据 5",
-    time: "2024-03-25",
-    productInfo: "测试数据 5"
+    key: "5",
+    storeInfo: "跨境小店 PH",
+    shippingAddress: "广东省深圳市南山区科兴科学园5栋604室",
+    procurementInfo: "物流包裹-YD998123",
+    orderInfo: "WO202405181028",
+    time: "2024-05-14 14:30:00",
+    productInfo: "家用多功能颈椎按摩仪护颈"
+  },
+  {
+    key: "6",
+    storeInfo: "跨境小店 US",
+    shippingAddress: "广东省深圳市南山区科兴科学园6栋605室",
+    procurementInfo: "A区-05货架-03层",
+    orderInfo: "SO202405181035",
+    time: "2024-05-15 14:35:00",
+    productInfo: "2024新款智能手表监控防水运动手环"
   }
 ]} 
           locale={{ emptyText: '暂无数据' }}
