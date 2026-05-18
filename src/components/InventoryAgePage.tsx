@@ -68,7 +68,68 @@ const InventoryAgePage: React.FC = () => {
       <Card>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "测试数据 1",
+    productInfo: "测试数据 1",
+    productDetails: "测试数据 1",
+    initialEndingStock: "测试数据 1",
+    inboundOutboundStock: "测试数据 1",
+    stock: "测试数据 1",
+    lessThan30: "测试数据 1",
+    days30to90: "测试数据 1",
+    days90to180: "测试数据 1",
+    moreThan180: "测试数据 1"
+  },
+  {
+    key: "测试数据 2",
+    productInfo: "测试数据 2",
+    productDetails: "测试数据 2",
+    initialEndingStock: "测试数据 2",
+    inboundOutboundStock: "测试数据 2",
+    stock: "测试数据 2",
+    lessThan30: "测试数据 2",
+    days30to90: "测试数据 2",
+    days90to180: "测试数据 2",
+    moreThan180: "测试数据 2"
+  },
+  {
+    key: "测试数据 3",
+    productInfo: "测试数据 3",
+    productDetails: "测试数据 3",
+    initialEndingStock: "测试数据 3",
+    inboundOutboundStock: "测试数据 3",
+    stock: "测试数据 3",
+    lessThan30: "测试数据 3",
+    days30to90: "测试数据 3",
+    days90to180: "测试数据 3",
+    moreThan180: "测试数据 3"
+  },
+  {
+    key: "测试数据 4",
+    productInfo: "测试数据 4",
+    productDetails: "测试数据 4",
+    initialEndingStock: "测试数据 4",
+    inboundOutboundStock: "测试数据 4",
+    stock: "测试数据 4",
+    lessThan30: "测试数据 4",
+    days30to90: "测试数据 4",
+    days90to180: "测试数据 4",
+    moreThan180: "测试数据 4"
+  },
+  {
+    key: "测试数据 5",
+    productInfo: "测试数据 5",
+    productDetails: "测试数据 5",
+    initialEndingStock: "测试数据 5",
+    inboundOutboundStock: "测试数据 5",
+    stock: "测试数据 5",
+    lessThan30: "测试数据 5",
+    days30to90: "测试数据 5",
+    days90to180: "测试数据 5",
+    moreThan180: "测试数据 5"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
           scroll={{ x: 1500 }}

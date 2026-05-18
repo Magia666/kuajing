@@ -28,7 +28,28 @@ const LogisticsChannelPage: React.FC = () => {
       <Card>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "1",
+    channelName: "测试数据 1"
+  },
+  {
+    key: "2",
+    channelName: "测试数据 2"
+  },
+  {
+    key: "3",
+    channelName: "测试数据 3"
+  },
+  {
+    key: "4",
+    channelName: "测试数据 4"
+  },
+  {
+    key: "5",
+    channelName: "测试数据 5"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

@@ -75,7 +75,83 @@ const InventoryPage: React.FC = () => {
         </Space>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "1",
+    warehouse: "测试数据 1",
+    productInfo: "测试数据 1",
+    category: "测试数据 1",
+    dimensions: "测试数据 1",
+    stock: "测试数据 1",
+    available: "测试数据 1",
+    frozen: "测试数据 1",
+    damaged: "测试数据 1",
+    safetyStock: "测试数据 1",
+    sales: "测试数据 1",
+    inTransit: "测试数据 1",
+    costInfo: 100
+  },
+  {
+    key: "2",
+    warehouse: "测试数据 2",
+    productInfo: "测试数据 2",
+    category: "测试数据 2",
+    dimensions: "测试数据 2",
+    stock: "测试数据 2",
+    available: "测试数据 2",
+    frozen: "测试数据 2",
+    damaged: "测试数据 2",
+    safetyStock: "测试数据 2",
+    sales: "测试数据 2",
+    inTransit: "测试数据 2",
+    costInfo: 200
+  },
+  {
+    key: "3",
+    warehouse: "测试数据 3",
+    productInfo: "测试数据 3",
+    category: "测试数据 3",
+    dimensions: "测试数据 3",
+    stock: "测试数据 3",
+    available: "测试数据 3",
+    frozen: "测试数据 3",
+    damaged: "测试数据 3",
+    safetyStock: "测试数据 3",
+    sales: "测试数据 3",
+    inTransit: "测试数据 3",
+    costInfo: 300
+  },
+  {
+    key: "4",
+    warehouse: "测试数据 4",
+    productInfo: "测试数据 4",
+    category: "测试数据 4",
+    dimensions: "测试数据 4",
+    stock: "测试数据 4",
+    available: "测试数据 4",
+    frozen: "测试数据 4",
+    damaged: "测试数据 4",
+    safetyStock: "测试数据 4",
+    sales: "测试数据 4",
+    inTransit: "测试数据 4",
+    costInfo: 400
+  },
+  {
+    key: "5",
+    warehouse: "测试数据 5",
+    productInfo: "测试数据 5",
+    category: "测试数据 5",
+    dimensions: "测试数据 5",
+    stock: "测试数据 5",
+    available: "测试数据 5",
+    frozen: "测试数据 5",
+    damaged: "测试数据 5",
+    safetyStock: "测试数据 5",
+    sales: "测试数据 5",
+    inTransit: "测试数据 5",
+    costInfo: 500
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
           scroll={{ x: 1500 }}

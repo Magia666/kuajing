@@ -61,7 +61,48 @@ const DistributionAccountPage: React.FC = () => {
       <Card>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "1",
+    transactionNumber: "测试数据 1",
+    amount: 100,
+    applicationTime: "2024-03-21",
+    paymentTime: "2024-03-21",
+    status: "处理中"
+  },
+  {
+    key: "2",
+    transactionNumber: "测试数据 2",
+    amount: 200,
+    applicationTime: "2024-03-22",
+    paymentTime: "2024-03-22",
+    status: "成功"
+  },
+  {
+    key: "3",
+    transactionNumber: "测试数据 3",
+    amount: 300,
+    applicationTime: "2024-03-23",
+    paymentTime: "2024-03-23",
+    status: "处理中"
+  },
+  {
+    key: "4",
+    transactionNumber: "测试数据 4",
+    amount: 400,
+    applicationTime: "2024-03-24",
+    paymentTime: "2024-03-24",
+    status: "成功"
+  },
+  {
+    key: "5",
+    transactionNumber: "测试数据 5",
+    amount: 500,
+    applicationTime: "2024-03-25",
+    paymentTime: "2024-03-25",
+    status: "处理中"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

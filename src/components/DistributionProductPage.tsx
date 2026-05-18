@@ -79,7 +79,63 @@ const DistributionProductPage: React.FC = () => {
         </Space>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "1",
+    productInfo: "测试数据 1",
+    itemNumber: "测试数据 1",
+    sku: "测试数据 1",
+    price: 100,
+    stock: "测试数据 1",
+    weight: "测试数据 1",
+    dimensions: "测试数据 1",
+    category: "测试数据 1"
+  },
+  {
+    key: "2",
+    productInfo: "测试数据 2",
+    itemNumber: "测试数据 2",
+    sku: "测试数据 2",
+    price: 200,
+    stock: "测试数据 2",
+    weight: "测试数据 2",
+    dimensions: "测试数据 2",
+    category: "测试数据 2"
+  },
+  {
+    key: "3",
+    productInfo: "测试数据 3",
+    itemNumber: "测试数据 3",
+    sku: "测试数据 3",
+    price: 300,
+    stock: "测试数据 3",
+    weight: "测试数据 3",
+    dimensions: "测试数据 3",
+    category: "测试数据 3"
+  },
+  {
+    key: "4",
+    productInfo: "测试数据 4",
+    itemNumber: "测试数据 4",
+    sku: "测试数据 4",
+    price: 400,
+    stock: "测试数据 4",
+    weight: "测试数据 4",
+    dimensions: "测试数据 4",
+    category: "测试数据 4"
+  },
+  {
+    key: "5",
+    productInfo: "测试数据 5",
+    itemNumber: "测试数据 5",
+    sku: "测试数据 5",
+    price: 500,
+    stock: "测试数据 5",
+    weight: "测试数据 5",
+    dimensions: "测试数据 5",
+    category: "测试数据 5"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

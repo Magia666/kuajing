@@ -48,7 +48,53 @@ const ExpressClaimPage: React.FC = () => {
       <Card>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "测试数据 1",
+    expressNumber: "测试数据 1",
+    express: "测试数据 1",
+    warehouse: "测试数据 1",
+    status: "处理中",
+    receiveTime: "2024-03-21",
+    photo: "测试数据 1"
+  },
+  {
+    key: "测试数据 2",
+    expressNumber: "测试数据 2",
+    express: "测试数据 2",
+    warehouse: "测试数据 2",
+    status: "成功",
+    receiveTime: "2024-03-22",
+    photo: "测试数据 2"
+  },
+  {
+    key: "测试数据 3",
+    expressNumber: "测试数据 3",
+    express: "测试数据 3",
+    warehouse: "测试数据 3",
+    status: "处理中",
+    receiveTime: "2024-03-23",
+    photo: "测试数据 3"
+  },
+  {
+    key: "测试数据 4",
+    expressNumber: "测试数据 4",
+    express: "测试数据 4",
+    warehouse: "测试数据 4",
+    status: "成功",
+    receiveTime: "2024-03-24",
+    photo: "测试数据 4"
+  },
+  {
+    key: "测试数据 5",
+    expressNumber: "测试数据 5",
+    express: "测试数据 5",
+    warehouse: "测试数据 5",
+    status: "处理中",
+    receiveTime: "2024-03-25",
+    photo: "测试数据 5"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

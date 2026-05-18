@@ -92,7 +92,83 @@ const DistributionOrderPage: React.FC = () => {
       <Card>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "1",
+    orderNumber: "测试数据 1",
+    systemCode: "测试数据 1",
+    sku: "测试数据 1",
+    transactionDate: "2024-03-21",
+    quantity: "测试数据 1",
+    amount: 100,
+    orderStatus: "处理中",
+    paymentStatus: "处理中",
+    store: "测试数据 1",
+    supplier: "测试数据 1",
+    distributor: "测试数据 1",
+    warehouse: "测试数据 1"
+  },
+  {
+    key: "2",
+    orderNumber: "测试数据 2",
+    systemCode: "测试数据 2",
+    sku: "测试数据 2",
+    transactionDate: "2024-03-22",
+    quantity: "测试数据 2",
+    amount: 200,
+    orderStatus: "成功",
+    paymentStatus: "成功",
+    store: "测试数据 2",
+    supplier: "测试数据 2",
+    distributor: "测试数据 2",
+    warehouse: "测试数据 2"
+  },
+  {
+    key: "3",
+    orderNumber: "测试数据 3",
+    systemCode: "测试数据 3",
+    sku: "测试数据 3",
+    transactionDate: "2024-03-23",
+    quantity: "测试数据 3",
+    amount: 300,
+    orderStatus: "处理中",
+    paymentStatus: "处理中",
+    store: "测试数据 3",
+    supplier: "测试数据 3",
+    distributor: "测试数据 3",
+    warehouse: "测试数据 3"
+  },
+  {
+    key: "4",
+    orderNumber: "测试数据 4",
+    systemCode: "测试数据 4",
+    sku: "测试数据 4",
+    transactionDate: "2024-03-24",
+    quantity: "测试数据 4",
+    amount: 400,
+    orderStatus: "成功",
+    paymentStatus: "成功",
+    store: "测试数据 4",
+    supplier: "测试数据 4",
+    distributor: "测试数据 4",
+    warehouse: "测试数据 4"
+  },
+  {
+    key: "5",
+    orderNumber: "测试数据 5",
+    systemCode: "测试数据 5",
+    sku: "测试数据 5",
+    transactionDate: "2024-03-25",
+    quantity: "测试数据 5",
+    amount: 500,
+    orderStatus: "处理中",
+    paymentStatus: "处理中",
+    store: "测试数据 5",
+    supplier: "测试数据 5",
+    distributor: "测试数据 5",
+    warehouse: "测试数据 5"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

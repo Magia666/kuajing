@@ -54,7 +54,68 @@ const InventoryLogPage: React.FC = () => {
       <Card>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "测试数据 1",
+    systemCode: "测试数据 1",
+    sku: "测试数据 1",
+    type: "测试数据 1",
+    warehouse: "测试数据 1",
+    storeName: "测试数据 1",
+    quantity: "测试数据 1",
+    remainingStock: "测试数据 1",
+    description: "测试数据 1",
+    date: "2024-03-21"
+  },
+  {
+    key: "测试数据 2",
+    systemCode: "测试数据 2",
+    sku: "测试数据 2",
+    type: "测试数据 2",
+    warehouse: "测试数据 2",
+    storeName: "测试数据 2",
+    quantity: "测试数据 2",
+    remainingStock: "测试数据 2",
+    description: "测试数据 2",
+    date: "2024-03-22"
+  },
+  {
+    key: "测试数据 3",
+    systemCode: "测试数据 3",
+    sku: "测试数据 3",
+    type: "测试数据 3",
+    warehouse: "测试数据 3",
+    storeName: "测试数据 3",
+    quantity: "测试数据 3",
+    remainingStock: "测试数据 3",
+    description: "测试数据 3",
+    date: "2024-03-23"
+  },
+  {
+    key: "测试数据 4",
+    systemCode: "测试数据 4",
+    sku: "测试数据 4",
+    type: "测试数据 4",
+    warehouse: "测试数据 4",
+    storeName: "测试数据 4",
+    quantity: "测试数据 4",
+    remainingStock: "测试数据 4",
+    description: "测试数据 4",
+    date: "2024-03-24"
+  },
+  {
+    key: "测试数据 5",
+    systemCode: "测试数据 5",
+    sku: "测试数据 5",
+    type: "测试数据 5",
+    warehouse: "测试数据 5",
+    storeName: "测试数据 5",
+    quantity: "测试数据 5",
+    remainingStock: "测试数据 5",
+    description: "测试数据 5",
+    date: "2024-03-25"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

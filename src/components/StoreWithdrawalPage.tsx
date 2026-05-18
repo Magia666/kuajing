@@ -62,7 +62,88 @@ const StoreWithdrawalPage: React.FC = () => {
         </div>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "测试数据 1",
+    storeType: "测试数据 1",
+    storeName: "测试数据 1",
+    site: "测试数据 1",
+    withdrawalAmount: 100,
+    paymentMethod: "测试数据 1",
+    paymentAccount: "测试数据 1",
+    transactionNumber: "测试数据 1",
+    transactionVoucher: "测试数据 1",
+    paymentScreenshot: "测试数据 1",
+    withdrawalStatus: "处理中",
+    applyTime: "2024-03-21",
+    remark: "测试数据 1",
+    rejectionReason: "测试数据 1"
+  },
+  {
+    key: "测试数据 2",
+    storeType: "测试数据 2",
+    storeName: "测试数据 2",
+    site: "测试数据 2",
+    withdrawalAmount: 200,
+    paymentMethod: "测试数据 2",
+    paymentAccount: "测试数据 2",
+    transactionNumber: "测试数据 2",
+    transactionVoucher: "测试数据 2",
+    paymentScreenshot: "测试数据 2",
+    withdrawalStatus: "成功",
+    applyTime: "2024-03-22",
+    remark: "测试数据 2",
+    rejectionReason: "测试数据 2"
+  },
+  {
+    key: "测试数据 3",
+    storeType: "测试数据 3",
+    storeName: "测试数据 3",
+    site: "测试数据 3",
+    withdrawalAmount: 300,
+    paymentMethod: "测试数据 3",
+    paymentAccount: "测试数据 3",
+    transactionNumber: "测试数据 3",
+    transactionVoucher: "测试数据 3",
+    paymentScreenshot: "测试数据 3",
+    withdrawalStatus: "处理中",
+    applyTime: "2024-03-23",
+    remark: "测试数据 3",
+    rejectionReason: "测试数据 3"
+  },
+  {
+    key: "测试数据 4",
+    storeType: "测试数据 4",
+    storeName: "测试数据 4",
+    site: "测试数据 4",
+    withdrawalAmount: 400,
+    paymentMethod: "测试数据 4",
+    paymentAccount: "测试数据 4",
+    transactionNumber: "测试数据 4",
+    transactionVoucher: "测试数据 4",
+    paymentScreenshot: "测试数据 4",
+    withdrawalStatus: "成功",
+    applyTime: "2024-03-24",
+    remark: "测试数据 4",
+    rejectionReason: "测试数据 4"
+  },
+  {
+    key: "测试数据 5",
+    storeType: "测试数据 5",
+    storeName: "测试数据 5",
+    site: "测试数据 5",
+    withdrawalAmount: 500,
+    paymentMethod: "测试数据 5",
+    paymentAccount: "测试数据 5",
+    transactionNumber: "测试数据 5",
+    transactionVoucher: "测试数据 5",
+    paymentScreenshot: "测试数据 5",
+    withdrawalStatus: "处理中",
+    applyTime: "2024-03-25",
+    remark: "测试数据 5",
+    rejectionReason: "测试数据 5"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

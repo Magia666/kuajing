@@ -42,7 +42,48 @@ const RechargeRecordPage: React.FC = () => {
       <Card>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "1",
+    orderNumber: "测试数据 1",
+    transactionAmount: 100,
+    remainingPoints: "测试数据 1",
+    description: "测试数据 1",
+    transactionTime: "2024-03-21"
+  },
+  {
+    key: "2",
+    orderNumber: "测试数据 2",
+    transactionAmount: 200,
+    remainingPoints: "测试数据 2",
+    description: "测试数据 2",
+    transactionTime: "2024-03-22"
+  },
+  {
+    key: "3",
+    orderNumber: "测试数据 3",
+    transactionAmount: 300,
+    remainingPoints: "测试数据 3",
+    description: "测试数据 3",
+    transactionTime: "2024-03-23"
+  },
+  {
+    key: "4",
+    orderNumber: "测试数据 4",
+    transactionAmount: 400,
+    remainingPoints: "测试数据 4",
+    description: "测试数据 4",
+    transactionTime: "2024-03-24"
+  },
+  {
+    key: "5",
+    orderNumber: "测试数据 5",
+    transactionAmount: 500,
+    remainingPoints: "测试数据 5",
+    description: "测试数据 5",
+    transactionTime: "2024-03-25"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

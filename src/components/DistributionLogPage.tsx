@@ -61,7 +61,73 @@ const DistributionLogPage: React.FC = () => {
       <Card>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "测试数据 1",
+    systemCode: "测试数据 1",
+    warehouse: "测试数据 1",
+    productName: "测试数据 1",
+    sku: "测试数据 1",
+    supplier: "测试数据 1",
+    type: "测试数据 1",
+    quantity: "测试数据 1",
+    remainingStock: "测试数据 1",
+    remark: "测试数据 1",
+    date: "2024-03-21"
+  },
+  {
+    key: "测试数据 2",
+    systemCode: "测试数据 2",
+    warehouse: "测试数据 2",
+    productName: "测试数据 2",
+    sku: "测试数据 2",
+    supplier: "测试数据 2",
+    type: "测试数据 2",
+    quantity: "测试数据 2",
+    remainingStock: "测试数据 2",
+    remark: "测试数据 2",
+    date: "2024-03-22"
+  },
+  {
+    key: "测试数据 3",
+    systemCode: "测试数据 3",
+    warehouse: "测试数据 3",
+    productName: "测试数据 3",
+    sku: "测试数据 3",
+    supplier: "测试数据 3",
+    type: "测试数据 3",
+    quantity: "测试数据 3",
+    remainingStock: "测试数据 3",
+    remark: "测试数据 3",
+    date: "2024-03-23"
+  },
+  {
+    key: "测试数据 4",
+    systemCode: "测试数据 4",
+    warehouse: "测试数据 4",
+    productName: "测试数据 4",
+    sku: "测试数据 4",
+    supplier: "测试数据 4",
+    type: "测试数据 4",
+    quantity: "测试数据 4",
+    remainingStock: "测试数据 4",
+    remark: "测试数据 4",
+    date: "2024-03-24"
+  },
+  {
+    key: "测试数据 5",
+    systemCode: "测试数据 5",
+    warehouse: "测试数据 5",
+    productName: "测试数据 5",
+    sku: "测试数据 5",
+    supplier: "测试数据 5",
+    type: "测试数据 5",
+    quantity: "测试数据 5",
+    remainingStock: "测试数据 5",
+    remark: "测试数据 5",
+    date: "2024-03-25"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

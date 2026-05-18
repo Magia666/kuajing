@@ -62,7 +62,58 @@ const ReturnApplicationPage: React.FC = () => {
         <Button type="primary" icon={<PlusOutlined />} className="mb-4">申请寄回</Button>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "测试数据 1",
+    returnWarehouse: "测试数据 1",
+    applicationPackage: "测试数据 1",
+    applicationRemark: "测试数据 1",
+    returnAddress: "测试数据 1",
+    packageFee: "测试数据 1",
+    applicationInfo: "测试数据 1",
+    packageInfo: "测试数据 1"
+  },
+  {
+    key: "测试数据 2",
+    returnWarehouse: "测试数据 2",
+    applicationPackage: "测试数据 2",
+    applicationRemark: "测试数据 2",
+    returnAddress: "测试数据 2",
+    packageFee: "测试数据 2",
+    applicationInfo: "测试数据 2",
+    packageInfo: "测试数据 2"
+  },
+  {
+    key: "测试数据 3",
+    returnWarehouse: "测试数据 3",
+    applicationPackage: "测试数据 3",
+    applicationRemark: "测试数据 3",
+    returnAddress: "测试数据 3",
+    packageFee: "测试数据 3",
+    applicationInfo: "测试数据 3",
+    packageInfo: "测试数据 3"
+  },
+  {
+    key: "测试数据 4",
+    returnWarehouse: "测试数据 4",
+    applicationPackage: "测试数据 4",
+    applicationRemark: "测试数据 4",
+    returnAddress: "测试数据 4",
+    packageFee: "测试数据 4",
+    applicationInfo: "测试数据 4",
+    packageInfo: "测试数据 4"
+  },
+  {
+    key: "测试数据 5",
+    returnWarehouse: "测试数据 5",
+    applicationPackage: "测试数据 5",
+    applicationRemark: "测试数据 5",
+    returnAddress: "测试数据 5",
+    packageFee: "测试数据 5",
+    applicationInfo: "测试数据 5",
+    packageInfo: "测试数据 5"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

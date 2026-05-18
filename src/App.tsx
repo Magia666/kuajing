@@ -57,6 +57,8 @@ import InvitationListPage from "@/components/InvitationListPage";
 import InvitationWithdrawalPage from "@/components/InvitationWithdrawalPage";
 import CommissionFlowPage from "@/components/CommissionFlowPage";
 import FileDownloadTaskPage from "@/components/FileDownloadTaskPage";
+import ProductCollectionPage from "@/components/ProductCollectionPage";
+import InventorySyncPage from "@/components/InventorySyncPage";
 
 function Dashboard() {
   return (
@@ -107,6 +109,8 @@ export default function App() {
             <Route path="/inventory-warning" element={<InventoryWarning />} />
             <Route path="/data-monitoring" element={<DataMonitoring />} />
             <Route path="/ad-analysis" element={<AdAnalysis />} />
+            <Route path="/product-collection" element={<ProductCollectionPage />} />
+            <Route path="/inventory-sync" element={<InventorySyncPage />} />
             <Route path="/product-match" element={<ProductMatchPage />} />
             <Route path="/local-product" element={<LocalProductPage />} />
             <Route path="/employee-management" element={<EmployeeManagementPage />} />

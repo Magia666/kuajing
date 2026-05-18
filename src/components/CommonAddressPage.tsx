@@ -48,7 +48,73 @@ const CommonAddressPage: React.FC = () => {
       <Card>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "测试数据 1",
+    platform: "测试数据 1",
+    name: "测试数据 1",
+    province: "测试数据 1",
+    city: "测试数据 1",
+    district: "测试数据 1",
+    country: "测试数据 1",
+    phone: "测试数据 1",
+    address: "测试数据 1",
+    type: "测试数据 1",
+    isDefault: "测试数据 1"
+  },
+  {
+    key: "测试数据 2",
+    platform: "测试数据 2",
+    name: "测试数据 2",
+    province: "测试数据 2",
+    city: "测试数据 2",
+    district: "测试数据 2",
+    country: "测试数据 2",
+    phone: "测试数据 2",
+    address: "测试数据 2",
+    type: "测试数据 2",
+    isDefault: "测试数据 2"
+  },
+  {
+    key: "测试数据 3",
+    platform: "测试数据 3",
+    name: "测试数据 3",
+    province: "测试数据 3",
+    city: "测试数据 3",
+    district: "测试数据 3",
+    country: "测试数据 3",
+    phone: "测试数据 3",
+    address: "测试数据 3",
+    type: "测试数据 3",
+    isDefault: "测试数据 3"
+  },
+  {
+    key: "测试数据 4",
+    platform: "测试数据 4",
+    name: "测试数据 4",
+    province: "测试数据 4",
+    city: "测试数据 4",
+    district: "测试数据 4",
+    country: "测试数据 4",
+    phone: "测试数据 4",
+    address: "测试数据 4",
+    type: "测试数据 4",
+    isDefault: "测试数据 4"
+  },
+  {
+    key: "测试数据 5",
+    platform: "测试数据 5",
+    name: "测试数据 5",
+    province: "测试数据 5",
+    city: "测试数据 5",
+    district: "测试数据 5",
+    country: "测试数据 5",
+    phone: "测试数据 5",
+    address: "测试数据 5",
+    type: "测试数据 5",
+    isDefault: "测试数据 5"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

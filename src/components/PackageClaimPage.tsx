@@ -65,7 +65,53 @@ const PackageClaimPage: React.FC = () => {
 
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "1",
+    productInfo: "测试数据 1",
+    originalOrderInfo: "测试数据 1",
+    packageInfo: "测试数据 1",
+    shelfInfo: "测试数据 1",
+    time: "2024-03-21",
+    remark: "测试数据 1"
+  },
+  {
+    key: "2",
+    productInfo: "测试数据 2",
+    originalOrderInfo: "测试数据 2",
+    packageInfo: "测试数据 2",
+    shelfInfo: "测试数据 2",
+    time: "2024-03-22",
+    remark: "测试数据 2"
+  },
+  {
+    key: "3",
+    productInfo: "测试数据 3",
+    originalOrderInfo: "测试数据 3",
+    packageInfo: "测试数据 3",
+    shelfInfo: "测试数据 3",
+    time: "2024-03-23",
+    remark: "测试数据 3"
+  },
+  {
+    key: "4",
+    productInfo: "测试数据 4",
+    originalOrderInfo: "测试数据 4",
+    packageInfo: "测试数据 4",
+    shelfInfo: "测试数据 4",
+    time: "2024-03-24",
+    remark: "测试数据 4"
+  },
+  {
+    key: "5",
+    productInfo: "测试数据 5",
+    originalOrderInfo: "测试数据 5",
+    packageInfo: "测试数据 5",
+    shelfInfo: "测试数据 5",
+    time: "2024-03-25",
+    remark: "测试数据 5"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

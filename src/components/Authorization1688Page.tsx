@@ -42,7 +42,48 @@ const Authorization1688Page: React.FC = () => {
         <Alert title={<>已选择0项 <a className="ml-2">清空</a></>} type="info" showIcon className="mb-4" />
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "测试数据 1",
+    account: "测试数据 1",
+    remark: "测试数据 1",
+    authTime: "2024-03-21",
+    authStatus: "处理中",
+    expirationTime: "2024-03-21"
+  },
+  {
+    key: "测试数据 2",
+    account: "测试数据 2",
+    remark: "测试数据 2",
+    authTime: "2024-03-22",
+    authStatus: "成功",
+    expirationTime: "2024-03-22"
+  },
+  {
+    key: "测试数据 3",
+    account: "测试数据 3",
+    remark: "测试数据 3",
+    authTime: "2024-03-23",
+    authStatus: "处理中",
+    expirationTime: "2024-03-23"
+  },
+  {
+    key: "测试数据 4",
+    account: "测试数据 4",
+    remark: "测试数据 4",
+    authTime: "2024-03-24",
+    authStatus: "成功",
+    expirationTime: "2024-03-24"
+  },
+  {
+    key: "测试数据 5",
+    account: "测试数据 5",
+    remark: "测试数据 5",
+    authTime: "2024-03-25",
+    authStatus: "处理中",
+    expirationTime: "2024-03-25"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

@@ -81,7 +81,53 @@ const ProcurementRecordPage: React.FC = () => {
       <Card>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "测试数据 1",
+    storeInfo: "测试数据 1",
+    shippingAddress: "测试数据 1",
+    procurementInfo: "测试数据 1",
+    orderInfo: "测试数据 1",
+    time: "2024-03-21",
+    productInfo: "测试数据 1"
+  },
+  {
+    key: "测试数据 2",
+    storeInfo: "测试数据 2",
+    shippingAddress: "测试数据 2",
+    procurementInfo: "测试数据 2",
+    orderInfo: "测试数据 2",
+    time: "2024-03-22",
+    productInfo: "测试数据 2"
+  },
+  {
+    key: "测试数据 3",
+    storeInfo: "测试数据 3",
+    shippingAddress: "测试数据 3",
+    procurementInfo: "测试数据 3",
+    orderInfo: "测试数据 3",
+    time: "2024-03-23",
+    productInfo: "测试数据 3"
+  },
+  {
+    key: "测试数据 4",
+    storeInfo: "测试数据 4",
+    shippingAddress: "测试数据 4",
+    procurementInfo: "测试数据 4",
+    orderInfo: "测试数据 4",
+    time: "2024-03-24",
+    productInfo: "测试数据 4"
+  },
+  {
+    key: "测试数据 5",
+    storeInfo: "测试数据 5",
+    shippingAddress: "测试数据 5",
+    procurementInfo: "测试数据 5",
+    orderInfo: "测试数据 5",
+    time: "2024-03-25",
+    productInfo: "测试数据 5"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

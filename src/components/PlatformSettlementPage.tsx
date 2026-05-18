@@ -65,7 +65,48 @@ const PlatformSettlementPage: React.FC = () => {
 
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "1",
+    orderNumber: "测试数据 1",
+    platformType: "测试数据 1",
+    storeName: "测试数据 1",
+    estimatedAmount: 100,
+    completionTime: "2024-03-21"
+  },
+  {
+    key: "2",
+    orderNumber: "测试数据 2",
+    platformType: "测试数据 2",
+    storeName: "测试数据 2",
+    estimatedAmount: 200,
+    completionTime: "2024-03-22"
+  },
+  {
+    key: "3",
+    orderNumber: "测试数据 3",
+    platformType: "测试数据 3",
+    storeName: "测试数据 3",
+    estimatedAmount: 300,
+    completionTime: "2024-03-23"
+  },
+  {
+    key: "4",
+    orderNumber: "测试数据 4",
+    platformType: "测试数据 4",
+    storeName: "测试数据 4",
+    estimatedAmount: 400,
+    completionTime: "2024-03-24"
+  },
+  {
+    key: "5",
+    orderNumber: "测试数据 5",
+    platformType: "测试数据 5",
+    storeName: "测试数据 5",
+    estimatedAmount: 500,
+    completionTime: "2024-03-25"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

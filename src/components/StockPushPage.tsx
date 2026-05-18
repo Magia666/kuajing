@@ -53,7 +53,53 @@ const StockPushPage: React.FC = () => {
         </Space>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "测试数据 1",
+    ruleName: "测试数据 1",
+    productSku: "测试数据 1",
+    storeName: "测试数据 1",
+    warehouse: "测试数据 1",
+    time: "2024-03-21",
+    status: "处理中"
+  },
+  {
+    key: "测试数据 2",
+    ruleName: "测试数据 2",
+    productSku: "测试数据 2",
+    storeName: "测试数据 2",
+    warehouse: "测试数据 2",
+    time: "2024-03-22",
+    status: "成功"
+  },
+  {
+    key: "测试数据 3",
+    ruleName: "测试数据 3",
+    productSku: "测试数据 3",
+    storeName: "测试数据 3",
+    warehouse: "测试数据 3",
+    time: "2024-03-23",
+    status: "处理中"
+  },
+  {
+    key: "测试数据 4",
+    ruleName: "测试数据 4",
+    productSku: "测试数据 4",
+    storeName: "测试数据 4",
+    warehouse: "测试数据 4",
+    time: "2024-03-24",
+    status: "成功"
+  },
+  {
+    key: "测试数据 5",
+    ruleName: "测试数据 5",
+    productSku: "测试数据 5",
+    storeName: "测试数据 5",
+    warehouse: "测试数据 5",
+    time: "2024-03-25",
+    status: "处理中"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

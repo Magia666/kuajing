@@ -79,7 +79,68 @@ const CompensationClaimPage: React.FC = () => {
         </div>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "1",
+    warehouse: "测试数据 1",
+    orderNumber: "测试数据 1",
+    claimType: "测试数据 1",
+    claimDescription: "测试数据 1",
+    applicationAmount: 100,
+    actualAmount: 100,
+    status: "处理中",
+    rejectionReason: "测试数据 1",
+    applyTime: "2024-03-21"
+  },
+  {
+    key: "2",
+    warehouse: "测试数据 2",
+    orderNumber: "测试数据 2",
+    claimType: "测试数据 2",
+    claimDescription: "测试数据 2",
+    applicationAmount: 200,
+    actualAmount: 200,
+    status: "成功",
+    rejectionReason: "测试数据 2",
+    applyTime: "2024-03-22"
+  },
+  {
+    key: "3",
+    warehouse: "测试数据 3",
+    orderNumber: "测试数据 3",
+    claimType: "测试数据 3",
+    claimDescription: "测试数据 3",
+    applicationAmount: 300,
+    actualAmount: 300,
+    status: "处理中",
+    rejectionReason: "测试数据 3",
+    applyTime: "2024-03-23"
+  },
+  {
+    key: "4",
+    warehouse: "测试数据 4",
+    orderNumber: "测试数据 4",
+    claimType: "测试数据 4",
+    claimDescription: "测试数据 4",
+    applicationAmount: 400,
+    actualAmount: 400,
+    status: "成功",
+    rejectionReason: "测试数据 4",
+    applyTime: "2024-03-24"
+  },
+  {
+    key: "5",
+    warehouse: "测试数据 5",
+    orderNumber: "测试数据 5",
+    claimType: "测试数据 5",
+    claimDescription: "测试数据 5",
+    applicationAmount: 500,
+    actualAmount: 500,
+    status: "处理中",
+    rejectionReason: "测试数据 5",
+    applyTime: "2024-03-25"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />

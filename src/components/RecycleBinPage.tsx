@@ -19,7 +19,7 @@ const RecycleBinPage: React.FC = () => {
     { title: '操作', key: 'operation', render: () => <Button type="link" icon={<UndoOutlined />}>恢复</Button> },
   ];
 
-  const dataSource: RecycleBinData[] = [];
+  const dataSource: RecycleBinData[] = [{ key: "1", orderNumber: "ORD-001", customer: "John Doe", title: "Test Item", status: "处理中", total: 100, roleName: "管理员", accountName: "test_user", phone: "13800138000", amount: 100, operation: "操作" }, { key: "2", orderNumber: "ORD-002", customer: "Jane Doe", title: "Test Item 2", status: "已完成", total: 200, roleName: "普通职员", accountName: "normal_user", phone: "13800138001", amount: 200, operation: "操作" }];
 
   const onSelectChange = (newSelectedRowKeys: React.Key[]) => {
     setSelectedRowKeys(newSelectedRowKeys);

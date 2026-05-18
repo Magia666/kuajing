@@ -40,7 +40,53 @@ const RefusalSignPage: React.FC = () => {
         <Button type="primary" icon={<PlusOutlined />} className="mb-4">新增</Button>
         <Table 
           columns={columns} 
-          dataSource={[]} 
+          dataSource={[
+  {
+    key: "测试数据 1",
+    createTime: "2024-03-21",
+    refusalOrderNumber: "测试数据 1",
+    originalWarehouse: "测试数据 1",
+    status: "处理中",
+    expressName: "测试数据 1",
+    remark: "测试数据 1"
+  },
+  {
+    key: "测试数据 2",
+    createTime: "2024-03-22",
+    refusalOrderNumber: "测试数据 2",
+    originalWarehouse: "测试数据 2",
+    status: "成功",
+    expressName: "测试数据 2",
+    remark: "测试数据 2"
+  },
+  {
+    key: "测试数据 3",
+    createTime: "2024-03-23",
+    refusalOrderNumber: "测试数据 3",
+    originalWarehouse: "测试数据 3",
+    status: "处理中",
+    expressName: "测试数据 3",
+    remark: "测试数据 3"
+  },
+  {
+    key: "测试数据 4",
+    createTime: "2024-03-24",
+    refusalOrderNumber: "测试数据 4",
+    originalWarehouse: "测试数据 4",
+    status: "成功",
+    expressName: "测试数据 4",
+    remark: "测试数据 4"
+  },
+  {
+    key: "测试数据 5",
+    createTime: "2024-03-25",
+    refusalOrderNumber: "测试数据 5",
+    originalWarehouse: "测试数据 5",
+    status: "处理中",
+    expressName: "测试数据 5",
+    remark: "测试数据 5"
+  }
+]} 
           locale={{ emptyText: '暂无数据' }}
           pagination={{ placement: 'bottomRight' }}
         />
